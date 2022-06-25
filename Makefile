@@ -30,7 +30,15 @@ objects		  := $(boot_dir)/start.o		         \
 
 .PHONY: all $(modules) clean
 
-all:$(modules) vmlinux
+all: set-PROJECT_DIR \
+	$(modules) vmlinux
+
+set-%:
+	@ if [ "${${*}}" = "" ]; then \
+		echo "Environment variable $* not set"; \
+		exit 1; \
+	fi
+
 
 vmlinux: $(modules)
 	$(LD) -o $(vmlinux_elf) -N -T $(link_script) $(objects)
