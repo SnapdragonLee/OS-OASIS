@@ -11,7 +11,7 @@ NESTED(handle_sys,TF_SIZE, sp)
     nop
     .set at                             // Resume use of $at
 
-    // TODO: Fetch EPC from Trapframe, calculate a proper value and store it back to trapframe.
+    // Hint: Fetch EPC from Trapframe, calculate a proper value and store it back to trapframe.
     // point epc to the next instr. but should do special process for delay slot
     lw      t0, TF_EPC(sp)
     lw      t1, TF_CAUSE(sp)
@@ -22,7 +22,7 @@ NESTED(handle_sys,TF_SIZE, sp)
 IS_BD:
     sw      t0, TF_EPC(sp)
 
-    // TODO: Copy the syscall number into $a0.
+    // Hint: Copy the syscall number into $a0.
     lw      a0, TF_REG4(sp)
     
     addiu   a0, a0, -__SYSCALL_BASE     // a0 <- relative syscall number
@@ -35,7 +35,7 @@ IS_BD:
     lw      t3, 16(t0)                  // t3 <- the 5th argument of msyscall
     lw      t4, 20(t0)                  // t4 <- the 6th argument of msyscall
 
-    // TODO: Allocate a space of six arguments on current kernel stack and copy the six arguments to proper location
+    // Hint: Allocate a space of six arguments on current kernel stack and copy the six arguments to proper location
     lw      a0, TF_REG4(sp)
     lw      a1, TF_REG5(sp)
     lw      a2, TF_REG6(sp)
@@ -48,7 +48,7 @@ IS_BD:
     jalr    t2                          // Invoke sys_* function
     nop
     
-    // TODO: Resume current kernel stack
+    // Hint: Resume current kernel stack
     addiu   sp, sp, 24
     
     sw      v0, TF_REG2(sp)             // Store return value of function sys_* (in $v0) into trapframe
@@ -76,3 +76,5 @@ sys_call_table:                         // Syscall Table
     .word sys_cgetc
     .word sys_write_dev
     .word sys_read_dev
+
+    // Need to add syscall name here

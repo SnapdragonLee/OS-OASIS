@@ -20,6 +20,18 @@ void sched_yield(void) {
     static int point = 0; // current env_sched_list index
     struct Env *nxt_env;
 
+    /*  hint:
+     *  1. if (count==0), insert `e` into `env_sched_list[1-point]`
+     *     using LIST_REMOVE and LIST_INSERT_TAIL.
+     *  2. if (env_sched_list[point] is empty), point = 1 - point;
+     *     then search through `env_sched_list[point]` for a runnable env `e`,
+     *     and set count = e->env_pri
+     *  3. count--
+     *  4. env_run()
+     *
+     *  functions or macros below may be used (not all):
+     *  LIST_INSERT_TAIL, LIST_REMOVE, LIST_FIRST, LIST_EMPTY
+     */
     if (--count <= 0 || curenv == NULL || curenv->env_status != ENV_RUNNABLE) {
         int has_nxt_env = 0;
 
@@ -62,19 +74,6 @@ void sched_yield(void) {
     } else {
         env_run(curenv);
     }
-
-    /*  hint:
-     *  1. if (count==0), insert `e` into `env_sched_list[1-point]`
-     *     using LIST_REMOVE and LIST_INSERT_TAIL.
-     *  2. if (env_sched_list[point] is empty), point = 1 - point;
-     *     then search through `env_sched_list[point]` for a runnable env `e`,
-     *     and set count = e->env_pri
-     *  3. count--
-     *  4. env_run()
-     *
-     *  functions or macros below may be used (not all):
-     *  LIST_INSERT_TAIL, LIST_REMOVE, LIST_FIRST, LIST_EMPTY
-     */
 }
 
 #undef cur_list
