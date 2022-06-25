@@ -55,12 +55,14 @@ u_int mkenvid(struct Env *e) {
 /*** exercise 3.3 ***/
 int envid2env(u_int envid, struct Env **penv, int checkperm) {
     struct Env *e;
+
     /* Hint: If envid is zero, return curenv.*/
-    /*Step 1: Assign value to e using envid. */
     if (envid == 0) {
         *penv = curenv;
         return 0;
     }
+
+    /*Step 1: Assign value to e using envid. */
 
     e = envs + ENVX(envid);
 
@@ -110,7 +112,7 @@ void env_init(void) {
      * should be the same as it in the envs array. */
     for (i = NENV - 1; i >= 0; --i) {
         envs[i].env_status = ENV_FREE;
-        LIST_INSERT_HEAD(&env_free_list, &envs[i], env_link);
+        LIST_INSERT_HEAD(&env_free_list, envs + i, env_link);
     }
 }
 
@@ -136,12 +138,13 @@ static int env_setup_vm(struct Env *e) {
         return r;
     }
 
-    ++p->pp_ref;
+    p->pp_ref++;
     pgdir = (Pde *) page2kva(p);
 
     /*Step 2: Zero pgdir's field before UTOP. */
-    for (i = 0; i < PDX(UTOP); ++i)
+    for (i = 0; i < PDX(UTOP); ++i) {
         pgdir[i] = 0;
+    }
 
     /*Step 3: Copy kernel's boot_pgdir to pgdir. */
 

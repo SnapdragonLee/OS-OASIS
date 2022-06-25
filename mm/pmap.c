@@ -341,7 +341,7 @@ int page_insert(Pde *pgdir, struct Page *pp, u_long va, u_int perm) {
     /* Step 3.1 Check if the page can be insert, if can’t return -E_NO_MEM */
 
     /* Step 3.2 Insert page and increment the pp_ref */
-    (*pgtable_entry) = page2pa(pp) | PERM;
+    *pgtable_entry = page2pa(pp) | PERM;
     pp->pp_ref++;
 
     return 0;
