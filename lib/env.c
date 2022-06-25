@@ -208,13 +208,11 @@ int env_alloc(struct Env **new, u_int parent_id) {
         return r;
     }
 
-    /*Step 2: Call certain function(has been completed just now) to init kernel memory layout for this new Env.
-     *The function mainly maps the kernel address to this new Env address. */
-
     /*Step 3: Initialize every field of new Env with appropriate values.*/
     e->env_id = mkenvid(e);
     e->env_status = ENV_RUNNABLE;
     e->env_parent_id = parent_id;
+    e->env_runs = 0;
 
     /*Step 4: Focus on initializing the sp register and cp0_status of env_tf field, located at this new Env. */
     e->env_tf.cp0_status = 0x10001004;
@@ -250,7 +248,7 @@ static int load_icode_mapper(u_long va, u_int32_t sgsize, u_char *bin, u_int32_t
     u_long i = 0;
     int r;
     u_long offset = va - ROUNDDOWN(va, BY2PG);
-    int size;
+    int u_size;
 
     if (offset > 0) { // va not align
         p = page_lookup(env->env_pgdir, va + i, NULL);
@@ -260,21 +258,23 @@ static int load_icode_mapper(u_long va, u_int32_t sgsize, u_char *bin, u_int32_t
             }
             page_insert(env->env_pgdir, p, va + i, PTE_R);
         }
-        size = MIN(bin_size - i, BY2PG - offset);
-        bcopy((void *) bin, (void *) (page2kva(p) + offset), size);
-        i = i + size;
+        u_size = MIN(bin_size - i, BY2PG - offset);
+        bcopy((void *) bin, (void *) (page2kva(p) + offset), u_size);
+        i = i + u_size;
     }
+
     /*Step 1: load all content of bin into memory. */
     while (i < bin_size) {
         /* Hint: You should alloc a page and increase the reference count of it. */
-        size = MIN(BY2PG, bin_size - i);
+        u_size = MIN(BY2PG, bin_size - i);
         if ((r = page_alloc(&p)) != 0) {
             return r;
         }
         page_insert(env->env_pgdir, p, va + i, PTE_R);
-        bcopy((void *) bin + i, (void *) (page2kva(p)), size);
-        i += size;
+        bcopy((void *) bin + i, (void *) (page2kva(p)), u_size);
+        i += u_size;
     }
+
     /*Step 2: alloc pages to reach `sgsize` when `bin_size` < `sgsize`.
      * i has the value of `bin_size` now. */
     offset = va + i - ROUNDDOWN(va + i, BY2PG);
@@ -286,18 +286,18 @@ static int load_icode_mapper(u_long va, u_int32_t sgsize, u_char *bin, u_int32_t
             }
             page_insert(env->env_pgdir, p, va + i, PTE_R);
         }
-        size = MIN(sgsize - i, BY2PG - offset);
-        bzero((void *) (page2kva(p) + offset), size);
-        i = i + size;
+        u_size = MIN(sgsize - i, BY2PG - offset);
+        bzero((void *) (page2kva(p) + offset), u_size);
+        i = i + u_size;
     }
     while (i < sgsize) {
-        size = MIN(BY2PG, sgsize - i);
+        u_size = MIN(BY2PG, sgsize - i);
         if ((r = page_alloc(&p)) != 0) {
             return r;
         }
         page_insert(env->env_pgdir, p, va + i, PTE_R);
-        bzero((void *) page2kva(p), size);
-        i += size;
+        bzero((void *) page2kva(p), u_size);
+        i += u_size;
     }
     return 0;
 }
