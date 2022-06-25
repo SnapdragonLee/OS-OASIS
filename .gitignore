@@ -1,3 +1,4 @@
 .idea/
 gxemul/fs.img
 fs/fsformat
+aTestGxemul.sh
