@@ -26,11 +26,12 @@ void mips_init() {
     // ENV_CREATE(user_testfdsharing);
     // ENV_CREATE(user_testpipe);
     // ENV_CREATE(user_testpiperace);
-    // ENV_CREATE(fs_serv);
     // ENV_CREATE(user_testptelibrary);
 
     ENV_CREATE(user_icode);
     ENV_CREATE(fs_serv);
+
+
     trap_init();
     kclock_init();
     // env_run(&envs[0]);

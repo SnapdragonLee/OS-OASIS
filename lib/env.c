@@ -362,12 +362,15 @@ static void load_icode(struct Env *e, u_char *binary, u_int size) {
 void env_create_priority(u_char *binary, int size, int priority) {
     struct Env *e;
     int r;
+
     /*Step 1: Use env_alloc to alloc a new env. */
-    if ((r = env_alloc(&e, 0)) != 0) {
+    if (env_alloc(&e, 0)) {
         return;
     }
+
     /*Step 2: assign priority to the new env. */
     e->env_pri = priority;
+
     /*Step 3: Use load_icode() to load the named elf binary,
       and insert it into env_sched_list using LIST_INSERT_HEAD. */
     load_icode(e, binary, size);
@@ -460,6 +463,7 @@ extern void lcontext(u_int contxt);
  */
 /*** exercise 3.10 ***/
 void env_run(struct Env *e) {
+
     /*Step 1: save register state of curenv. */
     /* Hint: if there is an environment running, you should do
      *  switch the context and save the registers. You can imitate env_destroy() 's behaviors.*/
