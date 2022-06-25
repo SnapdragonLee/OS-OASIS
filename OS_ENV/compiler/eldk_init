@@ -1,0 +1,63 @@
+f_exp()
+{
+	export ${1}=${2}
+	echo "${1}=${2}"
+}
+
+rc=0
+case $1 in
+arm)
+	f_exp ARCH arm
+	f_exp CROSS_COMPILE arm-linux-
+	;;
+mips_4KC|4KC)
+	f_exp ARCH mips
+	f_exp CROSS_COMPILE mips_4KC-
+	;;
+mips_4KCle|4KCle)
+	f_exp ARCH mips
+	f_exp CROSS_COMPILE mips_4KCle-
+	;;
+ppc_4xx|4xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_4xx-
+	;;
+ppc_4xxFP|4xxFP)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_4xxFP-
+	;;
+ppc_6xx|6xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_6xx-
+	;;
+ppc_7xx|7xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_6xx-
+	;;
+ppc_82xx|82xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_6xx-
+	;;
+ppc_74xx|74xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_74xx-
+	;;
+ppc_8xx|8xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_8xx-
+	;;
+ppc_85xx|85xx)
+	f_exp ARCH ppc
+	f_exp CROSS_COMPILE ppc_85xx-
+	;;
+*) echo "Unknown target ${1}" >&2
+	rc=1
+	;;
+esac
+
+curwd="/OSLAB/compiler"
+[ "$rc" = 0 ] && f_exp DEPMOD $curwd/usr/bin/depmod.pl
+[ "$rc" = 0 ] && f_exp PATH $curwd/usr/bin:$curwd/bin:$PATH
+unset f_exp
+
+[ "$rc" = 0 ] || false
