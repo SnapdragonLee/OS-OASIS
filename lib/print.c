@@ -30,15 +30,15 @@ static const char theFatalMsg[] = "fatal error in lp_Print!";
  */
 void lp_Print(void (*output)(void *, char *, int), void *arg, char *fmt, va_list ap) {
 
-#define OUTPUT(arg, s, l)                                                                                                                                                                              \
-    {                                                                                                                                                                                                  \
-        if (((l) < 0) || ((l) > LP_MAX_BUF)) {                                                                                                                                                         \
-            (*output)(arg, (char *)theFatalMsg, sizeof(theFatalMsg) - 1);                                                                                                                              \
-            for (;;)                                                                                                                                                                                   \
-                ;                                                                                                                                                                                      \
-        } else {                                                                                                                                                                                       \
-            (*output)(arg, s, l);                                                                                                                                                                      \
-        }                                                                                                                                                                                              \
+#define OUTPUT(arg, s, l)                                                               \
+    {                                                                                   \
+        if (((l) < 0) || ((l) > LP_MAX_BUF)) {                                          \
+            (*output)(arg, (char *)theFatalMsg, sizeof(theFatalMsg) - 1);               \
+            for (;;)                                                                    \
+                ;                                                                       \
+        } else {                                                                        \
+            (*output)(arg, s, l);                                                       \
+        }                                                                               \
     }
 
     char buf[LP_MAX_BUF];
@@ -92,26 +92,31 @@ void lp_Print(void (*output)(void *, char *, int), void *arg, char *fmt, va_list
 
         /* check format flag */
         if (*fmt == '-') {
-            ladjust = 1, ++fmt;
+            ladjust = 1;
+            ++fmt;
         }
         if (*fmt == '0') {
-            padc = '0', ++fmt;
+            padc = '0';
+            ++fmt;
         }
 
         /* check width */
-        for (; IsDigit(*fmt); ++fmt)
+        for (; IsDigit(*fmt); ++fmt) {
             width = width * 10 + Ctod(*fmt);
+        }
 
         /* check precision */
         if (*fmt == '.') {
             ++fmt;
-            for (; IsDigit(*fmt); ++fmt)
+            for (; IsDigit(*fmt); ++fmt) {
                 prec = prec * 10 + Ctod(*fmt);
+            }
         }
 
         /* check for long */
         if (*fmt == 'l') {
-            longFlag = 1, ++fmt;
+            longFlag = 1;
+            ++fmt;
         }
 
         negFlag = 0;
@@ -144,7 +149,8 @@ void lp_Print(void (*output)(void *, char *, int), void *arg, char *fmt, va_list
                     Think the difference between case 'd' and others. (hint: negFlag).
                 */
                 if (num < 0) {
-                    num = -num, negFlag = 1;
+                    num = -num;
+                    negFlag = 1;
                 }
 
                 length = PrintNum(buf, num, 10, negFlag, width, ladjust, padc, 0);

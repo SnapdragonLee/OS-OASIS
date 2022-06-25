@@ -158,7 +158,7 @@
             LIST_FOREACH(LIST_NEXT((elm), field), (head), field) {                        \
                 if (LIST_NEXT(LIST_NEXT((elm), field), field) == NULL) {                  \
                     LIST_NEXT(LIST_NEXT((elm), field), field) = (elm);                    \
-                    (elm)->field.le_prev = &(LIST_NEXT(LIST_NEXT((elm), field), field));  \
+                    (elm)->field.le_prev = &(LIST_NEXT((elm), field)->field.le_next);     \
                     LIST_NEXT((elm), field) = NULL;                                       \
                     break;                                                                \
                 }                                                                         \

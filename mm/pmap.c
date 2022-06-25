@@ -23,7 +23,7 @@ static struct Page_list page_free_list; /* Free list of physical pages */
 void mips_detect_memory() {
     /* Step 1: Initialize basemem.
      * (When use real computer, CMOS tells us how many kilobytes there are). */
-    maxpa = 64 * 1024 * 1024;
+    maxpa = 64 * 1024 * 1024; /* 64KB */
     basemem = maxpa;
     extmem = 0;
 
@@ -87,16 +87,16 @@ static Pte *boot_pgdir_walk(Pde *pgdir, u_long va, int create) {
     /* Hint: Use KADDR and PTE_ADDR to get the page table from page directory
      * entry value. */
     pgdir_entryp = pgdir + PDX(va); // ptr for page dir entry
+    pgtable = KADDR(PTE_ADDR(*pgdir_entryp));
 
     /* Step 2: If the corresponding page table is not exist and parameter `create`
      * is set, create one. And set the correct permission bits for this new page
      * table. */
 
-    if (!((*pgdir_entryp) & PTE_V)) {
+    if (!(*pgdir_entryp & PTE_V)) {
         if (create) {                                      // create page table
-            *pgdir_entryp = PADDR(alloc(BY2PG, BY2PG, 1)); // alloc and return kva of pagetable
-            // set pagedir
-            (*pgdir_entryp) |= PTE_V; // set pa & permission
+            *pgdir_entryp = PADDR((Pte *) alloc(BY2PG, BY2PG, 1)); // alloc and return kva of pagetable
+            *pgdir_entryp |= PTE_V; // set pa & permission
         } else {
             return NULL;
         }
@@ -104,7 +104,6 @@ static Pte *boot_pgdir_walk(Pde *pgdir, u_long va, int create) {
 
     /* Step 3: Get the page table entry for `va`, and return it. */
     // content for pagetable entry
-    pgtable = (Pte *) KADDR(PTE_ADDR(*pgdir_entryp));
     pgtable_entry = pgtable + PTX(va);
     return pgtable_entry;
 }
@@ -128,7 +127,8 @@ void boot_map_segment(Pde *pgdir, u_long va, u_long size, u_long pa, int perm) {
     /* Step 2: Map virtual address space to physical address. */
     /* Hint: Use `boot_pgdir_walk` to get the page table entry of virtual address `va`. */
     for (i = 0; i < size; i += BY2PG) {
-        pgtable_entry = boot_pgdir_walk(pgdir, va + i, 1);
+        va_temp = va + i;
+        pgtable_entry = boot_pgdir_walk(pgdir, va_temp, 1);
         *pgtable_entry = PTE_ADDR(pa + i) | perm | PTE_V; // set pa to pagetable
     }
 }
@@ -180,20 +180,23 @@ void mips_vm_init() {
 void page_init(void) {
     /* Step 1: Initialize page_free_list. */
     /* Hint: Use macro `LIST_INIT` defined in include/queue.h. */
+    LIST_INIT((&page_free_list));
+
     /* Step 2: Align `freemem` up to multiple of BY2PG. */
+    freemem = ROUND(freemem, BY2PG);
+
     /* Step 3: Mark all memory blow `freemem` as used(set `pp_ref`
      * filed to 1) */
-    /* Step 4: Mark the other memory as free. */
-    LIST_INIT((&page_free_list));
-    freemem = ROUND(freemem, BY2PG);
-    int size = PADDR(freemem) / BY2PG;
     int i;
-    for (i = 0; i < size; ++i) {
-        pages[i].pp_ref = 1;
+    int np_unavailable = PPN(PADDR(freemem));
+    for (i = 0; i < np_unavailable; i++) {
+        (pages + i)->pp_ref = 1;
     }
-    for (; i < npage; ++i) {
-        pages[i].pp_ref = 0;
-        LIST_INSERT_HEAD((&page_free_list), (pages + i), pp_link);
+
+    /* Step 4: Mark the other memory as free. */
+    for (i = npage_unavailable; i < npage; i++) {
+        (pages + i)->pp_ref = 0;
+        LIST_INSERT_HEAD(&page_free_list, pages + i, pp_link);
     }
 }
 
@@ -277,15 +280,14 @@ int pgdir_walk(Pde *pgdir, u_long va, int create, Pte **ppte) {
      * is set, create one. And set the correct permission bits for this new page
      * table.
      * When creating new page table, maybe out of memory. */
-    if (!((*pgdir_entryp) & PTE_V)) {
+    if (!(*pgdir_entryp & PTE_V)) {
         if (create) {
             if (page_alloc(&ppage) == -E_NO_MEM) {
                 *ppte = NULL;
                 return -E_NO_MEM;
             }
-            ++ppage->pp_ref;
-            *pgdir_entryp = page2pa(ppage);
-            *pgdir_entryp |= PTE_V | PTE_R;
+            ppage->pp_ref++;
+            *pgdir_entryp = page2pa(ppage) | PTE_V | PTE_R;
         } else {
             *ppte = NULL;
             return 0;
