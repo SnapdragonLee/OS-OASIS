@@ -32,7 +32,7 @@
 
 #include <types.h>
 
-struct Trapframe { // lr:need to be modified(reference to linux pt_regs) TODO
+struct Trapframe { // lr:need to be modified(reference to linux pt_regs)
     /* Saved main processor registers. */
     unsigned long regs[32];
 

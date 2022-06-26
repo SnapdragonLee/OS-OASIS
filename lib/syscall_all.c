@@ -107,12 +107,15 @@ int sys_set_pgfault_handler(int sysno, u_int envid, u_int func, u_int xstacktop)
     // Your code here.
     struct Env *env;
     int ret;
-    // printf("sys_set_pgfault_handler entered, envid:%d\n",envid);
-    if ((ret = envid2env(envid, &env, 0)) < 0) {
+    /* printf("sys_set_pgfault_handler entered, envid:%d\n",envid); */
+
+    ret = envid2env(envid, &env, 0);
+    if (ret < 0) {
         return ret;
     }
-    env->env_pgfault_handler = func;
+
     env->env_xstacktop = xstacktop;
+    env->env_pgfault_handler = func;
 
     return 0;
     //    panic("sys_set_pgfault_handler not implemented");
@@ -140,12 +143,9 @@ int sys_mem_alloc(int sysno, u_int envid, u_int va, u_int perm) {
     // Your code here.
     struct Env *env;
     struct Page *ppage;
-    int ret = 0;
+    int ret;
 
-    if (!(perm & PTE_V) || (perm & PTE_COW)) {
-        return -E_INVAL;
-    }
-    if (va >= UTOP) {
+    if (!(perm & PTE_V) || (perm & PTE_COW) || va >= UTOP) {
         return -E_INVAL;
     }
 
@@ -200,11 +200,13 @@ int sys_mem_map(int sysno, u_int srcid, u_int srcva, u_int dstid, u_int dstva, u
     if (!(perm & PTE_V)) {
         return -E_INVAL;
     }
-
-    if ((ret = envid2env(srcid, &srcenv, 0)) < 0) {
+    ret = envid2env(srcid, &srcenv, 0);
+    if (ret < 0) {
         return ret;
     }
-    if ((ret = envid2env(dstid, &dstenv, 0)) < 0) {
+
+    ret = envid2env(dstid, &dstenv, 0);
+    if (ret < 0) {
         return ret;
     }
 
@@ -217,7 +219,8 @@ int sys_mem_map(int sysno, u_int srcid, u_int srcva, u_int dstid, u_int dstva, u
         return -E_INVAL;
     }
 
-    if ((ret = page_insert(dstenv->env_pgdir, ppage, round_dstva, perm)) < 0) {
+    ret = page_insert(dstenv->env_pgdir, ppage, round_dstva, perm);
+    if (ret < 0) {
         return ret;
     }
 
@@ -242,7 +245,9 @@ int sys_mem_unmap(int sysno, u_int envid, u_int va) {
     if (va >= UTOP) {
         return -E_INVAL;
     }
-    if ((ret = envid2env(envid, &env, 1)) < 0) {
+
+    ret = envid2env(envid, &env, 1);
+    if (ret < 0) {
         return ret;
     }
 
@@ -269,15 +274,19 @@ int sys_env_alloc(void) {
     // Your code here.
     int r;
     struct Env *e;
-    // printf("sys_env_alloc\n");
-    if ((r = env_alloc(&e, curenv->env_id)) < 0) {
+    /* printf("sys_env_alloc\n"); */
+
+    r = env_alloc(&e, curenv->env_id);
+    if (r < 0) {
         return r;
     }
+
     bcopy((void *) KERNEL_SP - sizeof(struct Trapframe), (void *) &(e->env_tf), sizeof(struct Trapframe));
-    e->env_tf.pc = e->env_tf.cp0_epc;
     e->env_status = ENV_NOT_RUNNABLE;
-    e->env_pri = curenv->env_pri;
+    e->env_tf.pc = e->env_tf.cp0_epc;
     e->env_tf.regs[2] = 0; // return value of func
+    e->env_pri = curenv->env_pri;
+
     return e->env_id;
     //    panic("sys_env_alloc not implemented");
 }
@@ -299,13 +308,16 @@ int sys_set_env_status(int sysno, u_int envid, u_int status) {
     // Your code here.
     struct Env *env;
     int ret;
-    // printf("%d set to status %d\n", envid, status);
+    /* printf("%d set to status %d\n", envid, status); */
     if (status != ENV_RUNNABLE && status != ENV_NOT_RUNNABLE && status != ENV_FREE) {
         return -E_INVAL;
     }
-    if ((ret = envid2env(envid, &env, 0)) < 0) {
+
+    ret = envid2env(envid, &env, 0);
+    if (ret < 0) {
         return ret;
     }
+
     if (status == ENV_RUNNABLE && env->env_status != ENV_RUNNABLE) {
         LIST_INSERT_HEAD(&env_sched_list[0], env, env_sched_link);
     } else if (status != ENV_RUNNABLE && env->env_status == ENV_RUNNABLE) {
@@ -397,12 +409,16 @@ int sys_ipc_can_send(int sysno, u_int envid, u_int value, u_int srcva, u_int per
     if (srcva >= UTOP) {
         return -E_INVAL;
     }
-    if ((r = envid2env(envid, &e, 0)) < 0) {
+
+    r = envid2env(envid, &e, 0);
+    if (ret < 0) {
         return r;
     }
+
     if (e->env_ipc_recving == 0) {
         return -E_IPC_NOT_RECV;
     }
+
     e->env_ipc_value = value;
     e->env_ipc_from = curenv->env_id;
     e->env_ipc_perm = perm;
@@ -450,21 +466,14 @@ int sys_write_dev(int sysno, u_int va, u_int dev, u_int len) {
     if (va >= ULIM) {
         return -E_INVAL;
     }
-    int flag = 0;
-    if (dev >= 0x10000000 && dev + len - 1 < 0x10000020) {
-        flag = 1;
-    }
-    if (dev >= 0x13000000 && dev + len - 1 < 0x13004200) {
-        flag = 1;
-    }
-    if (dev >= 0x15000000 && dev + len - 1 < 0x15000200) {
-        flag = 1;
-    }
-    if (!flag) {
+
+    if (!((dev >= 0x10000000 && dev + len - 1 < 0x10000020) ||
+          (dev >= 0x13000000 && dev + len - 1 < 0x13004200) ||
+          (dev >= 0x15000000 && dev + len - 1 < 0x15000200))) {
         return -E_INVAL;
     }
 
-    bcopy(va, dev + 0xa0000000, len);
+    bcopy((void *) va, (void *) (dev + 0xA0000000), len);
     return 0;
 }
 
@@ -488,20 +497,13 @@ int sys_read_dev(int sysno, u_int va, u_int dev, u_int len) {
     if (va >= ULIM) {
         return -E_INVAL;
     }
-    int flag = 0;
-    if (dev >= 0x10000000 && dev + len - 1 < 0x10000020) {
-        flag = 1;
-    }
-    if (dev >= 0x13000000 && dev + len - 1 < 0x13004200) {
-        flag = 1;
-    }
-    if (dev >= 0x15000000 && dev + len - 1 < 0x15000200) {
-        flag = 1;
-    }
-    if (!flag) {
+
+    if (!((dev >= 0x10000000 && dev + len - 1 < 0x10000020) ||
+          (dev >= 0x13000000 && dev + len - 1 < 0x13004200) ||
+          (dev >= 0x15000000 && dev + len - 1 < 0x15000200))) {
         return -E_INVAL;
     }
 
-    bcopy(dev + 0xa0000000, va, len);
+    bcopy((void *) (dev + 0xA0000000), (void *) va, len);
     return 0;
 }

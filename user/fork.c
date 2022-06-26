@@ -79,16 +79,18 @@ void user_bzero(void *v, u_int n) {
 static void pgfault(u_int va) {
     u_int *tmp;
     //  writef("fork.c:pgfault():\t va:%x\n",va);
+
     va = ROUNDDOWN(va, BY2PG);
     // writef("pgfault in fork,  va 0x%x\n",va);
+
     if ((((Pte * )(*vpt))[VPN(va)] & PTE_COW) == 0) {
-        user_panic("pgfault not cow");
+        user_panic("A fucking COW panicking here");
     }
 
     // map the new page at a temporary place
     tmp = USTACKTOP;
     if (syscall_mem_alloc(0, tmp, PTE_R | PTE_V) < 0) {
-        user_panic("pgfault alloc f");
+        user_panic("sys alloc failed");
     }
 
     // copy the content
@@ -96,12 +98,12 @@ static void pgfault(u_int va) {
 
     // map the page on the appropriate place
     if (syscall_mem_map(0, tmp, 0, va, PTE_R | PTE_V) < 0) {
-        user_panic("pgfault map f");
+        user_panic("sys mem_map failed");
     }
 
     // unmap the temporary place
     if (syscall_mem_unmap(0, tmp) < 0) {
-        user_panic("pgfault unmap f");
+        user_panic("sys mem_unmap failed");
     }
 }
 
@@ -175,7 +177,6 @@ int fork(void) {
 
     env = envs + ENVX(syscall_getenvid());
     if (newenvid == 0) { // son
-        // env = envs + ENVX(syscall_getenvid());
         return 0;
     }
     u_int j;
@@ -187,23 +188,16 @@ int fork(void) {
                 }
             }
         }
-    } /*
-     for (i = 0; i < USTACKTOP; i+=BY2PG) {
-         //writef("now:0x%x ",i);
-         if (((Pde*)((*vpd))[i >> PDSHIFT] ) &&
-             (((Pte*)(*vpt))[i >> PGSHIFT] )) {
-             duppage(newenvid, VPN(i));
-             // writef("valid:%d ",i);
-         }
-     }*/
-    // writef("1");
+    }
+
     if (syscall_mem_alloc(newenvid, UXSTACKTOP - BY2PG, PTE_V | PTE_R) < 0)
         user_panic("fork alloc f");
     if (syscall_set_pgfault_handler(newenvid, __asm_pgfault_handler, UXSTACKTOP) < 0)
         user_panic("fork pg f");
     if (syscall_set_env_status(newenvid, ENV_RUNNABLE) < 0)
         user_panic("fork set f");
-    // writef("fork end!haha!envid %d ",newenvid);
+
+    // writef("fork end, envid %d ",newenvid);
     return newenvid;
 }
 
