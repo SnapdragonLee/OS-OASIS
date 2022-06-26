@@ -194,17 +194,15 @@ int spawn(char *prog, char **argv) {
     // Your code begins here
     // Before Step 2 , You had better check the "target" spawned is a execute bin
     fd = r;
-    if ((r = readn(fd, elfbuf, sizeof(Elf32_Ehdr))) < 0)
+    if ((r = readn(fd, elfbuf, sizeof(Elf32_Ehdr))) < 0) {
         user_panic("read ehdr failed");
-    ehdr = elfbuf;
+    }
 
+    ehdr = elfbuf;
     res = ((struct Filefd *) num2fd(fd))->f_file.f_size;
 
     if (res < 4 || !usr_is_elf_format(ehdr) || ehdr->e_type != 2)
         user_panic("not elf or exec");
-    size = ehdr->e_phentsize;
-    text_start = ehdr->e_phoff;
-    count = ehdr->e_phnum;
 
     // Step 2: Allocate an env (Hint: using syscall_env_alloc())
     if ((child_envid = syscall_env_alloc()) < 0)
@@ -222,6 +220,11 @@ int spawn(char *prog, char **argv) {
     // Note2: You can achieve this func in any way ，remember to ensure the correctness
     //        Maybe you can review lab3
     // Your code ends here
+
+    size = ehdr->e_phentsize;
+    text_start = ehdr->e_phoff;
+    count = ehdr->e_phnum;
+
     for (i = 0; i < count; i++) {
         if ((r = seek(fd, text_start)) < 0)
             user_panic("seek failed");
@@ -234,9 +237,6 @@ int spawn(char *prog, char **argv) {
         }
         text_start += size;
     }
-
-    // int res=count*size;
-    // for(i=0;i<count;i++)res+=size;
 
     struct Trapframe *tf;
     writef("\n::::::::::spawn size : %x  sp : %x::::::::\n", res, esp);

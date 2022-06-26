@@ -38,20 +38,22 @@ void ide_read(u_int diskno, u_int secno, void *dst, u_int nsecs) {
         if (syscall_write_dev(&diskno, 0x13000010, 4) != 0) {
             user_panic("write failed!\n");
         }
+
         // set offset
         if (syscall_write_dev(&offset_now, 0x13000000, 4) != 0) {
             user_panic("write failed!\n");
         }
+
         // set value
         if (syscall_write_dev(&read, 0x13000020, 4) != 0) {
             user_panic("write failed!\n");
         }
-        // --- reading ---
 
         // get status
         if (syscall_read_dev(&op_status, 0x13000030, 4) != 0) {
             user_panic("write failed!\n");
         }
+
         if (op_status == 0) {
             user_panic("read failed!\n");
         }
@@ -62,6 +64,7 @@ void ide_read(u_int diskno, u_int secno, void *dst, u_int nsecs) {
         }
 
         offset += 0x200;
+        // error occurred, then panic.
     }
 }
 

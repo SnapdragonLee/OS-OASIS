@@ -80,7 +80,8 @@ void runcmd(char *s) {
     int fdnum;
     rightpipe = 0;
     gettoken(s, 0);
-    again:
+
+again:
     argc = 0;
     for (;;) {
         c = gettoken(0, &t);
@@ -154,7 +155,7 @@ void runcmd(char *s) {
         }
     }
 
-    runit:
+runit:
     if (argc == 0) {
         if (debug_)
             writef("EMPTY COMMAND\n");

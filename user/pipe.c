@@ -148,7 +148,7 @@ static int piperead(struct Fd *fd, void *vbuf, u_int n, u_int offset) {
     }
     return n;
 
-    // user_panic("piperead not implemented");
+    //  user_panic("piperead not implemented");
     //	return -E_INVAL;
 }
 
@@ -169,6 +169,7 @@ static int pipewrite(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {
     for (i = 0; i < n; i++) {
         while (p->p_wpos - p->p_rpos == BY2PIPE) {
             if (_pipeisclosed(fd, p)) {
+                //	return -E_INVAL;
                 return 0;
             }
             syscall_yield();
@@ -176,6 +177,7 @@ static int pipewrite(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {
         p->p_buf[p->p_wpos % BY2PIPE] = wbuf[i];
         p->p_wpos++;
     }
+
     return n;
 
     // user_panic("pipewrite not implemented");
@@ -184,8 +186,7 @@ static int pipewrite(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {
 static int pipestat(struct Fd *fd, struct Stat *stat) { struct Pipe *p; }
 
 static int pipeclose(struct Fd *fd) {
-    struct Fd *tmp = fd;
     syscall_mem_unmap(0, fd);
-    syscall_mem_unmap(0, fd2data(tmp));
+    syscall_mem_unmap(0, fd2data(fd));
     return 0;
 }
