@@ -3,7 +3,7 @@
 #include <mmu.h>
 
 void exit(void) {
-    // close_all();
+    close_all();
     syscall_env_destroy(0);
 }
 

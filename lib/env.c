@@ -19,6 +19,32 @@ extern Pde *boot_pgdir;
 extern char *KERNEL_SP;
 
 /* Overview:
+ *    This function is using to fix 30-commands-then-panic.
+ */
+
+static u_int asid_bitmap[2] = {0};
+
+static u_int asid_alloc() {
+    int i, index, inner;
+    for (i = 0; i < 64; ++i) {
+        index = i >> 5;
+        inner = i & 31;
+        if ((asid_bitmap[index] & (1 << inner)) == 0) {
+            asid_bitmap[index] |= 1 << inner;
+            return i;
+        }
+    }
+    panic("too many process!");
+}
+
+static void asid_free(u_int i) {
+    int index, inner;
+    index = i >> 5;
+    inner = i & 31;
+    asid_bitmap[index] &= ~(1 << inner);
+}
+
+/* Overview:
  *  This function is for making an unique ID for every env.
  *
  * Pre-Condition:
@@ -33,9 +59,10 @@ u_int mkenvid(struct Env *e) {
 
     /*Hint: lower bits of envid hold e's position in the envs array. */
     u_int idx = e - envs;
+    u_int asid = asid_alloc();
 
     /*Hint:  high bits of envid hold an increasing number. */
-    return (++next_env_id << (1 + LOG2NENV)) | idx;
+    return (asid << (1 + LOG2NENV)) | (1 << LOG2NENV) | idx;
 }
 
 /* Overview:
