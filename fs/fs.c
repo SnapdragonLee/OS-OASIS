@@ -65,7 +65,7 @@ int map_block(u_int blockno) {
 // Overview:
 //    Unmap a block.
 void unmap_block(u_int blockno) {
-    int r;
+    // int r;
 
     // Step 1: check if this block is mapped.
     if (!block_is_mapped(blockno)) {
@@ -506,7 +506,7 @@ int dir_lookup(struct File *dir, char *name, struct File **file) {
         // Step 3: Find target file by file name in all files on this block.
         // If we find the target file, set the result to *file and set f_dir field.
         for (j = 0; j < FILE2BLK; j++) {
-            if (strcmp(f[j].f_name, name) == 0) {
+            if (strcmp((void *)f[j].f_name, (void *)name) == 0) {
                 *file = &f[j];
                 f[j].f_dir = dir;
                 return 0;

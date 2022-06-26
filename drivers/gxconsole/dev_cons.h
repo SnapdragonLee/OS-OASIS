@@ -15,5 +15,7 @@
 #define        DEV_CONS_PUTGETCHAR            0x0000
 #define        DEV_CONS_HALT            0x0010
 
+void printcharc(char ch);
+
 
 #endif    /*  TESTMACHINE_CONS_H  */

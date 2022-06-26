@@ -162,6 +162,8 @@ int delete(const char *path);
 
 int ftruncate(int fd, u_int size);
 
+int remove(const char *path);
+
 int sync(void);
 
 #define user_assert(x)                                                                                                 \

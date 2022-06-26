@@ -23,7 +23,7 @@ static void user_myoutput(void *arg, char *s, int l) {
 void writef(char *fmt, ...) {
     va_list ap;
     va_start(ap, fmt);
-    user_lp_Print(user_myoutput, 0, fmt, ap);
+    user_lp_Print((void *)user_myoutput, 0, (char *) fmt, ap);
     va_end(ap);
 }
 
@@ -32,7 +32,7 @@ void _user_panic(const char *file, int line, const char *fmt, ...) {
 
     va_start(ap, fmt);
     writef("panic at %s:%d: ", file, line);
-    user_lp_Print(user_myoutput, 0, (char *) fmt, ap);
+    user_lp_Print((void *)user_myoutput, 0, (char *) fmt, ap);
     writef("\n");
     va_end(ap);
 

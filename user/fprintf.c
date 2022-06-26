@@ -18,7 +18,7 @@ int fwritef(int fd, const char *fmt, ...) {
     va_list ap;
     va_start(ap, fmt);
     user_bzero((void *) buf, 512);
-    user_lp_Print(user_out2string, buf, fmt, ap);
+    user_lp_Print((void *)user_out2string, buf, fmt, ap);
     va_end(ap);
     return write(fd, buf, strlen(buf));
 }

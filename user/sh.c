@@ -77,7 +77,7 @@ int gettoken(char *s, char **p1) {
 void runcmd(char *s) {
     char *argv[MAXARGS], *t;
     int argc, c, i, r, p[2], fd, rightpipe;
-    int fdnum;
+    // int fdnum = 0;
     rightpipe = 0;
     gettoken(s, 0);
 

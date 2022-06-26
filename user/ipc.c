@@ -1,6 +1,7 @@
 // User-level IPC library routines
 
-#include "lib.h" #include < mmu.h>
+#include "lib.h"
+#include <mmu.h>
 #include <env.h>
 
 extern struct Env *env;

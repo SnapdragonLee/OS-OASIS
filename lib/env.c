@@ -54,7 +54,7 @@ static void asid_free(u_int i) {
  */
 
 u_int mkenvid(struct Env *e) {
-    static u_long next_env_id = 0;
+    /* static u_long next_env_id = 0; */
 
     /*Hint: lower bits of envid hold e's position in the envs array. */
     u_int idx = e - envs;
@@ -508,7 +508,7 @@ void env_run(struct Env *e) {
     curenv->env_status = ENV_RUNNABLE;
 
     /*Step 3: Use lcontext() to switch to its address space. */
-    lcontext(curenv->env_pgdir);
+    lcontext((u_int) curenv->env_pgdir);
 
     /*Step 4: Use env_pop_tf() to restore the environment's
      * environment   registers and return to user mode.

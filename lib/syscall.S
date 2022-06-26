@@ -6,6 +6,7 @@
 
 /*** exercise 4.2 ***/
 NESTED(handle_sys,TF_SIZE, sp)
+    .set noat
     SAVE_ALL                            // Macro used to save trapframe
     CLI                                 // Clean Interrupt Mask
     nop

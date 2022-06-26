@@ -30,8 +30,8 @@ LEAF(env_pop_tf)
       lw   v0,TF_HI(k0)                     
       lw   v1,TF_EPC(k0)                    
       mthi   v0                               
-      mtc0   v1,CP0_EPC                       
-      lw   $31,TF_REG31(k0)                 
+      mtc0   v1,CP0_EPC
+      lw   $31,TF_REG31(k0)
       lw   $30,TF_REG30(k0)     
       lw   $29,TF_REG29(k0)            
       lw   $28,TF_REG28(k0)                 
@@ -58,9 +58,10 @@ LEAF(env_pop_tf)
       lw   $5,TF_REG5(k0)                   
       lw   $4,TF_REG4(k0)                   
       lw   $3,TF_REG3(k0)                   
-      lw   $2,TF_REG2(k0)                   
+      lw   $2,TF_REG2(k0)
+.set noat
       lw   $1,TF_REG1(k0)
-
+.set at
       lw   k1,TF_PC(k0)
 
       lw   k0,TF_STATUS(k0)                 

@@ -164,8 +164,8 @@ static int pipewrite(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {
     struct Pipe *p;
     char *wbuf;
 
-    p = fd2data(fd);
-    wbuf = vbuf;
+    p = (struct Pipe *)fd2data(fd);
+    wbuf = (char *)vbuf;
     for (i = 0; i < n; i++) {
         while (p->p_wpos - p->p_rpos == BY2PIPE) {
             if (_pipeisclosed(fd, p)) {
@@ -183,10 +183,13 @@ static int pipewrite(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {
     // user_panic("pipewrite not implemented");
 }
 
-static int pipestat(struct Fd *fd, struct Stat *stat) { struct Pipe *p; }
+static int pipestat(struct Fd *fd, struct Stat *stat) {
+    //struct Pipe *p; /what for?
+    return 0;
+}
 
 static int pipeclose(struct Fd *fd) {
-    syscall_mem_unmap(0, fd);
+    syscall_mem_unmap(0, (u_int)fd);
     syscall_mem_unmap(0, fd2data(fd));
     return 0;
 }

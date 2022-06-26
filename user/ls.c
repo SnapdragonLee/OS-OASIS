@@ -27,7 +27,7 @@ void lsdir(char *path, char *prefix) {
         user_panic("open %s: %e", path, fd);
     while ((n = readn(fd, &f, sizeof f)) == sizeof f)
         if (f.f_name[0]) {
-            ls1(prefix, f.f_type == FTYPE_DIR, f.f_size, f.f_name);
+            ls1(prefix, f.f_type == FTYPE_DIR, f.f_size, (char *)f.f_name);
         }
     if (n > 0)
         user_panic("short read in directory %s", path);

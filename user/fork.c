@@ -88,21 +88,21 @@ static void pgfault(u_int va) {
     }
 
     // map the new page at a temporary place
-    tmp = USTACKTOP;
-    if (syscall_mem_alloc(0, tmp, PTE_R | PTE_V) < 0) {
+    tmp = (u_int *)USTACKTOP;
+    if (syscall_mem_alloc(0, (u_int)tmp, (u_int)(PTE_R | PTE_V)) < 0) {
         user_panic("sys alloc failed");
     }
 
     // copy the content
-    user_bcopy(va, tmp, BY2PG);
+    user_bcopy((const void *)va, (void *)tmp, BY2PG);
 
     // map the page on the appropriate place
-    if (syscall_mem_map(0, tmp, 0, va, PTE_R | PTE_V) < 0) {
+    if (syscall_mem_map(0, (u_int)tmp, 0, (u_int)va, (u_int)(PTE_R | PTE_V)) < 0) {
         user_panic("sys mem_map failed");
     }
 
     // unmap the temporary place
-    if (syscall_mem_unmap(0, tmp) < 0) {
+    if (syscall_mem_unmap(0, (u_int)tmp) < 0) {
         user_panic("sys mem_unmap failed");
     }
 }

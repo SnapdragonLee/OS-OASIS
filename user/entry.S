@@ -100,8 +100,10 @@ nop
 		lw	$5,TF_REG5(sp)                   
 		lw	$4,TF_REG4(sp)                   
 		lw	$3,TF_REG3(sp)                   
-		lw	$2,TF_REG2(sp)                   
-		lw	$1,TF_REG1(sp) 
+		lw	$2,TF_REG2(sp)
+        .set noat
+		lw	$1,TF_REG1(sp)
+        .set at
 		lw	k0,TF_EPC(sp) 	//atomic operation needed 
 		jr	k0			//
 		lw	sp,TF_REG29(sp)  /* Deallocate stack */  

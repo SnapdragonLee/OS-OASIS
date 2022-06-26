@@ -21,6 +21,10 @@ void ide_read(u_int diskno, u_int secno, void *dst, u_int nsecs);
 void ide_write(u_int diskno, u_int secno, void *src, u_int nsecs);
 
 /* fs.c */
+void write_block(u_int blockno);
+
+int file_create(char *path, struct File **file);
+
 int file_open(char *path, struct File **pfile);
 
 int file_get_block(struct File *f, u_int blockno, void **pblk);

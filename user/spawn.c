@@ -56,7 +56,7 @@ int init_stack(u_int child, char **argv, u_int *init_esp) {
     }
     //    - set args[argc] to 0 to null-terminate the args array.
     ctemp--;
-    args[argc] = ctemp;
+    args[argc] = (u_int)ctemp;
     //    - push two more words onto the child's stack below 'args',
     //      containing the argc and argv parameters to be passed
     //      to the child's umain() function.
@@ -124,7 +124,7 @@ int usr_load_elf(int fd, Elf32_Phdr *ph, int child_envid) {
         if ((r = syscall_mem_map(child_envid, va, 0, BUFPAGE, PTE_V | PTE_R)) < 0) {
             return r;
         }
-        user_bcopy(buf, BUFPAGE + offset, temp);
+        user_bcopy((void *)buf, (void *)(BUFPAGE + offset), temp);
         if ((r = syscall_mem_unmap(0, BUFPAGE)) < 0) {
             return r;
         }
@@ -144,7 +144,7 @@ int usr_load_elf(int fd, Elf32_Phdr *ph, int child_envid) {
         if ((r = syscall_mem_map(child_envid, va + i, 0, BUFPAGE, PTE_V | PTE_R)) < 0) {
             return r;
         }
-        user_bcopy(buf, BUFPAGE, temp);
+        user_bcopy((void *)buf, (void *)BUFPAGE, temp);
         if ((r = syscall_mem_unmap(0, BUFPAGE)) < 0) {
             return r;
         }
@@ -156,7 +156,7 @@ int usr_load_elf(int fd, Elf32_Phdr *ph, int child_envid) {
         if ((r = syscall_mem_map(child_envid, va + i, 0, BUFPAGE, PTE_V | PTE_R)) < 0) {
             return r;
         }
-        user_bzero(BUFPAGE + offset, temp);
+        user_bzero((void *)(BUFPAGE + offset), temp);
         if ((r = syscall_mem_unmap(0, BUFPAGE)) < 0) {
             return r;
         }
@@ -179,7 +179,7 @@ int spawn(char *prog, char **argv) {
     int fd;
     u_int child_envid;
     int size, text_start, count;
-    u_int i, *blk;
+    u_int i; /* *blk */
     u_int esp;
     Elf32_Ehdr *ehdr;
     Elf32_Phdr *phdr;
@@ -198,10 +198,10 @@ int spawn(char *prog, char **argv) {
         user_panic("read ehdr failed");
     }
 
-    ehdr = elfbuf;
+    ehdr = (Elf32_Ehdr *)elfbuf;
     res = ((struct Filefd *) num2fd(fd))->f_file.f_size;
 
-    if (res < 4 || !usr_is_elf_format(ehdr) || ehdr->e_type != 2)
+    if (res < 4 || !usr_is_elf_format((u_char *)ehdr) || ehdr->e_type != 2)
         user_panic("not elf or exec");
 
     // Step 2: Allocate an env (Hint: using syscall_env_alloc())
@@ -230,7 +230,7 @@ int spawn(char *prog, char **argv) {
             user_panic("seek failed");
         if ((r = readn(fd, elfbuf, size)) < 0)
             user_panic("readn failed");
-        phdr = elfbuf;
+        phdr = (Elf32_Phdr *)elfbuf;
         if (phdr->p_type == PT_LOAD) {
             if ((r = usr_load_elf(fd, phdr, child_envid)) < 0)
                 user_panic("load failed");

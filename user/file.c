@@ -255,6 +255,7 @@ int remove(const char *path) {
     // Your code here.
     // Call fsipc_remove.
     fsipc_remove(path);
+    return 0;
 }
 
 // Overview:

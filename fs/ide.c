@@ -29,28 +29,28 @@ void ide_read(u_int diskno, u_int secno, void *dst, u_int nsecs) {
     int offset = 0;
     int op_status = 0;
     int read = 0;
-    int can_read = 0;
+    // int can_read = 0;
 
     while (offset_begin + offset < offset_end) {
         offset_now = offset_begin + offset;
 
         // set diskno
-        if (syscall_write_dev(&diskno, 0x13000010, 4) != 0) {
+        if (syscall_write_dev((u_int)&diskno, 0x13000010, 4) != 0) {
             user_panic("write failed!\n");
         }
 
         // set offset
-        if (syscall_write_dev(&offset_now, 0x13000000, 4) != 0) {
+        if (syscall_write_dev((u_int)&offset_now, 0x13000000, 4) != 0) {
             user_panic("write failed!\n");
         }
 
         // set value
-        if (syscall_write_dev(&read, 0x13000020, 4) != 0) {
+        if (syscall_write_dev((u_int)&read, 0x13000020, 4) != 0) {
             user_panic("write failed!\n");
         }
 
         // get status
-        if (syscall_read_dev(&op_status, 0x13000030, 4) != 0) {
+        if (syscall_read_dev((u_int)&op_status, 0x13000030, 4) != 0) {
             user_panic("write failed!\n");
         }
 
@@ -59,7 +59,7 @@ void ide_read(u_int diskno, u_int secno, void *dst, u_int nsecs) {
         }
 
         // get data
-        if (syscall_read_dev(dst + offset, 0x13004000, 0x200) != 0) {
+        if (syscall_read_dev((u_int)(dst + offset), 0x13004000, 0x200) != 0) {
             user_panic("read failed\n");
         }
 
@@ -88,7 +88,7 @@ void ide_write(u_int diskno, u_int secno, void *src, u_int nsecs) {
     int offset = 0;
     int op_status = 0;
     int write = 1;
-    int can_read = 0;
+    //int can_read = 0;
 
     writef("diskno: %d\n", diskno);
 
@@ -96,25 +96,25 @@ void ide_write(u_int diskno, u_int secno, void *src, u_int nsecs) {
         offset_now = offset_begin + offset;
 
         // set diskno
-        if (syscall_write_dev(&diskno, 0x13000010, 4) != 0) {
+        if (syscall_write_dev((u_int)&diskno, 0x13000010, 4) != 0) {
             user_panic("write failed!\n");
         }
         // set offset
-        if (syscall_write_dev(&offset_now, 0x13000000, 4) != 0) {
+        if (syscall_write_dev((u_int)&offset_now, 0x13000000, 4) != 0) {
             user_panic("write failed!\n");
         }
         // write data
-        if (syscall_write_dev(src + offset, 0x13004000, 0x200) != 0) {
+        if (syscall_write_dev((u_int)(src + offset), 0x13004000, 0x200) != 0) {
             user_panic("read failed!\n");
         }
         // set value
-        if (syscall_write_dev(&write, 0x13000020, 4) != 0) {
+        if (syscall_write_dev((u_int)&write, 0x13000020, 4) != 0) {
             user_panic("write failed!\n");
         }
         // --- writing ---
 
         // get status
-        if (syscall_read_dev(&op_status, 0x13000030, 4) != 0) {
+        if (syscall_read_dev((u_int)&op_status, 0x13000030, 4) != 0) {
             user_panic("write failed!\n");
         }
         if (op_status == 0) {

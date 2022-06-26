@@ -109,13 +109,13 @@ void serve_open(u_int envid, struct Fsreq_open *rq) {
     // Open the file.
     if ((r = file_open((char *) path, &f)) < 0) {
         if (r == -E_NOT_FOUND && (rq->req_omode & O_CREAT)) {
-            if ((r = file_create(path, &f)) < 0) {
-                return r;
+            if (file_create((char *)path, (struct File **)&f) < 0) {
+                return ;
             }
             f->f_type = FTYPE_REG;
         } else if (r == -E_NOT_FOUND && (rq->req_omode & O_MKDIR)) {
-            if ((r = file_create(path, &f)) < 0) {
-                return r;
+            if (file_create((char *)path, (struct File **)&f) < 0) {
+                return ;
             }
             f->f_type = FTYPE_DIR;
         } else {
@@ -207,7 +207,7 @@ void serve_remove(u_int envid, struct Fsreq_remove *rq) {
 
     // Step 2: Remove file from file system and response to user-level process.
     // Call file_remove and ipc_send an approprite value to corresponding env.
-    r = file_remove(path);
+    r = file_remove((char *)path);
     ipc_send(envid, r, 0, 0);
 }
 
