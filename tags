@@ -1,0 +1,1714 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/snapdragon_manjaro21/Project_Manjr/C_Based/OS_OASIS/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+$(drivers)	drivers/Makefile	/^$(drivers):$/;"	t
+$(modules)	Makefile	/^$(modules): $/;"	t
+%.b	fs/Makefile	/^%.b: ..\/user\/entry.o ..\/user\/syscall_wrap.o %.o $(USERLIB) $(FSLIB)$/;"	t
+%.b	user/Makefile	/^%.b: entry.o syscall_wrap.o %.o $(USERLIB)$/;"	t
+%.b.c	fs/Makefile	/^%.b.c: %.b$/;"	t
+%.b.c	user/Makefile	/^%.b.c: %.b$/;"	t
+%.o	boot/Makefile	/^%.o: %.S$/;"	t
+%.o	drivers/gxconsole/Makefile	/^%.o: %.c %.h$/;"	t
+%.o	fs/Makefile	/^%.o: $(user_dir)\/lib.h$/;"	t
+%.o	fs/Makefile	/^%.o: %.S$/;"	t
+%.o	fs/Makefile	/^%.o: %.c$/;"	t
+%.o	init/Makefile	/^%.o: %.c$/;"	t
+%.o	lib/Makefile	/^%.o: %.S$/;"	t
+%.o	lib/Makefile	/^%.o: %.c$/;"	t
+%.o	mm/Makefile	/^%.o: %.S$/;"	t
+%.o	mm/Makefile	/^%.o: %.c$/;"	t
+%.o	readelf/Makefile	/^%.o: %.c$/;"	t
+%.o	user/Makefile	/^%.o: %.S$/;"	t
+%.o	user/Makefile	/^%.o: %.c$/;"	t
+%.o	user/Makefile	/^%.o: lib.h$/;"	t
+%.x	fs/Makefile	/^%.x: %.b.c$/;"	t
+%.x	user/Makefile	/^%.x: %.b.c $/;"	t
+.bss	tools/scse0_3.lds	/^  .bss  : {$/;"	S
+.bss	user/user.lds	/^  .bss : {$/;"	S
+.data	tools/scse0_3.lds	/^  .data : {$/;"	S
+.data	user/user.lds	/^  .data : {			\/* Data *\/$/;"	S
+.except_vec3	tools/scse0_3.lds	/^  .except_vec3 : {$/;"	S
+.sdata	tools/scse0_3.lds	/^  .sdata : {$/;"	S
+.text	tools/scse0_3.lds	/^  .text : {$/;"	S
+.text	user/user.lds	/^  .text : {$/;"	S
+ARGBEGIN	include/args.h	/^#define ARGBEGIN /;"	d
+ARGC	include/args.h	/^#define ARGC(/;"	d
+ARGEND	include/args.h	/^#define ARGEND /;"	d
+ARGF	include/args.h	/^#define ARGF(/;"	d
+AT	include/asm-mips3k/regdef.h	/^#define AT /;"	d
+AT	include/asm/regdef.h	/^#define AT /;"	d
+Acknowledgement	README.md	/^#### Acknowledgement$/;"	t	section:OS-OASIS""Additional
+Additional	README.md	/^## Additional$/;"	s	chapter:OS-OASIS
+BIT2BLK	include/fs.h	/^#define BIT2BLK /;"	d
+BLOCK_BMAP	fs/fsformat.c	/^    BLOCK_BMAP = 2,$/;"	e	enum:__anon0ae0c3200103	file:
+BLOCK_BOOT	fs/fsformat.c	/^    BLOCK_BOOT = 1,$/;"	e	enum:__anon0ae0c3200103	file:
+BLOCK_DATA	fs/fsformat.c	/^    BLOCK_DATA = 4,$/;"	e	enum:__anon0ae0c3200103	file:
+BLOCK_FILE	fs/fsformat.c	/^    BLOCK_FILE = 5,$/;"	e	enum:__anon0ae0c3200103	file:
+BLOCK_FREE	fs/fsformat.c	/^    BLOCK_FREE = 0,$/;"	e	enum:__anon0ae0c3200103	file:
+BLOCK_INDEX	fs/fsformat.c	/^    BLOCK_INDEX = 6,$/;"	e	enum:__anon0ae0c3200103	file:
+BLOCK_SUPER	fs/fsformat.c	/^    BLOCK_SUPER = 3,$/;"	e	enum:__anon0ae0c3200103	file:
+BUFPAGE	user/spawn.c	/^#define BUFPAGE /;"	d	file:
+BUILD_HANDLER	lib/genex.S	/^.macro	BUILD_HANDLER exception handler clear$/;"	m
+BY2BLK	include/fs.h	/^#define BY2BLK /;"	d
+BY2FILE	include/fs.h	/^#define BY2FILE /;"	d
+BY2PG	fs/fsformat.c	/^#define BY2PG /;"	d	file:
+BY2PG	include/mmu.h	/^#define BY2PG /;"	d
+BY2PIPE	user/pipe.c	/^#define BY2PIPE /;"	d	file:
+BY2SECT	fs/fs.h	/^#define BY2SECT /;"	d
+Block	fs/fsformat.c	/^struct Block {$/;"	s	file:
+CC	drivers/Makefile	/^CC			  := $(CROSS_COMPILE)gcc$/;"	m
+CC	include.mk	/^CC			  := $(CROSS_COMPILE)gcc$/;"	m
+CC	readelf/Makefile	/^CC        := gcc$/;"	m
+CFLAGS	drivers/Makefile	/^CFLAGS		  := -O -G 0 -mno-abicalls -fno-builtin -Wall$/;"	m
+CFLAGS	include.mk	/^CFLAGS		  := -O -G 0 -mno-abicalls -fno-builtin -Wa,-xgot -Wall -fPIC -march=r3000$/;"	m
+CHAR_BIT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define CHAR_BIT /;"	d
+CHAR_BIT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define CHAR_BIT /;"	d
+CHAR_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define CHAR_MAX /;"	d
+CHAR_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define CHAR_MAX /;"	d
+CHAR_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#  define CHAR_MIN /;"	d
+CHAR_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define CHAR_MIN /;"	d
+CHAR_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#  define CHAR_MIN /;"	d
+CHAR_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define CHAR_MIN /;"	d
+CLI	lib/genex.S	/^CLI$/;"	l
+CMAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define CMAGIC /;"	d
+CP0_BADVADDR	include/asm-mips3k/cp0regdef.h	/^#define CP0_BADVADDR /;"	d
+CP0_BADVADDR	include/asm/cp0regdef.h	/^#define CP0_BADVADDR /;"	d
+CP0_CACHEERR	include/asm-mips3k/cp0regdef.h	/^#define CP0_CACHEERR /;"	d
+CP0_CACHEERR	include/asm/cp0regdef.h	/^#define CP0_CACHEERR /;"	d
+CP0_CAUSE	include/asm-mips3k/cp0regdef.h	/^#define CP0_CAUSE /;"	d
+CP0_CAUSE	include/asm/cp0regdef.h	/^#define CP0_CAUSE /;"	d
+CP0_COMPARE	include/asm-mips3k/cp0regdef.h	/^#define CP0_COMPARE /;"	d
+CP0_COMPARE	include/asm/cp0regdef.h	/^#define CP0_COMPARE /;"	d
+CP0_CONFIG	include/asm-mips3k/cp0regdef.h	/^#define CP0_CONFIG /;"	d
+CP0_CONFIG	include/asm/cp0regdef.h	/^#define CP0_CONFIG /;"	d
+CP0_CONTEXT	include/asm-mips3k/cp0regdef.h	/^#define CP0_CONTEXT /;"	d
+CP0_CONTEXT	include/asm/cp0regdef.h	/^#define CP0_CONTEXT /;"	d
+CP0_COUNT	include/asm-mips3k/cp0regdef.h	/^#define CP0_COUNT /;"	d
+CP0_COUNT	include/asm/cp0regdef.h	/^#define CP0_COUNT /;"	d
+CP0_DIAGNOSTIC	include/asm-mips3k/cp0regdef.h	/^#define CP0_DIAGNOSTIC /;"	d
+CP0_DIAGNOSTIC	include/asm/cp0regdef.h	/^#define CP0_DIAGNOSTIC /;"	d
+CP0_ECC	include/asm-mips3k/cp0regdef.h	/^#define CP0_ECC /;"	d
+CP0_ECC	include/asm/cp0regdef.h	/^#define CP0_ECC /;"	d
+CP0_ENTRYHI	include/asm-mips3k/cp0regdef.h	/^#define CP0_ENTRYHI /;"	d
+CP0_ENTRYHI	include/asm/cp0regdef.h	/^#define CP0_ENTRYHI /;"	d
+CP0_ENTRYLO0	include/asm-mips3k/cp0regdef.h	/^#define CP0_ENTRYLO0 /;"	d
+CP0_ENTRYLO0	include/asm/cp0regdef.h	/^#define CP0_ENTRYLO0 /;"	d
+CP0_ENTRYLO1	include/asm-mips3k/cp0regdef.h	/^#define CP0_ENTRYLO1 /;"	d
+CP0_ENTRYLO1	include/asm/cp0regdef.h	/^#define CP0_ENTRYLO1 /;"	d
+CP0_EPC	include/asm-mips3k/cp0regdef.h	/^#define CP0_EPC /;"	d
+CP0_EPC	include/asm/cp0regdef.h	/^#define CP0_EPC /;"	d
+CP0_ERROREPC	include/asm-mips3k/cp0regdef.h	/^#define CP0_ERROREPC /;"	d
+CP0_ERROREPC	include/asm/cp0regdef.h	/^#define CP0_ERROREPC /;"	d
+CP0_FRAMEMASK	include/asm-mips3k/cp0regdef.h	/^#define CP0_FRAMEMASK /;"	d
+CP0_FRAMEMASK	include/asm/cp0regdef.h	/^#define CP0_FRAMEMASK /;"	d
+CP0_INDEX	include/asm-mips3k/cp0regdef.h	/^#define CP0_INDEX /;"	d
+CP0_INDEX	include/asm/cp0regdef.h	/^#define CP0_INDEX /;"	d
+CP0_LLADDR	include/asm-mips3k/cp0regdef.h	/^#define CP0_LLADDR /;"	d
+CP0_LLADDR	include/asm/cp0regdef.h	/^#define CP0_LLADDR /;"	d
+CP0_PAGEMASK	include/asm-mips3k/cp0regdef.h	/^#define CP0_PAGEMASK /;"	d
+CP0_PAGEMASK	include/asm/cp0regdef.h	/^#define CP0_PAGEMASK /;"	d
+CP0_PERFORMANCE	include/asm-mips3k/cp0regdef.h	/^#define CP0_PERFORMANCE /;"	d
+CP0_PERFORMANCE	include/asm/cp0regdef.h	/^#define CP0_PERFORMANCE /;"	d
+CP0_PRID	include/asm-mips3k/cp0regdef.h	/^#define CP0_PRID /;"	d
+CP0_PRID	include/asm/cp0regdef.h	/^#define CP0_PRID /;"	d
+CP0_RANDOM	include/asm-mips3k/cp0regdef.h	/^#define CP0_RANDOM /;"	d
+CP0_RANDOM	include/asm/cp0regdef.h	/^#define CP0_RANDOM /;"	d
+CP0_STATUS	include/asm-mips3k/cp0regdef.h	/^#define CP0_STATUS /;"	d
+CP0_STATUS	include/asm/cp0regdef.h	/^#define CP0_STATUS /;"	d
+CP0_TAGHI	include/asm-mips3k/cp0regdef.h	/^#define CP0_TAGHI /;"	d
+CP0_TAGHI	include/asm/cp0regdef.h	/^#define CP0_TAGHI /;"	d
+CP0_TAGLO	include/asm-mips3k/cp0regdef.h	/^#define CP0_TAGLO /;"	d
+CP0_TAGLO	include/asm/cp0regdef.h	/^#define CP0_TAGLO /;"	d
+CP0_WATCHHI	include/asm-mips3k/cp0regdef.h	/^#define CP0_WATCHHI /;"	d
+CP0_WATCHHI	include/asm/cp0regdef.h	/^#define CP0_WATCHHI /;"	d
+CP0_WATCHLO	include/asm-mips3k/cp0regdef.h	/^#define CP0_WATCHLO /;"	d
+CP0_WATCHLO	include/asm/cp0regdef.h	/^#define CP0_WATCHLO /;"	d
+CP0_WIRED	include/asm-mips3k/cp0regdef.h	/^#define CP0_WIRED /;"	d
+CP0_WIRED	include/asm/cp0regdef.h	/^#define CP0_WIRED /;"	d
+CP0_XCONTEXT	include/asm-mips3k/cp0regdef.h	/^#define CP0_XCONTEXT /;"	d
+CP0_XCONTEXT	include/asm/cp0regdef.h	/^#define CP0_XCONTEXT /;"	d
+CROSS_COMPILE	drivers/Makefile	/^CROSS_COMPILE := \/opt\/eldk\/usr\/bin\/mips_4KC-$/;"	m
+CROSS_COMPILE	include.mk	/^CROSS_COMPILE := $(PROJECT_DIR)compiler\/usr\/bin\/mips_4KC-$/;"	m
+Ctod	lib/print.c	/^#define Ctod(/;"	d	file:
+Ctod	user/print.c	/^#define Ctod(/;"	d	file:
+DBL_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_DIG	/;"	d
+DBL_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_DIG	/;"	d
+DBL_EPSILON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_EPSILON	/;"	d
+DBL_EPSILON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_EPSILON	/;"	d
+DBL_MANT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MANT_DIG	/;"	d
+DBL_MANT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MANT_DIG	/;"	d
+DBL_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MAX	/;"	d
+DBL_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MAX	/;"	d
+DBL_MAX_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MAX_10_EXP	/;"	d
+DBL_MAX_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MAX_10_EXP	/;"	d
+DBL_MAX_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MAX_EXP	/;"	d
+DBL_MAX_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MAX_EXP	/;"	d
+DBL_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MIN	/;"	d
+DBL_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MIN	/;"	d
+DBL_MIN_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MIN_10_EXP	/;"	d
+DBL_MIN_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MIN_10_EXP	/;"	d
+DBL_MIN_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DBL_MIN_EXP	/;"	d
+DBL_MIN_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DBL_MIN_EXP	/;"	d
+DECIMAL_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define DECIMAL_DIG	/;"	d
+DECIMAL_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define DECIMAL_DIG	/;"	d
+DEV_CONS_ADDRESS	drivers/gxconsole/dev_cons.h	/^#define    DEV_CONS_ADDRESS /;"	d
+DEV_CONS_HALT	drivers/gxconsole/dev_cons.h	/^#define        DEV_CONS_HALT /;"	d
+DEV_CONS_LENGTH	drivers/gxconsole/dev_cons.h	/^#define    DEV_CONS_LENGTH /;"	d
+DEV_CONS_PUTGETCHAR	drivers/gxconsole/dev_cons.h	/^#define        DEV_CONS_PUTGETCHAR /;"	d
+DISKMAP	fs/fs.h	/^#define DISKMAP /;"	d
+DISKMAX	fs/fs.h	/^#define DISKMAX /;"	d
+DISKNO	fs/fs.h	/^#define DISKNO /;"	d
+Dev	user/fd.h	/^struct Dev {$/;"	s
+EARGF	include/args.h	/^#define EARGF(/;"	d
+EI_MAG0	include/kerelf.h	/^#define EI_MAG0 /;"	d
+EI_MAG0	readelf/kerelf.h	/^#define EI_MAG0 /;"	d
+EI_MAG1	include/kerelf.h	/^#define EI_MAG1 /;"	d
+EI_MAG1	readelf/kerelf.h	/^#define EI_MAG1 /;"	d
+EI_MAG2	include/kerelf.h	/^#define EI_MAG2 /;"	d
+EI_MAG2	readelf/kerelf.h	/^#define EI_MAG2 /;"	d
+EI_MAG3	include/kerelf.h	/^#define EI_MAG3 /;"	d
+EI_MAG3	readelf/kerelf.h	/^#define EI_MAG3 /;"	d
+EI_NIDENT	include/kerelf.h	/^#define EI_NIDENT /;"	d
+EI_NIDENT	readelf/kerelf.h	/^#define EI_NIDENT /;"	d
+ELFMAG0	include/kerelf.h	/^#define ELFMAG0 /;"	d
+ELFMAG0	readelf/kerelf.h	/^#define ELFMAG0 /;"	d
+ELFMAG1	include/kerelf.h	/^#define ELFMAG1 /;"	d
+ELFMAG1	readelf/kerelf.h	/^#define ELFMAG1 /;"	d
+ELFMAG2	include/kerelf.h	/^#define ELFMAG2 /;"	d
+ELFMAG2	readelf/kerelf.h	/^#define ELFMAG2 /;"	d
+ELFMAG3	include/kerelf.h	/^#define ELFMAG3 /;"	d
+ELFMAG3	readelf/kerelf.h	/^#define ELFMAG3 /;"	d
+END	include/asm-mips3k/asm.h	/^#define END(/;"	d
+END	include/asm/asm.h	/^#define END(/;"	d
+ENVX	include/env.h	/^#define ENVX(/;"	d
+ENV_CREATE	include/env.h	/^#define ENV_CREATE(/;"	d
+ENV_CREATE2	include/env.h	/^#define ENV_CREATE2(/;"	d
+ENV_CREATE_PRIORITY	include/env.h	/^#define ENV_CREATE_PRIORITY(/;"	d
+ENV_FREE	include/env.h	/^#define ENV_FREE /;"	d
+ENV_NOT_RUNNABLE	include/env.h	/^#define ENV_NOT_RUNNABLE /;"	d
+ENV_RUNNABLE	include/env.h	/^#define ENV_RUNNABLE /;"	d
+EOF	OS_ENV/compiler/usr/bin/gcore	/^	\/usr\/bin\/gdb > \/dev\/null << EOF$/;"	h
+EOF	OS_ENV/compiler/usr/bin/mips-linux-gccbug	/^    -V | --version) cat <<EOF$/;"	h
+EOF	OS_ENV/compiler/usr/bin/mips-linux-gstack	/^$GDB --quiet $readnever -nx \/proc\/$1\/exe $1 <<EOF 2>&1 | $/;"	h
+EOF	OS_ENV/compiler/usr/bin/texi2dvi	/^cat <<EOF >$comment_iftex_sed$/;"	h
+EOF	OS_ENV/compiler/usr/bin/texi2dvi	/^cat <<EOF >$uncomment_iftex_sed$/;"	h
+EOM	OS_ENV/compiler/usr/bin/texi2dvi	/^if findprog ${TEX:-tex}; then :; else cat <<EOM$/;"	h
+EXPORT	include/asm/asm.h	/^#define    EXPORT(/;"	d
+E_BAD_ENV	include/error.h	/^#define E_BAD_ENV /;"	d
+E_BAD_ENV	include/mmu.h	/^#define E_BAD_ENV /;"	d
+E_BAD_PATH	include/error.h	/^#define E_BAD_PATH /;"	d
+E_BAD_PATH	include/mmu.h	/^#define E_BAD_PATH /;"	d
+E_FILE_EXISTS	include/error.h	/^#define E_FILE_EXISTS /;"	d
+E_FILE_EXISTS	include/mmu.h	/^#define E_FILE_EXISTS /;"	d
+E_INVAL	include/error.h	/^#define E_INVAL /;"	d
+E_INVAL	include/mmu.h	/^#define E_INVAL /;"	d
+E_IPC_NOT_RECV	include/error.h	/^#define E_IPC_NOT_RECV /;"	d
+E_IPC_NOT_RECV	include/mmu.h	/^#define E_IPC_NOT_RECV /;"	d
+E_MAX_OPEN	include/error.h	/^#define E_MAX_OPEN /;"	d
+E_MAX_OPEN	include/mmu.h	/^#define E_MAX_OPEN /;"	d
+E_NOT_EXEC	include/error.h	/^#define E_NOT_EXEC /;"	d
+E_NOT_EXEC	include/mmu.h	/^#define E_NOT_EXEC /;"	d
+E_NOT_FOUND	include/error.h	/^#define E_NOT_FOUND /;"	d
+E_NOT_FOUND	include/mmu.h	/^#define E_NOT_FOUND /;"	d
+E_NO_DISK	include/error.h	/^#define E_NO_DISK /;"	d
+E_NO_DISK	include/mmu.h	/^#define E_NO_DISK /;"	d
+E_NO_FREE_ENV	include/error.h	/^#define E_NO_FREE_ENV /;"	d
+E_NO_FREE_ENV	include/mmu.h	/^#define E_NO_FREE_ENV /;"	d
+E_NO_MEM	include/error.h	/^#define E_NO_MEM /;"	d
+E_NO_MEM	include/mmu.h	/^#define E_NO_MEM /;"	d
+E_UNSPECIFIED	include/error.h	/^#define E_UNSPECIFIED /;"	d
+E_UNSPECIFIED	include/mmu.h	/^#define E_UNSPECIFIED /;"	d
+Elf32_Addr	include/kerelf.h	/^typedef uint32_t Elf32_Addr;$/;"	t	typeref:typename:uint32_t
+Elf32_Addr	readelf/kerelf.h	/^typedef uint32_t Elf32_Addr;$/;"	t	typeref:typename:uint32_t
+Elf32_Ehdr	include/kerelf.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anonf0369ec70108
+Elf32_Ehdr	readelf/kerelf.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anonced3bdb60108
+Elf32_Half	include/kerelf.h	/^typedef uint16_t Elf32_Half;$/;"	t	typeref:typename:uint16_t
+Elf32_Half	readelf/kerelf.h	/^typedef uint16_t Elf32_Half;$/;"	t	typeref:typename:uint16_t
+Elf32_Off	include/kerelf.h	/^typedef uint32_t Elf32_Off;$/;"	t	typeref:typename:uint32_t
+Elf32_Off	readelf/kerelf.h	/^typedef uint32_t Elf32_Off;$/;"	t	typeref:typename:uint32_t
+Elf32_Phdr	include/kerelf.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anonf0369ec70208
+Elf32_Phdr	readelf/kerelf.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anonced3bdb60308
+Elf32_Section	include/kerelf.h	/^typedef uint16_t Elf32_Section;$/;"	t	typeref:typename:uint16_t
+Elf32_Section	readelf/kerelf.h	/^typedef uint16_t Elf32_Section;$/;"	t	typeref:typename:uint16_t
+Elf32_Shdr	readelf/kerelf.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anonced3bdb60208
+Elf32_Sword	include/kerelf.h	/^typedef int32_t Elf32_Sword;$/;"	t	typeref:typename:int32_t
+Elf32_Sword	readelf/kerelf.h	/^typedef int32_t Elf32_Sword;$/;"	t	typeref:typename:int32_t
+Elf32_Sxword	include/kerelf.h	/^typedef int64_t Elf32_Sxword;$/;"	t	typeref:typename:int64_t
+Elf32_Sxword	readelf/kerelf.h	/^typedef int64_t Elf32_Sxword;$/;"	t	typeref:typename:int64_t
+Elf32_Symndx	include/kerelf.h	/^typedef uint32_t Elf32_Symndx;$/;"	t	typeref:typename:uint32_t
+Elf32_Symndx	readelf/kerelf.h	/^typedef uint32_t Elf32_Symndx;$/;"	t	typeref:typename:uint32_t
+Elf32_Word	include/kerelf.h	/^typedef uint32_t Elf32_Word;$/;"	t	typeref:typename:uint32_t
+Elf32_Word	readelf/kerelf.h	/^typedef uint32_t Elf32_Word;$/;"	t	typeref:typename:uint32_t
+Elf32_Xword	include/kerelf.h	/^typedef uint64_t Elf32_Xword;$/;"	t	typeref:typename:uint64_t
+Elf32_Xword	readelf/kerelf.h	/^typedef uint64_t Elf32_Xword;$/;"	t	typeref:typename:uint64_t
+Env	include/env.h	/^struct Env {$/;"	s
+FDTABLE	user/fd.h	/^#define FDTABLE /;"	d
+FEXPORT	include/asm/asm.h	/^#define FEXPORT(/;"	d
+FILE2BLK	include/fs.h	/^#define FILE2BLK /;"	d
+FILEBASE	user/fd.h	/^#define FILEBASE /;"	d
+FILEVA	fs/serv.c	/^#define FILEVA /;"	d	file:
+FIXPROTO_DEFINES	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/mkheaders.conf	/^FIXPROTO_DEFINES=""$/;"	k
+FLAT_FLAG_GOTPIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define FLAT_FLAG_GOTPIC /;"	d
+FLAT_FLAG_GZDATA	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define FLAT_FLAG_GZDATA /;"	d
+FLAT_FLAG_GZIP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define FLAT_FLAG_GZIP /;"	d
+FLAT_FLAG_KTRACE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define FLAT_FLAG_KTRACE /;"	d
+FLAT_FLAG_RAM	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define FLAT_FLAG_RAM /;"	d
+FLAT_VERSION	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define	FLAT_VERSION	/;"	d
+FLT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_DIG	/;"	d
+FLT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_DIG	/;"	d
+FLT_EPSILON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_EPSILON	/;"	d
+FLT_EPSILON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_EPSILON	/;"	d
+FLT_EVAL_METHOD	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_EVAL_METHOD	/;"	d
+FLT_EVAL_METHOD	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_EVAL_METHOD	/;"	d
+FLT_MANT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MANT_DIG	/;"	d
+FLT_MANT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MANT_DIG	/;"	d
+FLT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MAX	/;"	d
+FLT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MAX	/;"	d
+FLT_MAX_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MAX_10_EXP	/;"	d
+FLT_MAX_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MAX_10_EXP	/;"	d
+FLT_MAX_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MAX_EXP	/;"	d
+FLT_MAX_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MAX_EXP	/;"	d
+FLT_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MIN	/;"	d
+FLT_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MIN	/;"	d
+FLT_MIN_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MIN_10_EXP	/;"	d
+FLT_MIN_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MIN_10_EXP	/;"	d
+FLT_MIN_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_MIN_EXP	/;"	d
+FLT_MIN_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_MIN_EXP	/;"	d
+FLT_RADIX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_RADIX	/;"	d
+FLT_RADIX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_RADIX	/;"	d
+FLT_ROUNDS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define FLT_ROUNDS /;"	d
+FLT_ROUNDS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define FLT_ROUNDS /;"	d
+FSIMGFILES	fs/Makefile	/^FSIMGFILES := motd newmotd $(user_dir)\/testarg.b $(user_dir)\/init.b $(USERAPPS)$/;"	m
+FSLIB	fs/Makefile	/^FSLIB :=	fs.o \\$/;"	m
+FSREQ_CLOSE	include/fs.h	/^#define FSREQ_CLOSE /;"	d
+FSREQ_DIRTY	include/fs.h	/^#define FSREQ_DIRTY /;"	d
+FSREQ_MAP	include/fs.h	/^#define FSREQ_MAP /;"	d
+FSREQ_OPEN	include/fs.h	/^#define FSREQ_OPEN /;"	d
+FSREQ_REMOVE	include/fs.h	/^#define FSREQ_REMOVE /;"	d
+FSREQ_SET_SIZE	include/fs.h	/^#define FSREQ_SET_SIZE /;"	d
+FSREQ_SYNC	include/fs.h	/^#define FSREQ_SYNC /;"	d
+FS_MAGIC	include/fs.h	/^#define FS_MAGIC /;"	d
+FTYPE_DIR	include/fs.h	/^#define FTYPE_DIR /;"	d
+FTYPE_REG	include/fs.h	/^#define FTYPE_REG /;"	d
+Fd	user/fd.h	/^struct Fd {$/;"	s
+Features	README.md	/^## Features$/;"	s	chapter:OS-OASIS
+File	fs/fsformat.c	/^typedef struct File File;$/;"	t	typeref:struct:File	file:
+File	include/fs.h	/^struct File {$/;"	s
+Filefd	user/fd.h	/^struct Filefd {$/;"	s
+Fsreq_close	include/fs.h	/^struct Fsreq_close {$/;"	s
+Fsreq_dirty	include/fs.h	/^struct Fsreq_dirty {$/;"	s
+Fsreq_map	include/fs.h	/^struct Fsreq_map {$/;"	s
+Fsreq_open	include/fs.h	/^struct Fsreq_open {$/;"	s
+Fsreq_remove	include/fs.h	/^struct Fsreq_remove {$/;"	s
+Fsreq_set_size	include/fs.h	/^struct Fsreq_set_size {$/;"	s
+GET_ENV_ASID	include/env.h	/^#define GET_ENV_ASID(/;"	d
+HALT_ADDRESS	drivers/gxconsole/console.c	/^#define    HALT_ADDRESS /;"	d	file:
+INCLUDES	boot/Makefile	/^INCLUDES	  := -I..\/include\/$/;"	m
+INCLUDES	fs/Makefile	/^INCLUDES = -I..\/include\/ -I..\/user\/$/;"	m
+INCLUDES	init/Makefile	/^INCLUDES := -I..\/include$/;"	m
+INCLUDES	lib/Makefile	/^INCLUDES := -I.\/ -I..\/ -I..\/include\/$/;"	m
+INCLUDES	mm/Makefile	/^INCLUDES	:= -I.\/ -I..\/ -I..\/include\/$/;"	m
+INCLUDES	readelf/Makefile	/^INCLUDES := -I.\/$/;"	m
+INCLUDES	user/Makefile	/^INCLUDES = -I..\/include\/$/;"	m
+INDEX2DATA	user/fd.h	/^#define INDEX2DATA(/;"	d
+INDEX2FD	user/fd.h	/^#define INDEX2FD(/;"	d
+INT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define INT_MAX /;"	d
+INT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define INT_MAX /;"	d
+INT_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define INT_MIN /;"	d
+INT_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define INT_MIN /;"	d
+IO_RTC	include/kclock.h	/^#define IO_RTC /;"	d
+IS_BD	lib/syscall.S	/^IS_BD:$/;"	l
+Intro	OS_Extram/README.md	/^#### Intro$/;"	t	chapter:OS-Examtra
+IsDigit	lib/print.c	/^#define IsDigit(/;"	d	file:
+IsDigit	user/print.c	/^#define IsDigit(/;"	d	file:
+KADDR	include/mmu.h	/^#define KADDR(/;"	d
+KERNBASE	include/mmu.h	/^#define KERNBASE /;"	d
+KERNEL_SP	lib/env_asm.S	/^KERNEL_SP:$/;"	l
+KERNEL_STACK	boot/start.S	/^KERNEL_STACK:$/;"	l
+KSTACKTOP	include/mmu.h	/^#define KSTACKTOP /;"	d
+KSTKSIZE	include/mmu.h	/^#define KSTKSIZE /;"	d
+LD	include.mk	/^LD			  := $(CROSS_COMPILE)ld$/;"	m
+LDBL_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_DIG	/;"	d
+LDBL_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_DIG	/;"	d
+LDBL_EPSILON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_EPSILON	/;"	d
+LDBL_EPSILON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_EPSILON	/;"	d
+LDBL_MANT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MANT_DIG	/;"	d
+LDBL_MANT_DIG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MANT_DIG	/;"	d
+LDBL_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MAX	/;"	d
+LDBL_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MAX	/;"	d
+LDBL_MAX_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MAX_10_EXP	/;"	d
+LDBL_MAX_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MAX_10_EXP	/;"	d
+LDBL_MAX_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MAX_EXP	/;"	d
+LDBL_MAX_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MAX_EXP	/;"	d
+LDBL_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MIN	/;"	d
+LDBL_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MIN	/;"	d
+LDBL_MIN_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MIN_10_EXP	/;"	d
+LDBL_MIN_10_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MIN_10_EXP	/;"	d
+LDBL_MIN_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define LDBL_MIN_EXP	/;"	d
+LDBL_MIN_EXP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define LDBL_MIN_EXP	/;"	d
+LEAF	include/asm-mips3k/asm.h	/^#define LEAF(/;"	d
+LEAF	include/asm/asm.h	/^#define LEAF(/;"	d
+LIB_H	user/lib.h	/^#define LIB_H$/;"	d
+LIST_EMPTY	include/queue.h	/^#define LIST_EMPTY(/;"	d
+LIST_ENTRY	include/queue.h	/^#define LIST_ENTRY(/;"	d
+LIST_FIRST	include/queue.h	/^#define LIST_FIRST(/;"	d
+LIST_FOREACH	include/queue.h	/^#define LIST_FOREACH(/;"	d
+LIST_HEAD	include/queue.h	/^#define LIST_HEAD(/;"	d
+LIST_HEAD_INITIALIZER	include/queue.h	/^#define LIST_HEAD_INITIALIZER(/;"	d
+LIST_INIT	include/queue.h	/^#define LIST_INIT(/;"	d
+LIST_INSERT_AFTER	include/queue.h	/^#define LIST_INSERT_AFTER(/;"	d
+LIST_INSERT_BEFORE	include/queue.h	/^#define LIST_INSERT_BEFORE(/;"	d
+LIST_INSERT_HEAD	include/queue.h	/^#define LIST_INSERT_HEAD(/;"	d
+LIST_INSERT_TAIL	include/queue.h	/^#define LIST_INSERT_TAIL(/;"	d
+LIST_NEXT	include/queue.h	/^#define LIST_NEXT(/;"	d
+LIST_REMOVE	include/queue.h	/^#define LIST_REMOVE(/;"	d
+LLONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define LLONG_MAX /;"	d
+LLONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define LLONG_MAX /;"	d
+LLONG_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define LLONG_MIN /;"	d
+LLONG_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define LLONG_MIN /;"	d
+LOG2NENV	include/env.h	/^#define LOG2NENV /;"	d
+LONG_LONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define LONG_LONG_MAX /;"	d
+LONG_LONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define LONG_LONG_MAX /;"	d
+LONG_LONG_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define LONG_LONG_MIN /;"	d
+LONG_LONG_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define LONG_LONG_MIN /;"	d
+LONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define LONG_MAX /;"	d
+LONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define LONG_MAX /;"	d
+LONG_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define LONG_MIN /;"	d
+LONG_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define LONG_MIN /;"	d
+LP_MAX_BUF	include/print.h	/^#define LP_MAX_BUF /;"	d
+MAXARGS	user/sh.c	/^#define MAXARGS /;"	d	file:
+MAXERROR	include/error.h	/^#define MAXERROR /;"	d
+MAXERROR	include/mmu.h	/^#define MAXERROR /;"	d
+MAXFD	user/fd.h	/^#define MAXFD /;"	d
+MAXFILESIZE	include/fs.h	/^#define MAXFILESIZE /;"	d
+MAXNAMELEN	include/fs.h	/^#define MAXNAMELEN /;"	d
+MAXOPEN	fs/serv.c	/^#define MAXOPEN /;"	d	file:
+MAXPATHLEN	include/fs.h	/^#define MAXPATHLEN /;"	d
+MAX_SHARED_LIBS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define	MAX_SHARED_LIBS	/;"	d
+MB_LEN_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define MB_LEN_MAX /;"	d
+MB_LEN_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define MB_LEN_MAX /;"	d
+MIN	include/types.h	/^#define MIN(/;"	d
+MIN	readelf/types.h	/^#define MIN(/;"	d
+MY_MUL	user/init.c	/^inline int MY_MUL(int a, int b) {$/;"	f	typeref:typename:int
+M_386	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M_386 = 100,$/;"	e	enum:machine_type
+M_MIPS1	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M_MIPS1 = 151,	\/* MIPS R3000\/R3000 binary *\/$/;"	e	enum:machine_type
+M_MIPS2	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M_MIPS2 = 152		\/* MIPS R6000\/R4000 binary *\/$/;"	e	enum:machine_type
+M__68010	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M__68010 = M_68010,$/;"	e	enum:machine_type
+M__68020	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M__68020 = M_68020,$/;"	e	enum:machine_type
+M__OLDSUN2	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M__OLDSUN2 = M_OLDSUN2,$/;"	e	enum:machine_type
+M__SPARC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  M__SPARC = M_SPARC,$/;"	e	enum:machine_type
+NBLOCK	fs/fsformat.c	/^#define NBLOCK /;"	d	file:
+NDIRECT	include/fs.h	/^#define NDIRECT /;"	d
+NENV	include/env.h	/^#define NENV /;"	d
+NESTED	include/asm-mips3k/asm.h	/^#define NESTED(/;"	d
+NESTED	include/asm/asm.h	/^#define NESTED(/;"	d
+NINDIRECT	include/fs.h	/^#define NINDIRECT /;"	d
+NMAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define NMAGIC /;"	d
+NOFOUND	mm/tlb_asm.S	/^NOFOUND:$/;"	l
+NOPAGE	lib/genex.S	/^NOPAGE:$/;"	l
+NULL	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define NULL /;"	d
+NULL	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define NULL /;"	d
+NULL	include/types.h	/^#define NULL /;"	d
+NULL	readelf/types.h	/^#define NULL /;"	d
+N_ABS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_ABS /;"	d
+N_BADMAG	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_BADMAG(/;"	d
+N_BSS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_BSS /;"	d
+N_BSSADDR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_BSSADDR(/;"	d
+N_DATA	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_DATA /;"	d
+N_DATADDR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_DATADDR(/;"	d
+N_DATOFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_DATOFF(/;"	d
+N_DRELOFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_DRELOFF(/;"	d
+N_EXT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_EXT /;"	d
+N_FLAGS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_FLAGS(/;"	d
+N_FN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_FN /;"	d
+N_INDR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_INDR /;"	d
+N_MACHTYPE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_MACHTYPE(/;"	d
+N_MAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_MAGIC(/;"	d
+N_SETA	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define	N_SETA	/;"	d
+N_SETB	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define	N_SETB	/;"	d
+N_SETD	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define	N_SETD	/;"	d
+N_SETT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define	N_SETT	/;"	d
+N_SETV	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_SETV	/;"	d
+N_SET_FLAGS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_SET_FLAGS(/;"	d
+N_SET_INFO	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_SET_INFO(/;"	d
+N_SET_MACHTYPE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_SET_MACHTYPE(/;"	d
+N_SET_MAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_SET_MAGIC(/;"	d
+N_STAB	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_STAB /;"	d
+N_STROFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_STROFF(/;"	d
+N_SYMOFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_SYMOFF(/;"	d
+N_TEXT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_TEXT /;"	d
+N_TRELOFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_TRELOFF(/;"	d
+N_TXTADDR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_TXTADDR(/;"	d
+N_TXTOFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_TXTOFF(/;"	d
+N_TYPE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_TYPE /;"	d
+N_UNDF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define N_UNDF /;"	d
+NoCOW	lib/genex.S	/^NoCOW:$/;"	l
+OLD_FLAT_FLAG_RAM	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#   	define OLD_FLAT_FLAG_RAM /;"	d
+OLD_FLAT_RELOC_TYPE_BSS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define OLD_FLAT_RELOC_TYPE_BSS	/;"	d
+OLD_FLAT_RELOC_TYPE_DATA	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define OLD_FLAT_RELOC_TYPE_DATA	/;"	d
+OLD_FLAT_RELOC_TYPE_TEXT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define OLD_FLAT_RELOC_TYPE_TEXT	/;"	d
+OLD_FLAT_VERSION	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define	OLD_FLAT_VERSION	/;"	d
+OMAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define OMAGIC /;"	d
+OS-Examtra	OS_Extram/README.md	/^# OS-Examtra$/;"	c
+OS-OASIS	README.md	/^# OS-OASIS$/;"	c
+OTHER_FIXINCLUDES_DIRS	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/mkheaders.conf	/^OTHER_FIXINCLUDES_DIRS=""$/;"	k
+OUTPUT	lib/print.c	/^#define OUTPUT(/;"	d	file:
+OUTPUT	user/print.c	/^#define OUTPUT(/;"	d	file:
+O_ACCMODE	user/lib.h	/^#define O_ACCMODE /;"	d
+O_CREAT	user/lib.h	/^#define O_CREAT /;"	d
+O_EXCL	user/lib.h	/^#define O_EXCL /;"	d
+O_MKDIR	user/lib.h	/^#define O_MKDIR /;"	d
+O_RDONLY	user/lib.h	/^#define O_RDONLY /;"	d
+O_RDWR	user/lib.h	/^#define O_RDWR /;"	d
+O_TRUNC	user/lib.h	/^#define O_TRUNC /;"	d
+O_WRONLY	user/lib.h	/^#define O_WRONLY /;"	d
+Open	fs/serv.c	/^struct Open {$/;"	s	file:
+PADDR	include/mmu.h	/^#define PADDR(/;"	d
+PAGE_SIZE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define PAGE_SIZE /;"	d
+PDMAP	include/mmu.h	/^#define PDMAP /;"	d
+PDSHIFT	include/mmu.h	/^#define PDSHIFT /;"	d
+PDX	include/mmu.h	/^#define PDX(/;"	d
+PF_MASKPROC	include/kerelf.h	/^#define PF_MASKPROC /;"	d
+PF_MASKPROC	readelf/kerelf.h	/^#define PF_MASKPROC /;"	d
+PF_R	include/kerelf.h	/^#define PF_R /;"	d
+PF_R	readelf/kerelf.h	/^#define PF_R /;"	d
+PF_W	include/kerelf.h	/^#define PF_W /;"	d
+PF_W	readelf/kerelf.h	/^#define PF_W /;"	d
+PF_X	include/kerelf.h	/^#define PF_X /;"	d
+PF_X	readelf/kerelf.h	/^#define PF_X /;"	d
+PGSHIFT	include/mmu.h	/^#define PGSHIFT /;"	d
+PHYSADDR_OFFSET	drivers/gxconsole/console.c	/^#define    PHYSADDR_OFFSET /;"	d	file:
+PPN	include/mmu.h	/^#define PPN(/;"	d
+PTE2PT	include/mmu.h	/^#define PTE2PT /;"	d
+PTE_ADDR	include/mmu.h	/^#define PTE_ADDR(/;"	d
+PTE_COW	include/mmu.h	/^#define PTE_COW /;"	d
+PTE_D	include/mmu.h	/^#define PTE_D /;"	d
+PTE_G	include/mmu.h	/^#define PTE_G /;"	d
+PTE_LIBRARY	include/mmu.h	/^#define PTE_LIBRARY /;"	d
+PTE_R	include/mmu.h	/^#define PTE_R /;"	d
+PTE_UC	include/mmu.h	/^#define PTE_UC /;"	d
+PTE_V	include/mmu.h	/^#define PTE_V /;"	d
+PTX	include/mmu.h	/^#define PTX(/;"	d
+PT_DYNAMIC	include/kerelf.h	/^#define PT_DYNAMIC /;"	d
+PT_DYNAMIC	readelf/kerelf.h	/^#define PT_DYNAMIC /;"	d
+PT_HIOS	include/kerelf.h	/^#define PT_HIOS /;"	d
+PT_HIOS	readelf/kerelf.h	/^#define PT_HIOS /;"	d
+PT_HIPROC	include/kerelf.h	/^#define PT_HIPROC /;"	d
+PT_HIPROC	readelf/kerelf.h	/^#define PT_HIPROC /;"	d
+PT_INTERP	include/kerelf.h	/^#define PT_INTERP /;"	d
+PT_INTERP	readelf/kerelf.h	/^#define PT_INTERP /;"	d
+PT_LOAD	include/kerelf.h	/^#define PT_LOAD /;"	d
+PT_LOAD	readelf/kerelf.h	/^#define PT_LOAD /;"	d
+PT_LOOS	include/kerelf.h	/^#define PT_LOOS /;"	d
+PT_LOOS	readelf/kerelf.h	/^#define PT_LOOS /;"	d
+PT_LOPROC	include/kerelf.h	/^#define PT_LOPROC /;"	d
+PT_LOPROC	readelf/kerelf.h	/^#define PT_LOPROC /;"	d
+PT_NOTE	include/kerelf.h	/^#define PT_NOTE /;"	d
+PT_NOTE	readelf/kerelf.h	/^#define PT_NOTE /;"	d
+PT_NULL	include/kerelf.h	/^#define PT_NULL /;"	d
+PT_NULL	readelf/kerelf.h	/^#define PT_NULL /;"	d
+PT_NUM	include/kerelf.h	/^#define PT_NUM /;"	d
+PT_NUM	readelf/kerelf.h	/^#define PT_NUM /;"	d
+PT_PHDR	include/kerelf.h	/^#define PT_PHDR /;"	d
+PT_PHDR	readelf/kerelf.h	/^#define PT_PHDR /;"	d
+PT_SHLIB	include/kerelf.h	/^#define PT_SHLIB /;"	d
+PT_SHLIB	readelf/kerelf.h	/^#define PT_SHLIB /;"	d
+PUTCHAR_ADDRESS	drivers/gxconsole/console.c	/^#define    PUTCHAR_ADDRESS /;"	d	file:
+Page	include/pmap.h	/^struct Page {$/;"	s
+Page_LIST_entry_t	include/pmap.h	/^typedef LIST_ENTRY(Page) Page_LIST_entry_t;$/;"	t
+Pde	include/mmu.h	/^typedef u_long Pde;$/;"	t	typeref:typename:u_long
+Pipe	user/pipe.c	/^struct Pipe {$/;"	s	file:
+PrintChar	lib/print.c	/^int PrintChar(char *buf, char c, int length, int ladjust) {$/;"	f	typeref:typename:int
+PrintNum	lib/print.c	/^int PrintNum(char *buf, unsigned long u, int base, int negFlag, int length, int ladjust, char pa/;"	f	typeref:typename:int
+PrintString	lib/print.c	/^int PrintString(char *buf, char *s, int length, int ladjust) {$/;"	f	typeref:typename:int
+Pte	include/mmu.h	/^typedef u_long Pte;$/;"	t	typeref:typename:u_long
+QMAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define QMAGIC /;"	d
+REQVA	fs/serv.c	/^#define REQVA /;"	d	file:
+ROUND	include/types.h	/^#define ROUND(/;"	d
+ROUND	readelf/types.h	/^#define ROUND(/;"	d
+ROUNDDOWN	include/types.h	/^#define ROUNDDOWN(/;"	d
+ROUNDDOWN	readelf/types.h	/^#define ROUNDDOWN(/;"	d
+Run	README.md	/^## Run$/;"	s	chapter:OS-OASIS
+SAVE_ALL	lib/genex.S	/^SAVE_ALL$/;"	l
+SCHAR_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define SCHAR_MAX /;"	d
+SCHAR_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define SCHAR_MAX /;"	d
+SCHAR_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define SCHAR_MIN /;"	d
+SCHAR_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define SCHAR_MIN /;"	d
+SECT2BLK	fs/fs.h	/^#define SECT2BLK /;"	d
+SEGMENT_SIZE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define	SEGMENT_SIZE	/;"	d
+SEGMENT_SIZE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define SEGMENT_SIZE	/;"	d
+SEGMENT_SIZE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define SEGMENT_SIZE /;"	d
+SHRT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define SHRT_MAX /;"	d
+SHRT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define SHRT_MAX /;"	d
+SHRT_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define SHRT_MIN /;"	d
+SHRT_MIN	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define SHRT_MIN /;"	d
+STATUSF_IP4	include/asm/cp0regdef.h	/^#define STATUSF_IP4 /;"	d
+STATUS_CU0	include/asm/cp0regdef.h	/^#define STATUS_CU0 /;"	d
+STATUS_KUC	include/asm/cp0regdef.h	/^#define    STATUS_KUC /;"	d
+STMP_FIXINC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/mkheaders.conf	/^STMP_FIXINC="stmp-fixinc"$/;"	k
+STMP_FIXPROTO	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/mkheaders.conf	/^STMP_FIXPROTO=""$/;"	k
+SWITCH	OS_ENV/compiler/usr/mips-linux/bin/mtrace	/^    SWITCH: {$/;"	l
+SYMBOLS	user/sh.c	/^#define SYMBOLS /;"	d	file:
+SYSTEM_HEADER_DIR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/mkheaders.conf	/^SYSTEM_HEADER_DIR="\/var\/tmp\/eldk.PyrfxY\/usr\/crosstool\/gcc-4.0.0-glibc-2.3.5-eldk\/mips-lin/;"	k
+SYS_cgetc	include/unistd.h	/^#define SYS_cgetc /;"	d
+SYS_env_alloc	include/unistd.h	/^#define SYS_env_alloc /;"	d
+SYS_env_destroy	include/unistd.h	/^#define SYS_env_destroy /;"	d
+SYS_getenvid	include/unistd.h	/^#define SYS_getenvid /;"	d
+SYS_ipc_can_send	include/unistd.h	/^#define SYS_ipc_can_send /;"	d
+SYS_ipc_recv	include/unistd.h	/^#define SYS_ipc_recv /;"	d
+SYS_mem_alloc	include/unistd.h	/^#define SYS_mem_alloc /;"	d
+SYS_mem_map	include/unistd.h	/^#define SYS_mem_map /;"	d
+SYS_mem_unmap	include/unistd.h	/^#define SYS_mem_unmap /;"	d
+SYS_panic	include/unistd.h	/^#define SYS_panic /;"	d
+SYS_putchar	include/unistd.h	/^#define SYS_putchar /;"	d
+SYS_read_dev	include/unistd.h	/^#define SYS_read_dev /;"	d
+SYS_set_env_status	include/unistd.h	/^#define SYS_set_env_status /;"	d
+SYS_set_pgfault_handler	include/unistd.h	/^#define SYS_set_pgfault_handler /;"	d
+SYS_set_trapframe	include/unistd.h	/^#define SYS_set_trapframe /;"	d
+SYS_write_dev	include/unistd.h	/^#define SYS_write_dev /;"	d
+SYS_yield	include/unistd.h	/^#define SYS_yield /;"	d
+Stat	user/fd.h	/^struct Stat {$/;"	s
+Super	fs/fsformat.c	/^typedef struct Super Super;$/;"	t	typeref:struct:Super	file:
+Super	include/fs.h	/^struct Super {$/;"	s
+TAILQ_ENTRY	include/queue.h	/^#define TAILQ_ENTRY(/;"	d
+TAILQ_HEAD	include/queue.h	/^#define TAILQ_HEAD(/;"	d
+TESTMACHINE_CONS_H	drivers/gxconsole/dev_cons.h	/^#define    TESTMACHINE_CONS_H$/;"	d
+TF_BADVADDR	include/trap.h	/^#define TF_BADVADDR /;"	d
+TF_CAUSE	include/trap.h	/^#define TF_CAUSE /;"	d
+TF_EPC	include/trap.h	/^#define TF_EPC /;"	d
+TF_HI	include/trap.h	/^#define TF_HI /;"	d
+TF_LO	include/trap.h	/^#define TF_LO /;"	d
+TF_PC	include/trap.h	/^#define TF_PC /;"	d
+TF_REG0	include/trap.h	/^#define TF_REG0 /;"	d
+TF_REG1	include/trap.h	/^#define TF_REG1 /;"	d
+TF_REG10	include/trap.h	/^#define TF_REG10 /;"	d
+TF_REG11	include/trap.h	/^#define TF_REG11 /;"	d
+TF_REG12	include/trap.h	/^#define TF_REG12 /;"	d
+TF_REG13	include/trap.h	/^#define TF_REG13 /;"	d
+TF_REG14	include/trap.h	/^#define TF_REG14 /;"	d
+TF_REG15	include/trap.h	/^#define TF_REG15 /;"	d
+TF_REG16	include/trap.h	/^#define TF_REG16 /;"	d
+TF_REG17	include/trap.h	/^#define TF_REG17 /;"	d
+TF_REG18	include/trap.h	/^#define TF_REG18 /;"	d
+TF_REG19	include/trap.h	/^#define TF_REG19 /;"	d
+TF_REG2	include/trap.h	/^#define TF_REG2 /;"	d
+TF_REG20	include/trap.h	/^#define TF_REG20 /;"	d
+TF_REG21	include/trap.h	/^#define TF_REG21 /;"	d
+TF_REG22	include/trap.h	/^#define TF_REG22 /;"	d
+TF_REG23	include/trap.h	/^#define TF_REG23 /;"	d
+TF_REG24	include/trap.h	/^#define TF_REG24 /;"	d
+TF_REG25	include/trap.h	/^#define TF_REG25 /;"	d
+TF_REG26	include/trap.h	/^#define TF_REG26 /;"	d
+TF_REG27	include/trap.h	/^#define TF_REG27 /;"	d
+TF_REG28	include/trap.h	/^#define TF_REG28 /;"	d
+TF_REG29	include/trap.h	/^#define TF_REG29 /;"	d
+TF_REG3	include/trap.h	/^#define TF_REG3 /;"	d
+TF_REG30	include/trap.h	/^#define TF_REG30 /;"	d
+TF_REG31	include/trap.h	/^#define TF_REG31 /;"	d
+TF_REG4	include/trap.h	/^#define TF_REG4 /;"	d
+TF_REG5	include/trap.h	/^#define TF_REG5 /;"	d
+TF_REG6	include/trap.h	/^#define TF_REG6 /;"	d
+TF_REG7	include/trap.h	/^#define TF_REG7 /;"	d
+TF_REG8	include/trap.h	/^#define TF_REG8 /;"	d
+TF_REG9	include/trap.h	/^#define TF_REG9 /;"	d
+TF_SIZE	include/trap.h	/^#define TF_SIZE /;"	d
+TF_STATUS	include/trap.h	/^#define TF_STATUS /;"	d
+THis is a copy from ELDK 4.1 and gxemul 0.4.6, but have no license yet.	OS_ENV/README.md	/^### THis is a copy from ELDK 4.1 and gxemul 0.4.6, but have no license yet./;"	S
+TIMESTACK	include/mmu.h	/^#define TIMESTACK /;"	d
+TMPPAGE	user/spawn.c	/^#define TMPPAGE /;"	d	file:
+TMPPAGETOP	user/spawn.c	/^#define TMPPAGETOP /;"	d	file:
+TMPVA	user/testptelibrary.c	/^#define TMPVA /;"	d	file:
+TRUP	include/mmu.h	/^#define TRUP(/;"	d
+T_ALIGN	include/trap.h	/^#define T_ALIGN /;"	d
+T_BOUND	include/trap.h	/^#define T_BOUND /;"	d
+T_BRKPT	include/trap.h	/^#define T_BRKPT /;"	d
+T_DBLFLT	include/trap.h	/^#define T_DBLFLT /;"	d
+T_DEBUG	include/trap.h	/^#define T_DEBUG /;"	d
+T_DEFAULT	include/trap.h	/^#define T_DEFAULT /;"	d
+T_DEVICE	include/trap.h	/^#define T_DEVICE /;"	d
+T_DIVIDE	include/trap.h	/^#define T_DIVIDE /;"	d
+T_FPERR	include/trap.h	/^#define T_FPERR /;"	d
+T_GPFLT	include/trap.h	/^#define T_GPFLT /;"	d
+T_ILLOP	include/trap.h	/^#define T_ILLOP /;"	d
+T_MCHK	include/trap.h	/^#define T_MCHK /;"	d
+T_NMI	include/trap.h	/^#define T_NMI /;"	d
+T_OFLOW	include/trap.h	/^#define T_OFLOW /;"	d
+T_PGFLT	include/trap.h	/^#define T_PGFLT /;"	d
+T_SEGNP	include/trap.h	/^#define T_SEGNP /;"	d
+T_STACK	include/trap.h	/^#define T_STACK /;"	d
+T_SYSCALL	include/trap.h	/^#define T_SYSCALL /;"	d
+T_TSS	include/trap.h	/^#define T_TSS /;"	d
+Trapframe	include/trap.h	/^struct Trapframe { \/\/ lr:need to be modified(reference to linux pt_regs)$/;"	s
+UCHAR_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define UCHAR_MAX /;"	d
+UCHAR_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define UCHAR_MAX /;"	d
+UENVS	include/mmu.h	/^#define UENVS /;"	d
+UINT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define UINT_MAX /;"	d
+UINT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define UINT_MAX /;"	d
+ULIM	include/mmu.h	/^#define ULIM /;"	d
+ULLONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define ULLONG_MAX /;"	d
+ULLONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define ULLONG_MAX /;"	d
+ULONG_LONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define ULONG_LONG_MAX /;"	d
+ULONG_LONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define ULONG_LONG_MAX /;"	d
+ULONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define ULONG_MAX /;"	d
+ULONG_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define ULONG_MAX /;"	d
+UNISTD_H	include/unistd.h	/^#define UNISTD_H$/;"	d
+UPAGES	include/mmu.h	/^#define UPAGES /;"	d
+USED	user/lib.h	/^#define USED(/;"	d
+USERAPPS	fs/Makefile	/^USERAPPS :=  $(user_dir)\/num.b  \\$/;"	m
+USERLIB	fs/Makefile	/^USERLIB :=  $(user_dir)\/printf.o \\$/;"	m
+USERLIB	user/Makefile	/^USERLIB := printf.o \\$/;"	m
+USHRT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^# define USHRT_MAX /;"	d
+USHRT_MAX	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^# define USHRT_MAX /;"	d
+USTACKTOP	include/mmu.h	/^#define USTACKTOP /;"	d
+UTEXT	include/mmu.h	/^#define UTEXT /;"	d
+UTOP	include/mmu.h	/^#define UTOP /;"	d
+UVPT	include/mmu.h	/^#define UVPT /;"	d
+UXSTACKTOP	include/mmu.h	/^#define UXSTACKTOP /;"	d
+VA2PFN	include/mmu.h	/^#define VA2PFN(/;"	d
+VPN	include/mmu.h	/^#define VPN(/;"	d
+VPT	include/mmu.h	/^#define VPT /;"	d
+WHITESPACE	user/sh.c	/^#define WHITESPACE /;"	d	file:
+ZMAGIC	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define ZMAGIC /;"	d
+_ANSI_STDARG_H_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _ANSI_STDARG_H_$/;"	d
+_ANSI_STDARG_H_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _ANSI_STDARG_H_$/;"	d
+_ANSI_STDDEF_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _ANSI_STDDEF_H$/;"	d
+_ANSI_STDDEF_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _ANSI_STDDEF_H$/;"	d
+_ARGSET	include/args.h	/^#define _ARGSET(/;"	d
+_ARGUSED	include/args.h	/^#define _ARGUSED(/;"	d
+_BSD_PTRDIFF_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _BSD_PTRDIFF_T_$/;"	d
+_BSD_PTRDIFF_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _BSD_PTRDIFF_T_$/;"	d
+_BSD_RUNE_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _BSD_RUNE_T_DEFINED_	/;"	d
+_BSD_RUNE_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _BSD_RUNE_T_DEFINED_	/;"	d
+_BSD_SIZE_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _BSD_SIZE_T_$/;"	d
+_BSD_SIZE_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _BSD_SIZE_T_$/;"	d
+_BSD_SIZE_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _BSD_SIZE_T_DEFINED_	/;"	d
+_BSD_SIZE_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _BSD_SIZE_T_DEFINED_	/;"	d
+_BSD_WCHAR_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _BSD_WCHAR_T_$/;"	d
+_BSD_WCHAR_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _BSD_WCHAR_T_$/;"	d
+_BSD_WCHAR_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _BSD_WCHAR_T_DEFINED_$/;"	d
+_BSD_WCHAR_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _BSD_WCHAR_T_DEFINED_$/;"	d
+_Bool	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdbool.h	/^#define _Bool	/;"	d
+_Bool	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdbool.h	/^#define _Bool	/;"	d
+_ENV_H_	include/env.h	/^#define _ENV_H_$/;"	d
+_ERROR_H_	include/error.h	/^#define _ERROR_H_$/;"	d
+_FLOAT_H___	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/float.h	/^#define _FLOAT_H___$/;"	d
+_FLOAT_H___	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/float.h	/^#define _FLOAT_H___$/;"	d
+_FS_H_	include/fs.h	/^#define _FS_H_ /;"	d
+_GCC_LIMITS_H_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define _GCC_LIMITS_H_$/;"	d
+_GCC_LIMITS_H_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define _GCC_LIMITS_H_$/;"	d
+_GCC_NEXT_LIMITS_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/syslimits.h	/^#define _GCC_NEXT_LIMITS_H	/;"	d
+_GCC_NEXT_LIMITS_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/gsyslimits.h	/^#define _GCC_NEXT_LIMITS_H	/;"	d
+_GCC_PTRDIFF_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _GCC_PTRDIFF_T$/;"	d
+_GCC_PTRDIFF_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _GCC_PTRDIFF_T$/;"	d
+_GCC_SIZE_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _GCC_SIZE_T$/;"	d
+_GCC_SIZE_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _GCC_SIZE_T$/;"	d
+_GCC_WCHAR_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _GCC_WCHAR_T$/;"	d
+_GCC_WCHAR_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _GCC_WCHAR_T$/;"	d
+_INC_TYPES_H_	fs/fsformat.c	/^#define _INC_TYPES_H_$/;"	d	file:
+_INC_TYPES_H_	include/types.h	/^#define _INC_TYPES_H_$/;"	d
+_INC_TYPES_H_	readelf/types.h	/^#define _INC_TYPES_H_$/;"	d
+_ISO646_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define _ISO646_H$/;"	d
+_ISO646_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define _ISO646_H$/;"	d
+_KCLOCK_H_	include/kclock.h	/^#define _KCLOCK_H_$/;"	d
+_KER_ELF_H	include/kerelf.h	/^#define _KER_ELF_H$/;"	d
+_KER_ELF_H	readelf/kerelf.h	/^#define _KER_ELF_H$/;"	d
+_LIMITS_H___	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/limits.h	/^#define _LIMITS_H___$/;"	d
+_LIMITS_H___	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/limits.h	/^#define _LIMITS_H___$/;"	d
+_LINUX_FLAT_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^#define _LINUX_FLAT_H$/;"	d
+_MMU_H_	include/mmu.h	/^#define _MMU_H_$/;"	d
+_N_HDROFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define _N_HDROFF(/;"	d
+_N_SEGMENT_ROUND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define _N_SEGMENT_ROUND(/;"	d
+_N_TXTENDADDR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define _N_TXTENDADDR(/;"	d
+_PMAP_H_	include/pmap.h	/^#define _PMAP_H_$/;"	d
+_PTRDIFF_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _PTRDIFF_T$/;"	d
+_PTRDIFF_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _PTRDIFF_T$/;"	d
+_PTRDIFF_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _PTRDIFF_T_$/;"	d
+_PTRDIFF_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _PTRDIFF_T_$/;"	d
+_RUNE_T_DECLARED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _RUNE_T_DECLARED$/;"	d
+_RUNE_T_DECLARED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _RUNE_T_DECLARED$/;"	d
+_SIZET_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SIZET_$/;"	d
+_SIZET_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SIZET_$/;"	d
+_SIZE_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SIZE_T$/;"	d
+_SIZE_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SIZE_T$/;"	d
+_SIZE_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SIZE_T_$/;"	d
+_SIZE_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SIZE_T_$/;"	d
+_SIZE_T_DECLARED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SIZE_T_DECLARED	/;"	d
+_SIZE_T_DECLARED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SIZE_T_DECLARED	/;"	d
+_SIZE_T_DEFINED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SIZE_T_DEFINED$/;"	d
+_SIZE_T_DEFINED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SIZE_T_DEFINED$/;"	d
+_SIZE_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SIZE_T_DEFINED_$/;"	d
+_SIZE_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SIZE_T_DEFINED_$/;"	d
+_STDARG_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _STDARG_H$/;"	d
+_STDARG_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _STDARG_H$/;"	d
+_STDBOOL_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdbool.h	/^#define _STDBOOL_H$/;"	d
+_STDBOOL_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdbool.h	/^#define _STDBOOL_H$/;"	d
+_STDDEF_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _STDDEF_H$/;"	d
+_STDDEF_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _STDDEF_H$/;"	d
+_STDDEF_H_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _STDDEF_H_$/;"	d
+_STDDEF_H_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _STDDEF_H_$/;"	d
+_SYS_QUEUE_H_	include/queue.h	/^#define _SYS_QUEUE_H_$/;"	d
+_SYS_SIZE_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _SYS_SIZE_T_H$/;"	d
+_SYS_SIZE_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _SYS_SIZE_T_H$/;"	d
+_TRAP_H_	include/trap.h	/^#define _TRAP_H_$/;"	d
+_T_PTRDIFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _T_PTRDIFF$/;"	d
+_T_PTRDIFF	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _T_PTRDIFF$/;"	d
+_T_PTRDIFF_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _T_PTRDIFF_$/;"	d
+_T_PTRDIFF_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _T_PTRDIFF_$/;"	d
+_T_SIZE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _T_SIZE$/;"	d
+_T_SIZE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _T_SIZE$/;"	d
+_T_SIZE_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _T_SIZE_$/;"	d
+_T_SIZE_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _T_SIZE_$/;"	d
+_T_WCHAR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _T_WCHAR$/;"	d
+_T_WCHAR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _T_WCHAR$/;"	d
+_T_WCHAR_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _T_WCHAR_$/;"	d
+_T_WCHAR_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _T_WCHAR_$/;"	d
+_UA_CLEANUP_PHASE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^#define _UA_CLEANUP_PHASE	/;"	d
+_UA_CLEANUP_PHASE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^#define _UA_CLEANUP_PHASE	/;"	d
+_UA_END_OF_STACK	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^#define _UA_END_OF_STACK	/;"	d
+_UA_END_OF_STACK	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^#define _UA_END_OF_STACK	/;"	d
+_UA_FORCE_UNWIND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^#define _UA_FORCE_UNWIND	/;"	d
+_UA_FORCE_UNWIND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^#define _UA_FORCE_UNWIND	/;"	d
+_UA_HANDLER_FRAME	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^#define _UA_HANDLER_FRAME	/;"	d
+_UA_HANDLER_FRAME	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^#define _UA_HANDLER_FRAME	/;"	d
+_UA_SEARCH_PHASE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^#define _UA_SEARCH_PHASE	/;"	d
+_UA_SEARCH_PHASE	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^#define _UA_SEARCH_PHASE	/;"	d
+_UNWIND_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^#define _UNWIND_H$/;"	d
+_UNWIND_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^#define _UNWIND_H$/;"	d
+_URC_CONTINUE_UNWIND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_CONTINUE_UNWIND = 8$/;"	e	enum:__anon34de8f550103
+_URC_CONTINUE_UNWIND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_CONTINUE_UNWIND = 8$/;"	e	enum:__anon842548390103
+_URC_END_OF_STACK	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_END_OF_STACK = 5,$/;"	e	enum:__anon34de8f550103
+_URC_END_OF_STACK	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_END_OF_STACK = 5,$/;"	e	enum:__anon842548390103
+_URC_FATAL_PHASE1_ERROR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_FATAL_PHASE1_ERROR = 3,$/;"	e	enum:__anon34de8f550103
+_URC_FATAL_PHASE1_ERROR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_FATAL_PHASE1_ERROR = 3,$/;"	e	enum:__anon842548390103
+_URC_FATAL_PHASE2_ERROR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_FATAL_PHASE2_ERROR = 2,$/;"	e	enum:__anon34de8f550103
+_URC_FATAL_PHASE2_ERROR	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_FATAL_PHASE2_ERROR = 2,$/;"	e	enum:__anon842548390103
+_URC_FOREIGN_EXCEPTION_CAUGHT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_FOREIGN_EXCEPTION_CAUGHT = 1,$/;"	e	enum:__anon34de8f550103
+_URC_FOREIGN_EXCEPTION_CAUGHT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_FOREIGN_EXCEPTION_CAUGHT = 1,$/;"	e	enum:__anon842548390103
+_URC_HANDLER_FOUND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_HANDLER_FOUND = 6,$/;"	e	enum:__anon34de8f550103
+_URC_HANDLER_FOUND	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_HANDLER_FOUND = 6,$/;"	e	enum:__anon842548390103
+_URC_INSTALL_CONTEXT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_INSTALL_CONTEXT = 7,$/;"	e	enum:__anon34de8f550103
+_URC_INSTALL_CONTEXT	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_INSTALL_CONTEXT = 7,$/;"	e	enum:__anon842548390103
+_URC_NORMAL_STOP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_NORMAL_STOP = 4,$/;"	e	enum:__anon34de8f550103
+_URC_NORMAL_STOP	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_NORMAL_STOP = 4,$/;"	e	enum:__anon842548390103
+_URC_NO_REASON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _URC_NO_REASON = 0,$/;"	e	enum:__anon34de8f550103
+_URC_NO_REASON	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _URC_NO_REASON = 0,$/;"	e	enum:__anon842548390103
+_USER_FD_H_	user/fd.h	/^#define _USER_FD_H_ /;"	d
+_Unwind_Action	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef int _Unwind_Action;$/;"	t	typeref:typename:int
+_Unwind_Action	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef int _Unwind_Action;$/;"	t	typeref:typename:int
+_Unwind_Exception	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^struct _Unwind_Exception$/;"	s
+_Unwind_Exception	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^struct _Unwind_Exception$/;"	s
+_Unwind_Exception_Class	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef unsigned _Unwind_Exception_Class __attribute__((__mode__(__DI__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Exception_Class	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef unsigned _Unwind_Exception_Class __attribute__((__mode__(__DI__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Exception_Cleanup_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef void (*_Unwind_Exception_Cleanup_Fn) (_Unwind_Reason_Code,$/;"	t	typeref:typename:void (*)(_Unwind_Reason_Code,struct _Unwind_Exception *)
+_Unwind_Exception_Cleanup_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef void (*_Unwind_Exception_Cleanup_Fn) (_Unwind_Reason_Code,$/;"	t	typeref:typename:void (*)(_Unwind_Reason_Code,struct _Unwind_Exception *)
+_Unwind_GetDataRelBase	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^_Unwind_GetDataRelBase (struct _Unwind_Context *_C)$/;"	f	typeref:typename:_Unwind_Ptr
+_Unwind_GetDataRelBase	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^_Unwind_GetDataRelBase (struct _Unwind_Context *_C)$/;"	f	typeref:typename:_Unwind_Ptr
+_Unwind_GetTextRelBase	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^_Unwind_GetTextRelBase (struct _Unwind_Context *_C __attribute__ ((__unused__)))$/;"	f	typeref:typename:_Unwind_Ptr
+_Unwind_GetTextRelBase	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^_Unwind_GetTextRelBase (struct _Unwind_Context *_C __attribute__ ((__unused__)))$/;"	f	typeref:typename:_Unwind_Ptr
+_Unwind_Internal_Ptr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef unsigned _Unwind_Internal_Ptr __attribute__((__mode__(__pointer__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Internal_Ptr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef unsigned _Unwind_Internal_Ptr __attribute__((__mode__(__pointer__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Personality_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef _Unwind_Reason_Code (*_Unwind_Personality_Fn)$/;"	t	typeref:typename:_Unwind_Reason_Code (*)(int,_Unwind_Action,_Unwind_Exception_Class,struct _Unwind_Exception *,struct _Unwind_Context *)
+_Unwind_Personality_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef _Unwind_Reason_Code (*_Unwind_Personality_Fn)$/;"	t	typeref:typename:_Unwind_Reason_Code (*)(int,_Unwind_Action,_Unwind_Exception_Class,struct _Unwind_Exception *,struct _Unwind_Context *)
+_Unwind_Ptr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef unsigned _Unwind_Ptr __attribute__((__mode__(__pointer__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Ptr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef unsigned _Unwind_Ptr __attribute__((__mode__(__word__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Ptr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef unsigned _Unwind_Ptr __attribute__((__mode__(__pointer__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Ptr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef unsigned _Unwind_Ptr __attribute__((__mode__(__word__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Reason_Code	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^} _Unwind_Reason_Code;$/;"	t	typeref:enum:__anon34de8f550103
+_Unwind_Reason_Code	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^} _Unwind_Reason_Code;$/;"	t	typeref:enum:__anon842548390103
+_Unwind_Stop_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn)$/;"	t	typeref:typename:_Unwind_Reason_Code (*)(int,_Unwind_Action,_Unwind_Exception_Class,struct _Unwind_Exception *,struct _Unwind_Context *,void *)
+_Unwind_Stop_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn)$/;"	t	typeref:typename:_Unwind_Reason_Code (*)(int,_Unwind_Action,_Unwind_Exception_Class,struct _Unwind_Exception *,struct _Unwind_Context *,void *)
+_Unwind_Sword	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef signed _Unwind_Sword __attribute__((__mode__(__word__)));$/;"	t	typeref:typename:signed
+_Unwind_Sword	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef signed _Unwind_Sword __attribute__((__mode__(__word__)));$/;"	t	typeref:typename:signed
+_Unwind_Trace_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn)$/;"	t	typeref:typename:_Unwind_Reason_Code (*)(struct _Unwind_Context *,void *)
+_Unwind_Trace_Fn	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn)$/;"	t	typeref:typename:_Unwind_Reason_Code (*)(struct _Unwind_Context *,void *)
+_Unwind_Word	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^typedef unsigned _Unwind_Word __attribute__((__mode__(__word__)));$/;"	t	typeref:typename:unsigned
+_Unwind_Word	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^typedef unsigned _Unwind_Word __attribute__((__mode__(__word__)));$/;"	t	typeref:typename:unsigned
+_VARARGS_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/varargs.h	/^#define _VARARGS_H$/;"	d
+_VARARGS_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/varargs.h	/^#define _VARARGS_H$/;"	d
+_VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _VA_LIST /;"	d
+_VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _VA_LIST$/;"	d
+_VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _VA_LIST /;"	d
+_VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _VA_LIST$/;"	d
+_VA_LIST_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _VA_LIST_$/;"	d
+_VA_LIST_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _VA_LIST_$/;"	d
+_VA_LIST_DEFINED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _VA_LIST_DEFINED$/;"	d
+_VA_LIST_DEFINED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _VA_LIST_DEFINED$/;"	d
+_VA_LIST_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define _VA_LIST_T_H$/;"	d
+_VA_LIST_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define _VA_LIST_T_H$/;"	d
+_WCHAR_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WCHAR_T$/;"	d
+_WCHAR_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WCHAR_T$/;"	d
+_WCHAR_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WCHAR_T_$/;"	d
+_WCHAR_T_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WCHAR_T_$/;"	d
+_WCHAR_T_DECLARED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WCHAR_T_DECLARED$/;"	d
+_WCHAR_T_DECLARED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WCHAR_T_DECLARED$/;"	d
+_WCHAR_T_DEFINED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WCHAR_T_DEFINED$/;"	d
+_WCHAR_T_DEFINED	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WCHAR_T_DEFINED$/;"	d
+_WCHAR_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WCHAR_T_DEFINED_$/;"	d
+_WCHAR_T_DEFINED_	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WCHAR_T_DEFINED_$/;"	d
+_WCHAR_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WCHAR_T_H$/;"	d
+_WCHAR_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WCHAR_T_H$/;"	d
+_WINT_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define _WINT_T$/;"	d
+_WINT_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define _WINT_T$/;"	d
+__ASM_MIPS_REGDEF_H	include/asm-mips3k/regdef.h	/^#define __ASM_MIPS_REGDEF_H$/;"	d
+__ASM_MIPS_REGDEF_H	include/asm/regdef.h	/^#define __ASM_MIPS_REGDEF_H$/;"	d
+__A_OUT_GNU_H__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define __A_OUT_GNU_H__$/;"	d
+__EOF__	OS_ENV/compiler/usr/bin/mips-linux-gccbug	/^      cat  > $file << '__EOF__'$/;"	h
+__EOF__	OS_ENV/compiler/usr/bin/mips-linux-gccbug	/^      cat >> $file << __EOF__$/;"	h
+__EOF__	OS_ENV/compiler/usr/bin/mips-linux-gccbug	/^    ed -s $TEMP << '__EOF__'$/;"	h
+__EOF__	OS_ENV/compiler/usr/bin/mips-linux-gccbug	/^  ed -s $TEMP << __EOF__$/;"	h
+__GNUC_VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define __GNUC_VA_LIST$/;"	d
+__GNUC_VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define __GNUC_VA_LIST$/;"	d
+__GNU_EXEC_MACROS__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^#define __GNU_EXEC_MACROS__$/;"	d
+__INT_WCHAR_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __INT_WCHAR_T_H$/;"	d
+__INT_WCHAR_T_H	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __INT_WCHAR_T_H$/;"	d
+__NR_SYSCALLS	include/unistd.h	/^#define __NR_SYSCALLS /;"	d
+__PTRDIFF_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __PTRDIFF_T$/;"	d
+__PTRDIFF_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __PTRDIFF_T$/;"	d
+__PTRDIFF_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __PTRDIFF_TYPE__ /;"	d
+__PTRDIFF_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __PTRDIFF_TYPE__ /;"	d
+__SCHED_H__	include/sched.h	/^#define __SCHED_H__$/;"	d
+__SIZE_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __SIZE_T$/;"	d
+__SIZE_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __SIZE_T$/;"	d
+__SIZE_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __SIZE_TYPE__ /;"	d
+__SIZE_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __SIZE_TYPE__ /;"	d
+__SIZE_T__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __SIZE_T__	/;"	d
+__SIZE_T__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __SIZE_T__	/;"	d
+__STDDEF_H__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __STDDEF_H__$/;"	d
+__STDDEF_H__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __STDDEF_H__$/;"	d
+__SYSCALL_BASE	include/unistd.h	/^#define __SYSCALL_BASE /;"	d
+__VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define __VA_LIST$/;"	d
+__VA_LIST	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define __VA_LIST$/;"	d
+__WCHAR_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __WCHAR_T$/;"	d
+__WCHAR_T	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __WCHAR_T$/;"	d
+__WCHAR_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __WCHAR_TYPE__ /;"	d
+__WCHAR_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef __WCHAR_TYPE__ wchar_t;$/;"	t	typeref:typename:wchar_t
+__WCHAR_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __WCHAR_TYPE__ /;"	d
+__WCHAR_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef __WCHAR_TYPE__ wchar_t;$/;"	t	typeref:typename:wchar_t
+__WCHAR_T__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __WCHAR_T__	/;"	d
+__WCHAR_T__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __WCHAR_T__	/;"	d
+__WINT_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __WINT_TYPE__ /;"	d
+__WINT_TYPE__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __WINT_TYPE__ /;"	d
+___int_ptrdiff_t_h	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define ___int_ptrdiff_t_h$/;"	d
+___int_ptrdiff_t_h	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define ___int_ptrdiff_t_h$/;"	d
+___int_size_t_h	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define ___int_size_t_h$/;"	d
+___int_size_t_h	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define ___int_size_t_h$/;"	d
+___int_wchar_t_h	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define ___int_wchar_t_h$/;"	d
+___int_wchar_t_h	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define ___int_wchar_t_h$/;"	d
+__anon0ae0c3200103	fs/fsformat.c	/^enum {$/;"	g	file:
+__anon34de8f550103	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^{$/;"	g
+__anon618cb7a6010a	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^typedef union {$/;"	u
+__anon618cb7a60208	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	struct {$/;"	s	union:__anon618cb7a6010a
+__anon829fabc6010a	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  union {$/;"	u	struct:nlist
+__anon842548390103	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^{$/;"	g
+__anonced3bdb60108	readelf/kerelf.h	/^typedef struct {$/;"	s
+__anonced3bdb60208	readelf/kerelf.h	/^typedef struct {$/;"	s
+__anonced3bdb60308	readelf/kerelf.h	/^typedef struct {$/;"	s
+__anonf0369ec70108	include/kerelf.h	/^typedef struct {$/;"	s
+__anonf0369ec70208	include/kerelf.h	/^typedef struct {$/;"	s
+__anonf8d212780108	user/init.c	/^struct {$/;"	s	file:
+__asm_pgfault_handler	user/entry.S	/^__asm_pgfault_handler:$/;"	l
+__bool_true_false_are_defined	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdbool.h	/^#define __bool_true_false_are_defined	/;"	d
+__bool_true_false_are_defined	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdbool.h	/^#define __bool_true_false_are_defined	/;"	d
+__bss_start	user/user.lds	/^  __bss_start = .;		\/* BSS *\/$/;"	s
+__build_clear_cli	lib/genex.S	/^.macro	__build_clear_cli$/;"	m
+__build_clear_sti	lib/genex.S	/^.macro	__build_clear_sti$/;"	m
+__gnuc_va_list	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^typedef __builtin_va_list __gnuc_va_list;$/;"	t	typeref:typename:__builtin_va_list
+__gnuc_va_list	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^typedef __builtin_va_list __gnuc_va_list;$/;"	t	typeref:typename:__builtin_va_list
+__pgfault_handler	user/entry.S	/^	__pgfault_handler:$/;"	l
+__size_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __size_t$/;"	d
+__size_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __size_t$/;"	d
+__size_t__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __size_t__	/;"	d
+__size_t__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __size_t__	/;"	d
+__va_copy	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define __va_copy(/;"	d
+__va_copy	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define __va_copy(/;"	d
+__va_list__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define __va_list__$/;"	d
+__va_list__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define __va_list__$/;"	d
+__wchar_t__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define __wchar_t__	/;"	d
+__wchar_t__	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define __wchar_t__	/;"	d
+_cp0regdef_h_	include/asm-mips3k/cp0regdef.h	/^#define _cp0regdef_h_$/;"	d
+_cp0regdef_h_	include/asm/cp0regdef.h	/^#define _cp0regdef_h_$/;"	d
+_edata	user/user.lds	/^  _edata = .;			\/* End of data section *\/$/;"	s
+_etext	user/user.lds	/^  _etext = .;			\/* End of text section *\/$/;"	s
+_gettoken	user/sh.c	/^int _gettoken(char *s, char **p1, char **p2) {$/;"	f	typeref:typename:int
+_panic	lib/printf.c	/^void _panic(const char *file, int line, const char *fmt, ...) {$/;"	f	typeref:typename:void
+_pipeisclosed	user/pipe.c	/^static int _pipeisclosed(struct Fd *fd, struct Pipe *p) {$/;"	f	typeref:typename:int	file:
+_print_h_	include/print.h	/^#define _print_h_$/;"	d
+_printf_h_	include/printf.h	/^#define _printf_h_$/;"	d
+_start	user/entry.S	/^_start:$/;"	l
+_text	user/user.lds	/^  _text = .;			\/* Text and read-only data *\/$/;"	s
+_user_panic	user/printf.c	/^void _user_panic(const char *file, int line, const char *fmt, ...) {$/;"	f	typeref:typename:void
+a0	include/asm-mips3k/regdef.h	/^#define a0 /;"	d
+a0	include/asm/regdef.h	/^#define a0 /;"	d
+a1	include/asm-mips3k/regdef.h	/^#define a1 /;"	d
+a1	include/asm/regdef.h	/^#define a1 /;"	d
+a2	include/asm-mips3k/regdef.h	/^#define a2 /;"	d
+a2	include/asm/regdef.h	/^#define a2 /;"	d
+a3	include/asm-mips3k/regdef.h	/^#define a3 /;"	d
+a3	include/asm/regdef.h	/^#define a3 /;"	d
+all	Makefile	/^all: set-PROJECT_DIR \\$/;"	t
+all	boot/Makefile	/^all: start.o$/;"	t
+all	drivers/Makefile	/^all: $(drivers)$/;"	t
+all	drivers/gxconsole/Makefile	/^all: console.o$/;"	t
+all	fs/Makefile	/^all: serv.x fs.img serv.b$/;"	t
+all	init/Makefile	/^all: init.o main.o code.o$/;"	t
+all	lib/Makefile	/^all: kernel_elfloader.o env.o print.o printf.o sched.o env_asm.o kclock.o traps.o genex.o kclock/;"	t
+all	mm/Makefile	/^all: pmap.o tlb_asm.o$/;"	t
+all	user/Makefile	/^all: echo.x echo.b  num.x num.b testptelibrary.b testptelibrary.x fktest.x fktest.b pingpong.x p/;"	t
+alloc	mm/pmap.c	/^static void *alloc(u_int n, u_int align, int clear) {$/;"	f	typeref:typename:void *	file:
+alloc_block	fs/fs.c	/^int alloc_block(void) {$/;"	f	typeref:typename:int
+alloc_block_num	fs/fs.c	/^int alloc_block_num(void) {$/;"	f	typeref:typename:int
+and	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define and	/;"	d
+and	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define and	/;"	d
+and	lib/genex.S	/^and	t0, t2$/;"	l
+and_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define and_eq	/;"	d
+and_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define and_eq	/;"	d
+andi	lib/genex.S	/^andi	t1, t0, STATUSF_IP4$/;"	l
+aoutcode	init/code.c	/^char aoutcode[] = {$/;"	v	typeref:typename:char[]
+arglist	OS_ENV/compiler/usr/mips-linux/bin/mtrace	/^arglist: while (@ARGV) {$/;"	l
+asid_alloc	lib/env.c	/^static u_int asid_alloc() {$/;"	f	typeref:typename:u_int	file:
+asid_bitmap	lib/env.c	/^static u_int asid_bitmap[2] = {0};$/;"	v	typeref:typename:u_int[2]	file:
+asid_free	lib/env.c	/^static void asid_free(u_int i) {$/;"	f	typeref:typename:void	file:
+assert	include/mmu.h	/^#define assert(/;"	d
+at	boot/start.S	/^.set at$/;"	d
+at	lib/genex.S	/^	.set	at$/;"	d
+at	lib/genex.S	/^	.set at$/;"	d
+at	lib/genex.S	/^.set	at$/;"	d
+at	lib/syscall.S	/^    .set at                             \/\/ Resume use of $at$/;"	d
+basemem	mm/pmap.c	/^u_long basemem; \/* Amount of base memory(in bytes) *\/$/;"	v	typeref:typename:u_long
+bcopy	init/init.c	/^void bcopy(const void *src, void *dst, size_t len) {$/;"	f	typeref:typename:void
+binary_user_A_size	init/code_a.c	/^unsigned int binary_user_A_size = 5298;$/;"	v	typeref:typename:unsigned int
+binary_user_A_start	init/code_a.c	/^unsigned char binary_user_A_start[]$/;"	v	typeref:typename:unsigned char[]
+binary_user_B_size	init/code_b.c	/^unsigned int binary_user_B_size = 5298;$/;"	v	typeref:typename:unsigned int
+binary_user_B_start	init/code_b.c	/^unsigned char binary_user_B_start[]$/;"	v	typeref:typename:unsigned char[]
+bitand	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define bitand	/;"	d
+bitand	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define bitand	/;"	d
+bitmap	fs/fs.c	/^u_int *bitmap; \/\/ bitmap blocks mapped in memory$/;"	v	typeref:typename:u_int *
+bitor	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define bitor	/;"	d
+bitor	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define bitor	/;"	d
+block_is_dirty	fs/fs.c	/^u_int block_is_dirty(u_int blockno) {$/;"	f	typeref:typename:u_int
+block_is_free	fs/fs.c	/^int block_is_free(u_int blockno) {$/;"	f	typeref:typename:int
+block_is_mapped	fs/fs.c	/^u_int block_is_mapped(u_int blockno) {$/;"	f	typeref:typename:u_int
+bnez	lib/genex.S	/^bnez	t1, timer_irq$/;"	l
+bol	user/num.c	/^int bol = 1;$/;"	v	typeref:typename:int
+bool	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdbool.h	/^#define bool	/;"	d
+bool	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdbool.h	/^#define bool	/;"	d
+boot_dir	Makefile	/^boot_dir	  := boot$/;"	m
+boot_map_segment	mm/pmap.c	/^void boot_map_segment(Pde *pgdir, u_long va, u_long size, u_long pa, int perm) {$/;"	f	typeref:typename:void
+boot_pgdir	mm/pmap.c	/^Pde *boot_pgdir;$/;"	v	typeref:typename:Pde *
+boot_pgdir_walk	mm/pmap.c	/^static Pte *boot_pgdir_walk(Pde *pgdir, u_long va, int create) {$/;"	f	typeref:typename:Pte *	file:
+boutcode	init/code.c	/^char boutcode[] = {$/;"	v	typeref:typename:char[]
+bss	user/init.c	/^char bss[6000];$/;"	v	typeref:typename:char[6000]
+bss_end	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long bss_end;      \/* Offset of end of bss segment from beginning$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+buf	user/cat.c	/^char buf[8192];$/;"	v	typeref:typename:char[8192]
+buf	user/sh.c	/^char buf[1024];$/;"	v	typeref:typename:char[1024]
+buf	user/testfdsharing.c	/^char buf[512], buf2[512];$/;"	v	typeref:typename:char[512]
+buf2	user/testfdsharing.c	/^char buf[512], buf2[512];$/;"	v	typeref:typename:char[512]
+build_date	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long build_date;   \/* When the program\/library was built *\/$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+bydep	OS_ENV/compiler/usr/bin/depmod.pl	/^sub bydep$/;"	s
+bzero	init/init.c	/^void bzero(void *b, size_t len) {$/;"	f	typeref:typename:void
+cat	user/cat.c	/^void cat(int f, char *s) {$/;"	f	typeref:typename:void
+check_write_block	fs/fs.c	/^void check_write_block(void) {$/;"	f	typeref:typename:void
+childofspawn	user/testptelibrary.c	/^void childofspawn(void) {$/;"	f	typeref:typename:void
+clean	Makefile	/^clean: $/;"	t
+clean	boot/Makefile	/^clean:$/;"	t
+clean	drivers/Makefile	/^clean: $/;"	t
+clean	drivers/gxconsole/Makefile	/^clean:$/;"	t
+clean	fs/Makefile	/^clean:$/;"	t
+clean	init/Makefile	/^clean:$/;"	t
+clean	lib/Makefile	/^clean:$/;"	t
+clean	mm/Makefile	/^clean:$/;"	t
+clean	readelf/Makefile	/^clean:$/;"	t
+clean	user/Makefile	/^clean:$/;"	t
+close	user/fd.c	/^int close(int fdnum) {$/;"	f	typeref:typename:int
+close_all	user/fd.c	/^void close_all(void) {$/;"	f	typeref:typename:void
+compl	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define compl	/;"	d
+compl	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define compl	/;"	d
+cons_close	user/console.c	/^int cons_close(struct Fd *fd) {$/;"	f	typeref:typename:int
+cons_read	user/console.c	/^int cons_read(struct Fd *fd, void *vbuf, u_int n, u_int offset) {$/;"	f	typeref:typename:int
+cons_stat	user/console.c	/^int cons_stat(struct Fd *fd, struct Stat *stat) {$/;"	f	typeref:typename:int
+cons_write	user/console.c	/^int cons_write(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {$/;"	f	typeref:typename:int
+cp0_badvaddr	include/trap.h	/^    unsigned long cp0_badvaddr;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+cp0_cause	include/trap.h	/^    unsigned long cp0_cause;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+cp0_epc	include/trap.h	/^    unsigned long cp0_epc;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+cp0_status	include/trap.h	/^    unsigned long cp0_status;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+create_file	fs/fsformat.c	/^struct File *create_file(struct File *dirf) {$/;"	f	typeref:struct:File *
+cur_list	lib/sched.c	/^#define cur_list /;"	d	file:
+curenv	lib/env.c	/^struct Env *curenv = NULL; \/\/ the current env$/;"	v	typeref:struct:Env *
+data	fs/fsformat.c	/^    uint8_t data[BY2BLK];$/;"	m	struct:Block	typeref:typename:uint8_t[]	file:
+data	user/init.c	/^} data = {"this is initialized data", "so is this"};$/;"	v	typeref:struct:__anonf8d212780108
+data_end	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long data_end;     \/* Offset of end of data segment$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+data_start	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long data_start;   \/* Offset of data segment from beginning of$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+debug	user/fd.h	/^#define debug /;"	d
+debug	user/file.c	/^#define debug /;"	d	file:
+debug	user/fsipc.c	/^#define debug /;"	d	file:
+debug	user/pipe.c	/^#define debug /;"	d	file:
+debug	user/spawn.c	/^#define debug /;"	d	file:
+debug_	user/sh.c	/^int debug_ = 0;$/;"	v	typeref:typename:int
+delay	boot/start.S	/^delay:$/;"	l
+dev_close	user/fd.h	/^    int (*dev_close)(struct Fd *);$/;"	m	struct:Dev	typeref:typename:int (*)(struct Fd *)
+dev_id	user/fd.h	/^    int dev_id;$/;"	m	struct:Dev	typeref:typename:int
+dev_lookup	user/fd.c	/^int dev_lookup(int dev_id, struct Dev **dev) {$/;"	f	typeref:typename:int
+dev_name	user/fd.h	/^    char *dev_name;$/;"	m	struct:Dev	typeref:typename:char *
+dev_read	user/fd.h	/^    int (*dev_read)(struct Fd *, void *, u_int, u_int);$/;"	m	struct:Dev	typeref:typename:int (*)(struct Fd *,void *,u_int,u_int)
+dev_seek	user/fd.h	/^    int (*dev_seek)(struct Fd *, u_int);$/;"	m	struct:Dev	typeref:typename:int (*)(struct Fd *,u_int)
+dev_stat	user/fd.h	/^    int (*dev_stat)(struct Fd *, struct Stat *);$/;"	m	struct:Dev	typeref:typename:int (*)(struct Fd *,struct Stat *)
+dev_write	user/fd.h	/^    int (*dev_write)(struct Fd *, const void *, u_int, u_int);$/;"	m	struct:Dev	typeref:typename:int (*)(struct Fd *,const void *,u_int,u_int)
+devcons	user/console.c	/^struct Dev devcons = {$/;"	v	typeref:struct:Dev
+devfile	user/file.c	/^struct Dev devfile = {$/;"	v	typeref:struct:Dev
+devpipe	user/pipe.c	/^struct Dev devpipe = {$/;"	v	typeref:struct:Dev
+devtab	user/fd.c	/^static struct Dev *devtab[] = {&devfile, &devcons, &devpipe, 0};$/;"	v	typeref:struct:Dev * []	file:
+diff_msg	user/fstest.c	/^static char *diff_msg = "This is a different massage of the day!\\r\\n\\r\\n";$/;"	v	typeref:typename:char *	file:
+dir_alloc_file	fs/fs.c	/^int dir_alloc_file(struct File *dir, struct File **file) {$/;"	f	typeref:typename:int
+dir_lookup	fs/fs.c	/^int dir_lookup(struct File *dir, char *name, struct File **file) {$/;"	f	typeref:typename:int
+disk	fs/fsformat.c	/^} disk[NBLOCK];$/;"	v	typeref:struct:Block[]
+diskaddr	fs/fs.c	/^u_int diskaddr(u_int blockno) {$/;"	f	typeref:typename:u_int
+do_help	OS_ENV/compiler/usr/mips-linux/bin/xtrace	/^do_help() {$/;"	f
+do_missing_arg	OS_ENV/compiler/usr/mips-linux/bin/xtrace	/^do_missing_arg() {$/;"	f
+do_usage	OS_ENV/compiler/usr/mips-linux/bin/xtrace	/^do_usage() {$/;"	f
+do_version	OS_ENV/compiler/usr/mips-linux/bin/xtrace	/^do_version() {$/;"	f
+drivers	drivers/Makefile	/^drivers		  := gxconsole$/;"	m
+drivers_dir	Makefile	/^drivers_dir	  := drivers$/;"	m
+dup	user/fd.c	/^int dup(int oldfdnum, int newfdnum) {$/;"	f	typeref:typename:int
+duppage	user/fork.c	/^static void duppage(u_int envid, u_int pn) {$/;"	f	typeref:typename:void	file:
+e_ehsize	include/kerelf.h	/^    Elf32_Half e_ehsize;              \/* ELF header size in bytes *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_ehsize	readelf/kerelf.h	/^    Elf32_Half e_ehsize;               \/* ELF header size in bytes *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_entry	include/kerelf.h	/^    Elf32_Addr e_entry;               \/* Entry point virtual address *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Addr
+e_entry	readelf/kerelf.h	/^    Elf32_Addr e_entry;                \/* Entry point virtual address *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Addr
+e_flags	include/kerelf.h	/^    Elf32_Word e_flags;               \/* Processor-specific flags *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Word
+e_flags	readelf/kerelf.h	/^    Elf32_Word e_flags;                \/* Processor-specific flags *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Word
+e_ident	include/kerelf.h	/^    unsigned char e_ident[EI_NIDENT]; \/* Magic number and other info *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:unsigned char[]
+e_ident	readelf/kerelf.h	/^    unsigned char e_ident[EI_NIDENT];     \/* Magic number and other info *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:unsigned char[]
+e_machine	include/kerelf.h	/^    Elf32_Half e_machine;             \/* Architecture *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_machine	readelf/kerelf.h	/^    Elf32_Half e_machine;              \/* Architecture *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_phentsize	include/kerelf.h	/^    Elf32_Half e_phentsize;           \/* Program header table entry size *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_phentsize	readelf/kerelf.h	/^    Elf32_Half e_phentsize;            \/* Program header table entry size *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_phnum	include/kerelf.h	/^    Elf32_Half e_phnum;               \/* Program header table entry count *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_phnum	readelf/kerelf.h	/^    Elf32_Half e_phnum;                \/* Program header table entry count *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_phoff	include/kerelf.h	/^    Elf32_Off e_phoff;                \/* Program header table file offset *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Off
+e_phoff	readelf/kerelf.h	/^    Elf32_Off  e_phoff;                \/* Program header table file offset *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Off
+e_shentsize	include/kerelf.h	/^    Elf32_Half e_shentsize;           \/* Section header table entry size *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_shentsize	readelf/kerelf.h	/^    Elf32_Half e_shentsize;            \/* Section header table entry size *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_shnum	include/kerelf.h	/^    Elf32_Half e_shnum;               \/* Section header table entry count *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_shnum	readelf/kerelf.h	/^    Elf32_Half e_shnum;                \/* Section header table entry count *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_shoff	include/kerelf.h	/^    Elf32_Off e_shoff;                \/* Section header table file offset *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Off
+e_shoff	readelf/kerelf.h	/^    Elf32_Off  e_shoff;                \/* Section header table file offset *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Off
+e_shstrndx	include/kerelf.h	/^    Elf32_Half e_shstrndx;            \/* Section header string table index *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_shstrndx	readelf/kerelf.h	/^    Elf32_Half e_shstrndx;             \/* Section header string table index *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_type	include/kerelf.h	/^    Elf32_Half e_type;                \/* Object file type *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Half
+e_type	readelf/kerelf.h	/^    Elf32_Half e_type;                 \/* Object file type *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Half
+e_version	include/kerelf.h	/^    Elf32_Word e_version;             \/* Object file version *\/$/;"	m	struct:__anonf0369ec70108	typeref:typename:Elf32_Word
+e_version	readelf/kerelf.h	/^    Elf32_Word e_version;              \/* Object file version *\/$/;"	m	struct:__anonced3bdb60108	typeref:typename:Elf32_Word
+eflags	lib/traps.c	/^    u_int eflags;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+empty1	lib/traps.c	/^    u_int empty1;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+empty2	lib/traps.c	/^    u_int empty2;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+empty3	lib/traps.c	/^    u_int empty3;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+empty4	lib/traps.c	/^    u_int empty4;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+empty5	lib/traps.c	/^    u_int empty5;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+end	tools/scse0_3.lds	/^   end = . ;$/;"	s
+end	user/user.lds	/^  end = . ;$/;"	s
+entry	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long entry;        \/* Offset of first executable instruction$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+env	user/libos.c	/^struct Env *env;$/;"	v	typeref:struct:Env *
+env_alloc	lib/env.c	/^int env_alloc(struct Env **new, u_int parent_id) {$/;"	f	typeref:typename:int
+env_check	lib/env.c	/^void env_check() {$/;"	f	typeref:typename:void
+env_cr3	include/env.h	/^    u_int env_cr3;$/;"	m	struct:Env	typeref:typename:u_int
+env_create	lib/env.c	/^void env_create(u_char *binary, int size) {$/;"	f	typeref:typename:void
+env_create_priority	lib/env.c	/^void env_create_priority(u_char *binary, int size, int priority) {$/;"	f	typeref:typename:void
+env_destroy	lib/env.c	/^void env_destroy(struct Env *e) {$/;"	f	typeref:typename:void
+env_free	lib/env.c	/^void env_free(struct Env *e) {$/;"	f	typeref:typename:void
+env_free_list	lib/env.c	/^static struct Env_list env_free_list; \/\/ Free list$/;"	v	typeref:struct:Env_list	file:
+env_id	include/env.h	/^    u_int env_id;             \/\/ Unique environment identifier$/;"	m	struct:Env	typeref:typename:u_int
+env_init	lib/env.c	/^void env_init(void) {$/;"	f	typeref:typename:void
+env_ipc_dstva	include/env.h	/^    u_int env_ipc_dstva;   \/\/ va at which to map received page$/;"	m	struct:Env	typeref:typename:u_int
+env_ipc_from	include/env.h	/^    u_int env_ipc_from;    \/\/ envid of the sender$/;"	m	struct:Env	typeref:typename:u_int
+env_ipc_perm	include/env.h	/^    u_int env_ipc_perm;    \/\/ perm of page mapping received$/;"	m	struct:Env	typeref:typename:u_int
+env_ipc_recving	include/env.h	/^    u_int env_ipc_recving; \/\/ env is blocked receiving$/;"	m	struct:Env	typeref:typename:u_int
+env_ipc_value	include/env.h	/^    u_int env_ipc_value;   \/\/ data value sent to us$/;"	m	struct:Env	typeref:typename:u_int
+env_nop	include/env.h	/^    u_int env_nop;  \/\/ align to avoid mul instruction$/;"	m	struct:Env	typeref:typename:u_int
+env_parent_id	include/env.h	/^    u_int env_parent_id;      \/\/ env_id of this env's parent$/;"	m	struct:Env	typeref:typename:u_int
+env_pgdir	include/env.h	/^    Pde *env_pgdir;           \/\/ Kernel virtual address of page dir$/;"	m	struct:Env	typeref:typename:Pde *
+env_pgfault_handler	include/env.h	/^    u_int env_pgfault_handler; \/\/ page fault state$/;"	m	struct:Env	typeref:typename:u_int
+env_pri	include/env.h	/^    u_int env_pri;$/;"	m	struct:Env	typeref:typename:u_int
+env_run	lib/env.c	/^void env_run(struct Env *e) {$/;"	f	typeref:typename:void
+env_runs	include/env.h	/^    u_int env_runs; \/\/ number of times been env_run'ed$/;"	m	struct:Env	typeref:typename:u_int
+env_sched_list	lib/env.c	/^struct Env_list env_sched_list[2];    \/\/ Runnable list$/;"	v	typeref:struct:Env_list[2]
+env_setup_vm	lib/env.c	/^static int env_setup_vm(struct Env *e) {$/;"	f	typeref:typename:int	file:
+env_status	include/env.h	/^    u_int env_status;         \/\/ Status of the environment$/;"	m	struct:Env	typeref:typename:u_int
+env_tf	include/env.h	/^    struct Trapframe env_tf;  \/\/ Saved registers$/;"	m	struct:Env	typeref:struct:Trapframe
+env_xstacktop	include/env.h	/^    u_int env_xstacktop;       \/\/ top of exception stack$/;"	m	struct:Env	typeref:typename:u_int
+envid2env	lib/env.c	/^int envid2env(u_int envid, struct Env **penv, int checkperm) {$/;"	f	typeref:typename:int
+envs	lib/env.c	/^struct Env *envs = NULL;   \/\/ All environments$/;"	v	typeref:struct:Env *
+envs	user/entry.S	/^envs:$/;"	l
+err	lib/traps.c	/^    u_int err;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+exception_class	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _Unwind_Exception_Class exception_class;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Exception_Class
+exception_class	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _Unwind_Exception_Class exception_class;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Exception_Class
+exception_cleanup	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _Unwind_Exception_Cleanup_Fn exception_cleanup;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Exception_Cleanup_Fn
+exception_cleanup	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _Unwind_Exception_Cleanup_Fn exception_cleanup;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Exception_Cleanup_Fn
+exception_handlers	lib/traps.c	/^unsigned long exception_handlers[32];$/;"	v	typeref:typename:unsigned long[32]
+exit	user/libos.c	/^void exit(void) {$/;"	f	typeref:typename:void
+extmem	mm/pmap.c	/^u_long extmem;  \/* Amount of extended memory(in bytes) *\/$/;"	v	typeref:typename:u_long
+f_dir	include/fs.h	/^    struct File *f_dir; \/\/ valid only in memory$/;"	m	struct:File	typeref:struct:File *
+f_direct	include/fs.h	/^    u_int f_direct[NDIRECT];$/;"	m	struct:File	typeref:typename:u_int[]
+f_fd	user/fd.h	/^    struct Fd f_fd;$/;"	m	struct:Filefd	typeref:struct:Fd
+f_file	user/fd.h	/^    struct File f_file;$/;"	m	struct:Filefd	typeref:struct:File
+f_fileid	user/fd.h	/^    u_int f_fileid;$/;"	m	struct:Filefd	typeref:typename:u_int
+f_indirect	include/fs.h	/^    u_int f_indirect;$/;"	m	struct:File	typeref:typename:u_int
+f_name	include/fs.h	/^    u_char f_name[MAXNAMELEN]; \/\/ filename$/;"	m	struct:File	typeref:typename:u_char[]
+f_pad	include/fs.h	/^    u_char f_pad[256 - MAXNAMELEN - 4 - 4 - NDIRECT * 4 - 4 - 4];$/;"	m	struct:File	typeref:typename:u_char[]
+f_size	include/fs.h	/^    u_int f_size;              \/\/ file size in bytes$/;"	m	struct:File	typeref:typename:u_int
+f_type	include/fs.h	/^    u_int f_type;              \/\/ file type$/;"	m	struct:File	typeref:typename:u_int
+false	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdbool.h	/^#define false	/;"	d
+false	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdbool.h	/^#define false	/;"	d
+fatal	OS_ENV/compiler/usr/bin/texi2dvi	/^fatal () {$/;"	f
+fault_va	lib/traps.c	/^    u_int fault_va;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+fd2data	user/fd.c	/^u_int fd2data(struct Fd *fd) { return INDEX2DATA(fd2num(fd)); }$/;"	f	typeref:typename:u_int
+fd2num	user/fd.c	/^int fd2num(struct Fd *fd) { return ((u_int) fd - FDTABLE) \/ BY2PG; }$/;"	f	typeref:typename:int
+fd_alloc	user/fd.c	/^int fd_alloc(struct Fd **fd) {$/;"	f	typeref:typename:int
+fd_close	user/fd.c	/^void fd_close(struct Fd *fd) { syscall_mem_unmap(0, (u_int) fd); }$/;"	f	typeref:typename:void
+fd_dev_id	user/fd.h	/^    u_int fd_dev_id;$/;"	m	struct:Fd	typeref:typename:u_int
+fd_lookup	user/fd.c	/^int fd_lookup(int fdnum, struct Fd **fd) {$/;"	f	typeref:typename:int
+fd_offset	user/fd.h	/^    u_int fd_offset;$/;"	m	struct:Fd	typeref:typename:u_int
+fd_omode	user/fd.h	/^    u_int fd_omode;$/;"	m	struct:Fd	typeref:typename:u_int
+fdtab	user/entry.S	/^fdtab:$/;"	l
+file_block_walk	fs/fs.c	/^int file_block_walk(struct File *f, u_int filebno, u_int **ppdiskbno, u_int alloc) {$/;"	f	typeref:typename:int
+file_clear_block	fs/fs.c	/^int file_clear_block(struct File *f, u_int filebno) {$/;"	f	typeref:typename:int
+file_close	fs/fs.c	/^void file_close(struct File *f) {$/;"	f	typeref:typename:void
+file_close	user/file.c	/^int file_close(struct Fd *fd) {$/;"	f	typeref:typename:int
+file_create	fs/fs.c	/^int file_create(char *path, struct File **file) {$/;"	f	typeref:typename:int
+file_dirty	fs/fs.c	/^int file_dirty(struct File *f, u_int offset) {$/;"	f	typeref:typename:int
+file_flush	fs/fs.c	/^void file_flush(struct File *f) {$/;"	f	typeref:typename:void
+file_get_block	fs/fs.c	/^int file_get_block(struct File *f, u_int filebno, void **blk) {$/;"	f	typeref:typename:int
+file_map_block	fs/fs.c	/^int file_map_block(struct File *f, u_int filebno, u_int *diskbno, u_int alloc) {$/;"	f	typeref:typename:int
+file_open	fs/fs.c	/^int file_open(char *path, struct File **file) { return walk_path(path, 0, file, 0); }$/;"	f	typeref:typename:int
+file_read	user/file.c	/^static int file_read(struct Fd *fd, void *buf, u_int n, u_int offset) {$/;"	f	typeref:typename:int	file:
+file_remove	fs/fs.c	/^int file_remove(char *path) {$/;"	f	typeref:typename:int
+file_set_size	fs/fs.c	/^int file_set_size(struct File *f, u_int newsize) {$/;"	f	typeref:typename:int
+file_stat	user/file.c	/^static int file_stat(struct Fd *fd, struct Stat *st) {$/;"	f	typeref:typename:int	file:
+file_truncate	fs/fs.c	/^void file_truncate(struct File *f, u_int newsize) {$/;"	f	typeref:typename:void
+file_write	user/file.c	/^static int file_write(struct Fd *fd, const void *buf, u_int n, u_int offset) {$/;"	f	typeref:typename:int	file:
+filler	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long filler[5];    \/* Reservered, set to zero *\/$/;"	m	struct:flat_hdr	typeref:typename:unsigned long[5]
+findprog	OS_ENV/compiler/usr/bin/texi2dvi	/^findprog () {$/;"	f
+finish_fs	fs/fsformat.c	/^void finish_fs(char *name) {$/;"	f	typeref:typename:void
+flag	user/ls.c	/^int flag[256];$/;"	v	typeref:typename:int[256]
+flags	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long flags;       $/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+flat_hdr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^struct flat_hdr {$/;"	s
+flat_v2_reloc_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^} flat_v2_reloc_t;$/;"	t	typeref:union:__anon618cb7a6010a
+flush_bitmap	fs/fsformat.c	/^void flush_bitmap() {$/;"	f	typeref:typename:void
+fork	user/fork.c	/^int fork(void) {$/;"	f	typeref:typename:int
+format_line	OS_ENV/compiler/usr/mips-linux/bin/xtrace	/^format_line() {$/;"	f
+fp	include/asm-mips3k/regdef.h	/^#define fp /;"	d
+fp	include/asm/regdef.h	/^#define fp /;"	d
+free_block	fs/fs.c	/^void free_block(u_int blockno) {$/;"	f	typeref:typename:void
+freemem	mm/pmap.c	/^static u_long freemem;$/;"	v	typeref:typename:u_long	file:
+fs.img	fs/Makefile	/^fs.img: $(FSIMGFILES)$/;"	t
+fs_dir	Makefile	/^fs_dir		  := fs$/;"	m
+fs_init	fs/fs.c	/^void fs_init(void) {$/;"	f	typeref:typename:void
+fs_sync	fs/fs.c	/^void fs_sync(void) {$/;"	f	typeref:typename:void
+fs_test	fs/test.c	/^void fs_test(void) {$/;"	f	typeref:typename:void
+fsipc	user/fsipc.c	/^static int fsipc(u_int type, void *fsreq, u_int dstva, u_int *perm) {$/;"	f	typeref:typename:int	file:
+fsipc_close	user/fsipc.c	/^int fsipc_close(u_int fileid) {$/;"	f	typeref:typename:int
+fsipc_dirty	user/fsipc.c	/^int fsipc_dirty(u_int fileid, u_int offset) {$/;"	f	typeref:typename:int
+fsipc_map	user/fsipc.c	/^int fsipc_map(u_int fileid, u_int offset, u_int dstva) {$/;"	f	typeref:typename:int
+fsipc_open	user/fsipc.c	/^int fsipc_open(const char *path, u_int omode, struct Fd *fd) {$/;"	f	typeref:typename:int
+fsipc_remove	user/fsipc.c	/^int fsipc_remove(const char *path) {$/;"	f	typeref:typename:int
+fsipc_set_size	user/fsipc.c	/^int fsipc_set_size(u_int fileid, u_int size) {$/;"	f	typeref:typename:int
+fsipc_sync	user/fsipc.c	/^int fsipc_sync(void) { return fsipc(FSREQ_SYNC, fsipcbuf, 0, 0); }$/;"	f	typeref:typename:int
+fsipcbuf	user/entry.S	/^fsipcbuf:$/;"	l
+fstat	user/fd.c	/^int fstat(int fdnum, struct Stat *stat) {$/;"	f	typeref:typename:int
+ftruncate	user/file.c	/^int ftruncate(int fdnum, u_int size) {$/;"	f	typeref:typename:int
+fwritef	user/fprintf.c	/^int fwritef(int fd, const char *fmt, ...) {$/;"	f	typeref:typename:int
+get_xref_files	OS_ENV/compiler/usr/bin/texi2dvi	/^get_xref_files ()$/;"	f
+gettoken	user/sh.c	/^int gettoken(char *s, char **p1) {$/;"	f	typeref:typename:int
+gp	include/asm-mips3k/regdef.h	/^#define gp /;"	d
+gp	include/asm/regdef.h	/^#define gp /;"	d
+halt	drivers/gxconsole/console.c	/^void halt(void) {$/;"	f	typeref:typename:void
+help_info	OS_ENV/compiler/usr/mips-linux/bin/xtrace	/^help_info() {$/;"	f
+hi	include/trap.h	/^    unsigned long hi;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+ide_read	fs/ide.c	/^void ide_read(u_int diskno, u_int secno, void *dst, u_int nsecs) {$/;"	f	typeref:typename:void
+ide_write	fs/ide.c	/^void ide_write(u_int diskno, u_int secno, void *src, u_int nsecs) {$/;"	f	typeref:typename:void
+init_dir	Makefile	/^init_dir	  := init$/;"	m
+init_disk	fs/fsformat.c	/^void init_disk() {$/;"	f	typeref:typename:void
+init_stack	user/spawn.c	/^int init_stack(u_int child, char **argv, u_int *init_esp) {$/;"	f	typeref:typename:int
+int16_t	include/types.h	/^typedef short int16_t;$/;"	t	typeref:typename:short
+int16_t	readelf/types.h	/^typedef short int16_t;$/;"	t	typeref:typename:short
+int32_t	include/types.h	/^typedef int int32_t;$/;"	t	typeref:typename:int
+int32_t	readelf/types.h	/^typedef int int32_t;$/;"	t	typeref:typename:int
+int64_t	include/types.h	/^typedef long long int64_t;$/;"	t	typeref:typename:long long
+int64_t	readelf/types.h	/^typedef long long int64_t;$/;"	t	typeref:typename:long long
+ipc_recv	user/ipc.c	/^u_int ipc_recv(u_int *whom, u_int dstva, u_int *perm) {$/;"	f	typeref:typename:u_int
+ipc_send	user/ipc.c	/^void ipc_send(u_int whom, u_int val, u_int srcva, u_int perm) {$/;"	f	typeref:typename:void
+is_elf_format	lib/kernel_elfloader.c	/^int is_elf_format(u_char *binary) {$/;"	f	typeref:typename:int
+is_elf_format	readelf/readelf.c	/^int is_elf_format(u_char *binary) {$/;"	f	typeref:typename:int
+iscons	user/console.c	/^int iscons(int fdnum) {$/;"	f	typeref:typename:int
+jp	include/asm-mips3k/regdef.h	/^#define jp /;"	d
+jp	include/asm/regdef.h	/^#define jp /;"	d
+k0	include/asm-mips3k/regdef.h	/^#define k0 /;"	d
+k0	include/asm/regdef.h	/^#define k0 /;"	d
+k1	include/asm-mips3k/regdef.h	/^#define k1 /;"	d
+k1	include/asm/regdef.h	/^#define k1 /;"	d
+kclock_init	lib/kclock.c	/^void kclock_init(void) {$/;"	f	typeref:typename:void
+lib_dir	Makefile	/^lib_dir		  := lib$/;"	m
+libmain	user/libos.c	/^void libmain(int argc, char **argv) {$/;"	f	typeref:typename:void
+line	user/num.c	/^int line = 0;$/;"	v	typeref:typename:int
+link_script	Makefile	/^link_script   := $(tools_dir)\/scse0_3.lds$/;"	m
+lo	include/trap.h	/^    unsigned long lo;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+load_elf	lib/kernel_elfloader.c	/^int load_elf(u_char *binary, int size, u_long *entry_point, void *user_data,$/;"	f	typeref:typename:int
+load_icode	lib/env.c	/^static void load_icode(struct Env *e, u_char *binary, u_int size) {$/;"	f	typeref:typename:void	file:
+load_icode_mapper	lib/env.c	/^static int load_icode_mapper(u_long va, u_int32_t sgsize, u_char *bin, u_int32_t bin_size, void /;"	f	typeref:typename:int	file:
+location	OS_ENV/compiler/usr/mips-linux/bin/mtrace	/^sub location {$/;"	s
+loop	boot/start.S	/^loop:$/;"	l
+lp_Print	lib/print.c	/^void lp_Print(void (*output)(void *, char *, int), void *arg, char *fmt, va_list ap) {$/;"	f	typeref:typename:void
+ls	user/ls.c	/^void ls(char *path, char *prefix) {$/;"	f	typeref:typename:void
+ls1	user/ls.c	/^void ls1(char *prefix, u_int isdir, u_int size, char *name) {$/;"	f	typeref:typename:void
+lsdir	user/ls.c	/^void lsdir(char *path, char *prefix) {$/;"	f	typeref:typename:void
+mCONTEXT	boot/start.S	/^mCONTEXT:$/;"	l
+machine_type	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^enum machine_type {$/;"	g
+magic	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	char magic[4];$/;"	m	struct:flat_hdr	typeref:typename:char[4]
+main	fs/fsformat.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+main	init/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	readelf/main.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+make_link_block	fs/fsformat.c	/^int make_link_block(struct File *dirf, int nblk) {$/;"	f	typeref:typename:int
+map_block	fs/fs.c	/^int map_block(u_int blockno) {$/;"	f	typeref:typename:int
+maxpa	mm/pmap.c	/^u_long maxpa;   \/* Maximum physical address *\/$/;"	v	typeref:typename:u_long
+memcmp	user/testfdsharing.c	/^int memcmp(char *a, char *b, int n) {$/;"	f	typeref:typename:int
+memcpy	lib/syscall_all.c	/^void *memcpy(void *destaddr, void const *srcaddr, u_int len) {$/;"	f	typeref:typename:void *
+memcpy	user/string.c	/^void *memcpy(void *destaddr, void const *srcaddr, u_int len) {$/;"	f	typeref:typename:void *
+mfc0	lib/genex.S	/^mfc0	t0, CP0_CAUSE$/;"	l
+mfc0	lib/genex.S	/^mfc0	t2, CP0_STATUS$/;"	l
+mips1	lib/env_asm.S	/^.set   mips1          $/;"	d
+mips2	boot/start.S	/^    .set    mips2$/;"	d
+mips_detect_memory	mm/pmap.c	/^void mips_detect_memory() {$/;"	f	typeref:typename:void
+mips_init	init/init.c	/^void mips_init() {$/;"	f	typeref:typename:void
+mips_vm_init	mm/pmap.c	/^void mips_vm_init() {$/;"	f	typeref:typename:void
+mkenvid	lib/env.c	/^u_int mkenvid(struct Env *e) {$/;"	f	typeref:typename:u_int
+mm_dir	Makefile	/^mm_dir		  := mm$/;"	m
+modules	Makefile	/^modules		  := boot drivers init lib mm user fs$/;"	m
+msg	fs/test.c	/^static char *msg = "This is the NEW message of the day!\\r\\n\\r\\n";$/;"	v	typeref:typename:char *	file:
+msg	user/fstest.c	/^static char *msg = "This is the NEW message of the day!\\r\\n\\r\\n";$/;"	v	typeref:typename:char *	file:
+msg	user/testpipe.c	/^char *msg = "Now is the time for all good men to come to the aid of their party.";$/;"	v	typeref:typename:char *
+msg	user/testptelibrary.c	/^const char *msg = "hello world!\\n";$/;"	v	typeref:typename:const char *
+msg1	user/init.c	/^    char msg1[5000];$/;"	m	struct:__anonf8d212780108	typeref:typename:char[5000]	file:
+msg2	user/init.c	/^    char msg2[1000];$/;"	m	struct:__anonf8d212780108	typeref:typename:char[1000]	file:
+msg2	user/testptelibrary.c	/^const char *msg2 = "goodbye ,world!\\n";$/;"	v	typeref:typename:const char *
+myoutput	lib/printf.c	/^static void myoutput(void *arg, char *s, int l) {$/;"	f	typeref:typename:void	file:
+n_desc	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  short n_desc;$/;"	m	struct:nlist	typeref:typename:short
+n_name	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon829fabc6010a	typeref:typename:char *
+n_next	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon829fabc6010a	typeref:struct:nlist *
+n_other	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  char n_other;$/;"	m	struct:nlist	typeref:typename:char
+n_strx	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon829fabc6010a	typeref:typename:long
+n_type	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned char n_type;$/;"	m	struct:nlist	typeref:typename:unsigned char
+n_un	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon829fabc6010a
+n_value	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned long n_value;$/;"	m	struct:nlist	typeref:typename:unsigned long
+nbitblock	fs/fsformat.c	/^uint32_t nbitblock; \/\/ the number of bitmap blocks.$/;"	v	typeref:typename:uint32_t
+nbitmap	fs/fs.c	/^u_int nbitmap; \/\/ number of bitmap blocks$/;"	v	typeref:typename:u_int
+nelem	fs/fsformat.c	/^#define nelem(/;"	d	file:
+next_block	fs/fsformat.c	/^int next_block(int type) {$/;"	f	typeref:typename:int
+nextbno	fs/fsformat.c	/^uint32_t nextbno;   \/\/ next availiable block.$/;"	v	typeref:typename:uint32_t
+nlist	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^struct nlist {$/;"	s
+noat	boot/start.S	/^    .set noat $/;"	d
+noat	lib/genex.S	/^	.set noat$/;"	d
+nop	fs/ide_asm.S	/^nop$/;"	l
+nop	lib/genex.S	/^nop$/;"	l
+nop	mm/tlb_asm.S	/^nop$/;"	l
+nop	user/entry.S	/^nop$/;"	l
+noreorder	boot/start.S	/^    .set noreorder$/;"	d
+noreorder	lib/env_asm.S	/^      .set noreorder$/;"	d
+noreorder	lib/genex.S	/^	.set noreorder$/;"	d
+noreorder	lib/genex.S	/^.set	noreorder$/;"	d
+noreorder	lib/genex.S	/^.set noreorder$/;"	d
+noreorder	lib/getc.S	/^.set noreorder$/;"	d
+noreorder	user/entry.S	/^.set noreorder$/;"	d
+not	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define not	/;"	d
+not	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define not	/;"	d
+not_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define not_eq	/;"	d
+not_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define not_eq	/;"	d
+npage	mm/pmap.c	/^u_long npage;   \/* Amount of memory(in pages) *\/$/;"	v	typeref:typename:u_long
+num	user/num.c	/^void num(int f, const char *s) {$/;"	f	typeref:typename:void
+num2fd	user/fd.c	/^int num2fd(int fd) { return fd * BY2PG + FDTABLE; }$/;"	f	typeref:typename:int
+nxt_list	lib/sched.c	/^#define nxt_list /;"	d	file:
+o_ff	fs/serv.c	/^    struct Filefd *o_ff; \/\/ va of filefd page$/;"	m	struct:Open	typeref:struct:Filefd *	file:
+o_file	fs/serv.c	/^    struct File *o_file; \/\/ mapped descriptor for open file$/;"	m	struct:Open	typeref:struct:File *	file:
+o_fileid	fs/serv.c	/^    u_int o_fileid;      \/\/ file id$/;"	m	struct:Open	typeref:typename:u_int	file:
+o_mode	fs/serv.c	/^    int o_mode;          \/\/ open mode$/;"	m	struct:Open	typeref:typename:int	file:
+objects	Makefile	/^objects		  := $(boot_dir)\/start.o		         \\$/;"	m
+offset	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^		signed long offset : 30;$/;"	m	struct:__anon618cb7a6010a::__anon618cb7a60208	typeref:typename:signed long:30
+offsetof	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^#define offsetof(/;"	d
+offsetof	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^#define offsetof(/;"	d
+offsetof	include/types.h	/^#define offsetof(/;"	d
+offsetof	readelf/types.h	/^#define offsetof(/;"	d
+open	user/file.c	/^int open(const char *path, int mode) {$/;"	f	typeref:typename:int
+open_alloc	fs/serv.c	/^int open_alloc(struct Open **o) {$/;"	f	typeref:typename:int
+open_lookup	fs/serv.c	/^int open_lookup(u_int envid, u_int fileid, struct Open **po) {$/;"	f	typeref:typename:int
+opencons	user/console.c	/^int opencons(void) {$/;"	f	typeref:typename:int
+opentab	fs/serv.c	/^struct Open opentab[MAXOPEN] = {{0, 0, 1}};$/;"	v	typeref:struct:Open[]
+or	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define or	/;"	d
+or	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define or	/;"	d
+or_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define or_eq	/;"	d
+or_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define or_eq	/;"	d
+p_align	include/kerelf.h	/^    Elf32_Word p_align;  \/* Segment alignment *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Word
+p_align	readelf/kerelf.h	/^    Elf32_Word p_align;                \/* Segment alignment *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Word
+p_buf	user/pipe.c	/^    u_char p_buf[BY2PIPE]; \/\/ data buffer$/;"	m	struct:Pipe	typeref:typename:u_char[]	file:
+p_filesz	include/kerelf.h	/^    Elf32_Word p_filesz; \/* Segment size in file *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Word
+p_filesz	readelf/kerelf.h	/^    Elf32_Word p_filesz;               \/* Segment size in file *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Word
+p_flags	include/kerelf.h	/^    Elf32_Word p_flags;  \/* Segment flags *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Word
+p_flags	readelf/kerelf.h	/^    Elf32_Word p_flags;                \/* Segment flags *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Word
+p_memsz	include/kerelf.h	/^    Elf32_Word p_memsz;  \/* Segment size in memory *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Word
+p_memsz	readelf/kerelf.h	/^    Elf32_Word p_memsz;                \/* Segment size in memory *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Word
+p_offset	include/kerelf.h	/^    Elf32_Off p_offset;  \/* Segment file offset *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Off
+p_offset	readelf/kerelf.h	/^    Elf32_Off p_offset;               \/* Segment file offset *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Off
+p_paddr	include/kerelf.h	/^    Elf32_Addr p_paddr;  \/* Segment physical address *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Addr
+p_paddr	readelf/kerelf.h	/^    Elf32_Addr p_paddr;                \/* Segment physical address *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Addr
+p_rpos	user/pipe.c	/^    u_int p_rpos;          \/\/ read position$/;"	m	struct:Pipe	typeref:typename:u_int	file:
+p_type	include/kerelf.h	/^    Elf32_Word p_type;   \/* Segment type *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Word
+p_type	readelf/kerelf.h	/^    Elf32_Word p_type;                 \/* Segment type *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Word
+p_vaddr	include/kerelf.h	/^    Elf32_Addr p_vaddr;  \/* Segment virtual address *\/$/;"	m	struct:__anonf0369ec70208	typeref:typename:Elf32_Addr
+p_vaddr	readelf/kerelf.h	/^    Elf32_Addr p_vaddr;                \/* Segment virtual address *\/$/;"	m	struct:__anonced3bdb60308	typeref:typename:Elf32_Addr
+p_wpos	user/pipe.c	/^    u_int p_wpos;          \/\/ write position$/;"	m	struct:Pipe	typeref:typename:u_int	file:
+pa2page	include/pmap.h	/^static inline struct Page *pa2page(u_long pa) {$/;"	f	typeref:struct:Page *
+page2kva	include/pmap.h	/^static inline u_long page2kva(struct Page *pp) { return KADDR(page2pa(pp)); }$/;"	f	typeref:typename:u_long
+page2pa	include/pmap.h	/^static inline u_long page2pa(struct Page *pp) { return page2ppn(pp) << PGSHIFT; }$/;"	f	typeref:typename:u_long
+page2ppn	include/pmap.h	/^static inline u_long page2ppn(struct Page *pp) { return pp - pages; }$/;"	f	typeref:typename:u_long
+page_alloc	mm/pmap.c	/^int page_alloc(struct Page **pp) {$/;"	f	typeref:typename:int
+page_check	mm/pmap.c	/^void page_check(void) {$/;"	f	typeref:typename:void
+page_decref	mm/pmap.c	/^void page_decref(struct Page *pp) {$/;"	f	typeref:typename:void
+page_fault_handler	lib/traps.c	/^void page_fault_handler(struct Trapframe *tf) {$/;"	f	typeref:typename:void
+page_free	mm/pmap.c	/^void page_free(struct Page *pp) {$/;"	f	typeref:typename:void
+page_free_list	mm/pmap.c	/^static struct Page_list page_free_list; \/* Free list of physical pages *\/$/;"	v	typeref:struct:Page_list	file:
+page_init	mm/pmap.c	/^void page_init(void) {$/;"	f	typeref:typename:void
+page_insert	mm/pmap.c	/^int page_insert(Pde *pgdir, struct Page *pp, u_long va, u_int perm) {$/;"	f	typeref:typename:int
+page_lookup	mm/pmap.c	/^struct Page *page_lookup(Pde *pgdir, u_long va, Pte **ppte) {$/;"	f	typeref:struct:Page *
+page_remove	mm/pmap.c	/^void page_remove(Pde *pgdir, u_long va) {$/;"	f	typeref:typename:void
+pageout	mm/pmap.c	/^void pageout(int va, int context) {$/;"	f	typeref:typename:void
+pageref	user/pageref.c	/^int pageref(void *v) {$/;"	f	typeref:typename:int
+pages	mm/pmap.c	/^struct Page *pages;$/;"	v	typeref:struct:Page *
+pages	user/entry.S	/^pages:$/;"	l
+panic	include/printf.h	/^#define panic(/;"	d
+pc	include/trap.h	/^    unsigned long pc;$/;"	m	struct:Trapframe	typeref:typename:unsigned long
+pc	lib/traps.c	/^    u_int pc;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+pgdir_walk	mm/pmap.c	/^int pgdir_walk(Pde *pgdir, u_long va, int create, Pte **ppte) {$/;"	f	typeref:typename:int
+pgfault	user/fork.c	/^static void pgfault(u_int va) {$/;"	f	typeref:typename:void	file:
+pgfault_trap_frame	lib/traps.c	/^struct pgfault_trap_frame {$/;"	s	file:
+physical_memory_manage_check	mm/pmap.c	/^void physical_memory_manage_check(void) {$/;"	f	typeref:typename:void
+pipe	user/pipe.c	/^int pipe(int pfd[2]) {$/;"	f	typeref:typename:int
+pipeclose	user/pipe.c	/^static int pipeclose(struct Fd *fd) {$/;"	f	typeref:typename:int	file:
+pipeisclosed	user/pipe.c	/^int pipeisclosed(int fdnum) {$/;"	f	typeref:typename:int
+piperead	user/pipe.c	/^static int piperead(struct Fd *fd, void *vbuf, u_int n, u_int offset) {$/;"	f	typeref:typename:int	file:
+pipestat	user/pipe.c	/^static int pipestat(struct Fd *fd, struct Stat *stat) { struct Pipe *p; }$/;"	f	typeref:typename:int	file:
+pipewrite	user/pipe.c	/^static int pipewrite(struct Fd *fd, const void *vbuf, u_int n, u_int offset) {$/;"	f	typeref:typename:int	file:
+pop	lib/kclock_asm.S	/^	.set	pop$/;"	d
+pop	lib/kcons.S	/^    .set    pop$/;"	d
+pp_link	include/pmap.h	/^    Page_LIST_entry_t pp_link; \/* free list link *\/$/;"	m	struct:Page	typeref:typename:Page_LIST_entry_t
+pp_ref	include/pmap.h	/^    u_short pp_ref;$/;"	m	struct:Page	typeref:typename:u_short
+printcharc	drivers/gxconsole/console.c	/^void printcharc(char ch) {$/;"	f	typeref:typename:void
+printf	lib/printf.c	/^void printf(char *fmt, ...) {$/;"	f	typeref:typename:void
+printstr	drivers/gxconsole/console.c	/^void printstr(char *s) {$/;"	f	typeref:typename:void
+private_1	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _Unwind_Word private_1;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Word
+private_1	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _Unwind_Word private_1;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Word
+private_2	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/unwind.h	/^  _Unwind_Word private_2;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Word
+private_2	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/unwind.h	/^  _Unwind_Word private_2;$/;"	m	struct:_Unwind_Exception	typeref:typename:_Unwind_Word
+ptrdiff_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef __PTRDIFF_TYPE__ ptrdiff_t;$/;"	t	typeref:typename:__PTRDIFF_TYPE__
+ptrdiff_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef __PTRDIFF_TYPE__ ptrdiff_t;$/;"	t	typeref:typename:__PTRDIFF_TYPE__
+push	lib/kclock_asm.S	/^	.set	push$/;"	d
+push	lib/kcons.S	/^    .set    push$/;"	d
+qaddr_t	include/types.h	/^typedef quad_t *qaddr_t;$/;"	t	typeref:typename:quad_t *
+qaddr_t	readelf/types.h	/^typedef quad_t *qaddr_t;$/;"	t	typeref:typename:quad_t *
+quad_t	include/types.h	/^typedef int64_t quad_t;$/;"	t	typeref:typename:int64_t
+quad_t	readelf/types.h	/^typedef int64_t quad_t;$/;"	t	typeref:typename:int64_t
+r_address	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  int r_address;$/;"	m	struct:relocation_info	typeref:typename:int
+r_bsr	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned r_bsr:1;$/;"	m	struct:relocation_info	typeref:typename:unsigned:1
+r_disp	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned r_disp:1;$/;"	m	struct:relocation_info	typeref:typename:unsigned:1
+r_extern	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned int r_extern:1;$/;"	m	struct:relocation_info	typeref:typename:unsigned int:1
+r_length	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned int r_length:2;$/;"	m	struct:relocation_info	typeref:typename:unsigned int:2
+r_pad	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned int r_pad:4;$/;"	m	struct:relocation_info	typeref:typename:unsigned int:4
+r_pad	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned r_pad:2;$/;"	m	struct:relocation_info	typeref:typename:unsigned:2
+r_pcrel	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned int r_pcrel:1;$/;"	m	struct:relocation_info	typeref:typename:unsigned int:1
+r_symbolnum	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^  unsigned int r_symbolnum:24;$/;"	m	struct:relocation_info	typeref:typename:unsigned int:24
+ra	include/asm-mips3k/regdef.h	/^#define ra /;"	d
+ra	include/asm/regdef.h	/^#define ra /;"	d
+read	user/fd.c	/^int read(int fdnum, void *buf, u_int n) {$/;"	f	typeref:typename:int
+read_bitmap	fs/fs.c	/^void read_bitmap(void) {$/;"	f	typeref:typename:void
+read_block	fs/fs.c	/^int read_block(u_int blockno, void **blk, u_int *isnew) {$/;"	f	typeref:typename:int
+read_map	user/file.c	/^int read_map(int fdnum, u_int offset, void **blk) {$/;"	f	typeref:typename:int
+read_super	fs/fs.c	/^void read_super(void) {$/;"	f	typeref:typename:void
+readelf	readelf/Makefile	/^readelf: main.o readelf.o $/;"	t
+readelf	readelf/readelf.c	/^int readelf(u_char *binary, int size) {$/;"	f	typeref:typename:int
+readline	user/sh.c	/^void readline(char *buf, u_int n) {$/;"	f	typeref:typename:void
+readn	user/fd.c	/^int readn(int fdnum, void *buf, u_int n) {$/;"	f	typeref:typename:int
+register_t	include/types.h	/^typedef int32_t register_t;$/;"	t	typeref:typename:int32_t
+register_t	readelf/types.h	/^typedef int32_t register_t;$/;"	t	typeref:typename:int32_t
+regs	include/trap.h	/^    unsigned long regs[32];$/;"	m	struct:Trapframe	typeref:typename:unsigned long[32]
+reloc	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	} reloc;$/;"	m	union:__anon618cb7a6010a	typeref:struct:__anon618cb7a6010a::__anon618cb7a60208
+reloc_count	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long reloc_count;  \/* Number of relocation records *\/$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+reloc_start	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long reloc_start;  \/* Offset of relocation records from$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+relocation_info	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/a.out.h	/^struct relocation_info$/;"	s
+remove	user/file.c	/^int remove(const char *path) {$/;"	f	typeref:typename:int
+reorder	boot/start.S	/^    .set    reorder$/;"	d
+req_fileid	include/fs.h	/^    int req_fileid;$/;"	m	struct:Fsreq_close	typeref:typename:int
+req_fileid	include/fs.h	/^    int req_fileid;$/;"	m	struct:Fsreq_dirty	typeref:typename:int
+req_fileid	include/fs.h	/^    int req_fileid;$/;"	m	struct:Fsreq_map	typeref:typename:int
+req_fileid	include/fs.h	/^    int req_fileid;$/;"	m	struct:Fsreq_set_size	typeref:typename:int
+req_offset	include/fs.h	/^    u_int req_offset;$/;"	m	struct:Fsreq_dirty	typeref:typename:u_int
+req_offset	include/fs.h	/^    u_int req_offset;$/;"	m	struct:Fsreq_map	typeref:typename:u_int
+req_omode	include/fs.h	/^    u_int req_omode;$/;"	m	struct:Fsreq_open	typeref:typename:u_int
+req_path	include/fs.h	/^    char req_path[MAXPATHLEN];$/;"	m	struct:Fsreq_open	typeref:typename:char[]
+req_path	include/fs.h	/^    u_char req_path[MAXPATHLEN];$/;"	m	struct:Fsreq_remove	typeref:typename:u_char[]
+req_size	include/fs.h	/^    u_int req_size;$/;"	m	struct:Fsreq_set_size	typeref:typename:u_int
+rev	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long rev;          \/* version (as above) *\/$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+reverse	fs/fsformat.c	/^void reverse(uint32_t *p) {$/;"	f	typeref:typename:void
+reverse_block	fs/fsformat.c	/^void reverse_block(struct Block *b) {$/;"	f	typeref:typename:void
+runcmd	user/sh.c	/^void runcmd(char *s) {$/;"	f	typeref:typename:void
+rune_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef _BSD_RUNE_T_ rune_t;$/;"	t	typeref:typename:_BSD_RUNE_T_
+rune_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef __rune_t        rune_t;$/;"	t	typeref:typename:__rune_t
+rune_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef _BSD_RUNE_T_ rune_t;$/;"	t	typeref:typename:_BSD_RUNE_T_
+rune_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef __rune_t        rune_t;$/;"	t	typeref:typename:__rune_t
+s0	include/asm-mips3k/regdef.h	/^#define s0 /;"	d
+s0	include/asm/regdef.h	/^#define s0 /;"	d
+s1	include/asm-mips3k/regdef.h	/^#define s1 /;"	d
+s1	include/asm/regdef.h	/^#define s1 /;"	d
+s2	include/asm-mips3k/regdef.h	/^#define s2 /;"	d
+s2	include/asm/regdef.h	/^#define s2 /;"	d
+s3	include/asm-mips3k/regdef.h	/^#define s3 /;"	d
+s3	include/asm/regdef.h	/^#define s3 /;"	d
+s4	include/asm-mips3k/regdef.h	/^#define s4 /;"	d
+s4	include/asm/regdef.h	/^#define s4 /;"	d
+s5	include/asm-mips3k/regdef.h	/^#define s5 /;"	d
+s5	include/asm/regdef.h	/^#define s5 /;"	d
+s6	include/asm-mips3k/regdef.h	/^#define s6 /;"	d
+s6	include/asm/regdef.h	/^#define s6 /;"	d
+s7	include/asm-mips3k/regdef.h	/^#define s7 /;"	d
+s7	include/asm/regdef.h	/^#define s7 /;"	d
+s8	include/asm-mips3k/regdef.h	/^#define s8 /;"	d
+s8	include/asm/regdef.h	/^#define s8 /;"	d
+s_magic	include/fs.h	/^    u_int s_magic;      \/\/ Magic number: FS_MAGIC$/;"	m	struct:Super	typeref:typename:u_int
+s_nblocks	include/fs.h	/^    u_int s_nblocks;    \/\/ Total number of blocks on disk$/;"	m	struct:Super	typeref:typename:u_int
+s_root	include/fs.h	/^    struct File s_root; \/\/ Root directory node$/;"	m	struct:Super	typeref:struct:File
+save_block_link	fs/fsformat.c	/^void save_block_link(struct File *f, int nblk, int bno) {$/;"	f	typeref:typename:void
+sched_yield	lib/sched.c	/^void sched_yield(void) {$/;"	f	typeref:typename:void
+seek	user/fd.c	/^int seek(int fdnum, u_int offset) {$/;"	f	typeref:typename:int
+serve	fs/serv.c	/^void serve(void) {$/;"	f	typeref:typename:void
+serve_close	fs/serv.c	/^void serve_close(u_int envid, struct Fsreq_close *rq) {$/;"	f	typeref:typename:void
+serve_dirty	fs/serv.c	/^void serve_dirty(u_int envid, struct Fsreq_dirty *rq) {$/;"	f	typeref:typename:void
+serve_init	fs/serv.c	/^void serve_init(void) {$/;"	f	typeref:typename:void
+serve_map	fs/serv.c	/^void serve_map(u_int envid, struct Fsreq_map *rq) {$/;"	f	typeref:typename:void
+serve_open	fs/serv.c	/^void serve_open(u_int envid, struct Fsreq_open *rq) {$/;"	f	typeref:typename:void
+serve_remove	fs/serv.c	/^void serve_remove(u_int envid, struct Fsreq_remove *rq) {$/;"	f	typeref:typename:void
+serve_set_size	fs/serv.c	/^void serve_set_size(u_int envid, struct Fsreq_set_size *rq) {$/;"	f	typeref:typename:void
+serve_sync	fs/serv.c	/^void serve_sync(u_int envid) {$/;"	f	typeref:typename:void
+set-%	Makefile	/^set-%:$/;"	t
+set_except_vector	lib/traps.c	/^void *set_except_vector(int n, void *addr) {$/;"	f	typeref:typename:void *
+set_pgfault_handler	user/pgfault.c	/^void set_pgfault_handler(void (*fn)(u_int va)) {$/;"	f	typeref:typename:void
+setup_c0_status	lib/kclock_asm.S	/^.macro	setup_c0_status set clr$/;"	m
+setup_c0_status	lib/kcons.S	/^ .macro setup_c0_status set clr$/;"	m
+sfork	user/fork.c	/^int sfork(void) {$/;"	f	typeref:typename:int
+sh_addr	readelf/kerelf.h	/^    Elf32_Addr sh_addr;                 \/* Section addr *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Addr
+sh_addralign	readelf/kerelf.h	/^    Elf32_Word sh_addralign;            \/* Section alignment *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_entsize	readelf/kerelf.h	/^    Elf32_Word sh_entsize;              \/* Section entry size *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_flags	readelf/kerelf.h	/^    Elf32_Word sh_flags;                \/* Section flags *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_info	readelf/kerelf.h	/^    Elf32_Word sh_info;                 \/* Section extra info *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_link	readelf/kerelf.h	/^    Elf32_Word sh_link;                 \/* Section link *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_name	readelf/kerelf.h	/^    Elf32_Word sh_name;                 \/* Section name *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_offset	readelf/kerelf.h	/^    Elf32_Off sh_offset;               \/* Section offset *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Off
+sh_size	readelf/kerelf.h	/^    Elf32_Word sh_size;                 \/* Section size *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+sh_type	readelf/kerelf.h	/^    Elf32_Word sh_type;                 \/* Section type *\/$/;"	m	struct:__anonced3bdb60208	typeref:typename:Elf32_Word
+size_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef __SIZE_TYPE__ size_t;$/;"	t	typeref:typename:__SIZE_TYPE__
+size_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef __SIZE_TYPE__ size_t;$/;"	t	typeref:typename:__SIZE_TYPE__
+size_t	include/types.h	/^typedef u_int32_t size_t;$/;"	t	typeref:typename:u_int32_t
+skip_slash	fs/fs.c	/^char *skip_slash(char *p) {$/;"	f	typeref:typename:char *
+sp	include/asm-mips3k/regdef.h	/^#define sp /;"	d
+sp	include/asm/regdef.h	/^#define sp /;"	d
+sp	lib/traps.c	/^    u_int sp;$/;"	m	struct:pgfault_trap_frame	typeref:typename:u_int	file:
+spawn	user/spawn.c	/^int spawn(char *prog, char **argv) {$/;"	f	typeref:typename:int
+spawnl	user/spawn.c	/^int spawnl(char *prog, char *args, ...) { return spawn(prog, &args); }$/;"	f	typeref:typename:int
+ssize_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef long ssize_t;$/;"	t	typeref:typename:long
+ssize_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef long ssize_t;$/;"	t	typeref:typename:long
+st_dev	user/fd.h	/^    struct Dev *st_dev;$/;"	m	struct:Stat	typeref:struct:Dev *
+st_isdir	user/fd.h	/^    u_int st_isdir;$/;"	m	struct:Stat	typeref:typename:u_int
+st_name	user/fd.h	/^    char st_name[MAXNAMELEN];$/;"	m	struct:Stat	typeref:typename:char[]
+st_size	user/fd.h	/^    u_int st_size;$/;"	m	struct:Stat	typeref:typename:u_int
+stack_size	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long stack_size;   \/* Size of stack, in bytes *\/$/;"	m	struct:flat_hdr	typeref:typename:unsigned long
+stat	user/fd.c	/^int stat(const char *path, struct Stat *stat) {$/;"	f	typeref:typename:int
+static_assert	include/types.h	/^#define static_assert(/;"	d
+static_assert	readelf/types.h	/^#define static_assert(/;"	d
+strchr	user/string.c	/^const char *strchr(const char *s, char c) {$/;"	f	typeref:typename:const char *
+strcmp	user/string.c	/^int strcmp(const char *p, const char *q) {$/;"	f	typeref:typename:int
+strcpy	user/string.c	/^char *strcpy(char *dst, const char *src) {$/;"	f	typeref:typename:char *
+strecmp	fs/test.c	/^int strecmp(char *a, char *b) {$/;"	f	typeref:typename:int
+strlen	user/string.c	/^int strlen(const char *s) {$/;"	f	typeref:typename:int
+sum	user/init.c	/^int sum(char *s, int n) {$/;"	f	typeref:typename:int
+super	fs/fs.c	/^struct Super *super;$/;"	v	typeref:struct:Super *
+super	fs/fsformat.c	/^struct Super super; \/\/ super block.$/;"	v	typeref:struct:Super
+sync	user/file.c	/^int sync(void) { return fsipc_sync(); }$/;"	f	typeref:typename:int
+sys_call_table	lib/syscall.S	/^sys_call_table:                         \/\/ Syscall Table$/;"	l
+sys_env_alloc	lib/syscall_all.c	/^int sys_env_alloc(void) {$/;"	f	typeref:typename:int
+sys_env_destroy	lib/syscall_all.c	/^int sys_env_destroy(int sysno, u_int envid) {$/;"	f	typeref:typename:int
+sys_getenvid	lib/syscall_all.c	/^u_int sys_getenvid(void) { return curenv->env_id; }$/;"	f	typeref:typename:u_int
+sys_ipc_can_send	lib/syscall_all.c	/^int sys_ipc_can_send(int sysno, u_int envid, u_int value, u_int srcva, u_int perm) {$/;"	f	typeref:typename:int
+sys_ipc_recv	lib/syscall_all.c	/^void sys_ipc_recv(int sysno, u_int dstva) {$/;"	f	typeref:typename:void
+sys_mem_alloc	lib/syscall_all.c	/^int sys_mem_alloc(int sysno, u_int envid, u_int va, u_int perm) {$/;"	f	typeref:typename:int
+sys_mem_map	lib/syscall_all.c	/^int sys_mem_map(int sysno, u_int srcid, u_int srcva, u_int dstid, u_int dstva, u_int perm) {$/;"	f	typeref:typename:int
+sys_mem_unmap	lib/syscall_all.c	/^int sys_mem_unmap(int sysno, u_int envid, u_int va) {$/;"	f	typeref:typename:int
+sys_panic	lib/syscall_all.c	/^void sys_panic(int sysno, char *msg) {$/;"	f	typeref:typename:void
+sys_putchar	lib/syscall_all.c	/^void sys_putchar(int sysno, int c, int a2, int a3, int a4, int a5) {$/;"	f	typeref:typename:void
+sys_read_dev	lib/syscall_all.c	/^int sys_read_dev(int sysno, u_int va, u_int dev, u_int len) {$/;"	f	typeref:typename:int
+sys_set_env_status	lib/syscall_all.c	/^int sys_set_env_status(int sysno, u_int envid, u_int status) {$/;"	f	typeref:typename:int
+sys_set_pgfault_handler	lib/syscall_all.c	/^int sys_set_pgfault_handler(int sysno, u_int envid, u_int func, u_int xstacktop) {$/;"	f	typeref:typename:int
+sys_set_trapframe	lib/syscall_all.c	/^int sys_set_trapframe(int sysno, u_int envid, struct Trapframe *tf) { return 0; }$/;"	f	typeref:typename:int
+sys_write_dev	lib/syscall_all.c	/^int sys_write_dev(int sysno, u_int va, u_int dev, u_int len) {$/;"	f	typeref:typename:int
+sys_yield	lib/syscall_all.c	/^void sys_yield(void) {$/;"	f	typeref:typename:void
+syscall_cgetc	user/syscall_lib.c	/^int syscall_cgetc() { return msyscall(SYS_cgetc, 0, 0, 0, 0, 0); }$/;"	f	typeref:typename:int
+syscall_env_alloc	user/lib.h	/^inline static int syscall_env_alloc(void) { return msyscall(SYS_env_alloc, 0, 0, 0, 0, 0); }$/;"	f	typeref:typename:int
+syscall_env_destroy	user/syscall_lib.c	/^int syscall_env_destroy(u_int envid) { return msyscall(SYS_env_destroy, envid, 0, 0, 0, 0); }$/;"	f	typeref:typename:int
+syscall_getenvid	user/syscall_lib.c	/^u_int syscall_getenvid(void) { return msyscall(SYS_getenvid, 0, 0, 0, 0, 0); }$/;"	f	typeref:typename:u_int
+syscall_ipc_can_send	user/syscall_lib.c	/^int syscall_ipc_can_send(u_int envid, u_int value, u_int srcva, u_int perm) {$/;"	f	typeref:typename:int
+syscall_ipc_recv	user/syscall_lib.c	/^void syscall_ipc_recv(u_int dstva) { msyscall(SYS_ipc_recv, dstva, 0, 0, 0, 0); }$/;"	f	typeref:typename:void
+syscall_mem_alloc	user/syscall_lib.c	/^int syscall_mem_alloc(u_int envid, u_int va, u_int perm) { return msyscall(SYS_mem_alloc, envid,/;"	f	typeref:typename:int
+syscall_mem_map	user/syscall_lib.c	/^int syscall_mem_map(u_int srcid, u_int srcva, u_int dstid, u_int dstva, u_int perm) {$/;"	f	typeref:typename:int
+syscall_mem_unmap	user/syscall_lib.c	/^int syscall_mem_unmap(u_int envid, u_int va) { return msyscall(SYS_mem_unmap, envid, va, 0, 0, 0/;"	f	typeref:typename:int
+syscall_panic	user/syscall_lib.c	/^void syscall_panic(char *msg) { msyscall(SYS_panic, (int) msg, 0, 0, 0, 0); }$/;"	f	typeref:typename:void
+syscall_putchar	user/syscall_lib.c	/^void syscall_putchar(char ch) { msyscall(SYS_putchar, (int) ch, 0, 0, 0, 0); }$/;"	f	typeref:typename:void
+syscall_read_dev	user/syscall_lib.c	/^int syscall_read_dev(u_int va, u_int dev, u_int offset) { return msyscall(SYS_read_dev, va, dev,/;"	f	typeref:typename:int
+syscall_set_env_status	user/syscall_lib.c	/^int syscall_set_env_status(u_int envid, u_int status) { return msyscall(SYS_set_env_status, envi/;"	f	typeref:typename:int
+syscall_set_pgfault_handler	user/syscall_lib.c	/^int syscall_set_pgfault_handler(u_int envid, void (*func)(void), u_int xstacktop) {$/;"	f	typeref:typename:int
+syscall_set_trapframe	user/syscall_lib.c	/^int syscall_set_trapframe(u_int envid, struct Trapframe *tf) {$/;"	f	typeref:typename:int
+syscall_write_dev	user/syscall_lib.c	/^int syscall_write_dev(u_int va, u_int dev, u_int offset) { return msyscall(SYS_write_dev, va, de/;"	f	typeref:typename:int
+syscall_yield	user/syscall_lib.c	/^void syscall_yield(void) { msyscall(SYS_yield, 0, 0, 0, 0, 0); }$/;"	f	typeref:typename:void
+t0	include/asm-mips3k/regdef.h	/^#define t0 /;"	d
+t0	include/asm/regdef.h	/^#define t0 /;"	d
+t1	include/asm-mips3k/regdef.h	/^#define t1 /;"	d
+t1	include/asm/regdef.h	/^#define t1 /;"	d
+t2	include/asm-mips3k/regdef.h	/^#define t2 /;"	d
+t2	include/asm/regdef.h	/^#define t2 /;"	d
+t3	include/asm-mips3k/regdef.h	/^#define t3 /;"	d
+t3	include/asm/regdef.h	/^#define t3 /;"	d
+t4	include/asm-mips3k/regdef.h	/^#define t4 /;"	d
+t4	include/asm/regdef.h	/^#define t4 /;"	d
+t5	include/asm-mips3k/regdef.h	/^#define t5 /;"	d
+t5	include/asm/regdef.h	/^#define t5 /;"	d
+t6	include/asm-mips3k/regdef.h	/^#define t6 /;"	d
+t6	include/asm/regdef.h	/^#define t6 /;"	d
+t7	include/asm-mips3k/regdef.h	/^#define t7 /;"	d
+t7	include/asm/regdef.h	/^#define t7 /;"	d
+t8	include/asm-mips3k/regdef.h	/^#define t8 /;"	d
+t8	include/asm/regdef.h	/^#define t8 /;"	d
+t9	include/asm-mips3k/regdef.h	/^#define t9 /;"	d
+t9	include/asm/regdef.h	/^#define t9 /;"	d
+theFatalMsg	lib/print.c	/^static const char theFatalMsg[] = "fatal error in lp_Print!";$/;"	v	typeref:typename:const char[]	file:
+timer_irq	lib/genex.S	/^timer_irq:$/;"	l
+tlb_invalidate	mm/pmap.c	/^void tlb_invalidate(Pde *pgdir, u_long va) {$/;"	f	typeref:typename:void
+tlbra	boot/start.S	/^tlbra:$/;"	l
+tools_dir	Makefile	/^tools_dir	  := tools$/;"	m
+tools_dir	fs/Makefile	/^tools_dir := .$/;"	m
+trap_init	lib/traps.c	/^void trap_init() {$/;"	f	typeref:typename:void
+true	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdbool.h	/^#define true	/;"	d
+true	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdbool.h	/^#define true	/;"	d
+type	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^		unsigned long type : 2;$/;"	m	struct:__anon618cb7a6010a::__anon618cb7a60208	typeref:typename:unsigned long:2
+type	fs/fsformat.c	/^    uint32_t type;$/;"	m	struct:Block	typeref:typename:uint32_t	file:
+u_char	include/types.h	/^typedef unsigned char u_char;$/;"	t	typeref:typename:unsigned char
+u_char	readelf/types.h	/^typedef unsigned char u_char;$/;"	t	typeref:typename:unsigned char
+u_int	include/types.h	/^typedef unsigned int u_int;$/;"	t	typeref:typename:unsigned int
+u_int	readelf/types.h	/^typedef unsigned int u_int;$/;"	t	typeref:typename:unsigned int
+u_int16_t	include/types.h	/^typedef unsigned short u_int16_t;$/;"	t	typeref:typename:unsigned short
+u_int16_t	readelf/types.h	/^typedef unsigned short u_int16_t;$/;"	t	typeref:typename:unsigned short
+u_int32_t	include/types.h	/^typedef unsigned int u_int32_t;$/;"	t	typeref:typename:unsigned int
+u_int32_t	readelf/types.h	/^typedef unsigned int u_int32_t;$/;"	t	typeref:typename:unsigned int
+u_int64_t	include/types.h	/^typedef unsigned long long u_int64_t;$/;"	t	typeref:typename:unsigned long long
+u_int64_t	readelf/types.h	/^typedef unsigned long long u_int64_t;$/;"	t	typeref:typename:unsigned long long
+u_int8_t	include/types.h	/^typedef unsigned char u_int8_t;$/;"	t	typeref:typename:unsigned char
+u_int8_t	readelf/types.h	/^typedef unsigned char u_int8_t;$/;"	t	typeref:typename:unsigned char
+u_long	include/types.h	/^typedef unsigned long u_long;$/;"	t	typeref:typename:unsigned long
+u_long	readelf/types.h	/^typedef unsigned long u_long;$/;"	t	typeref:typename:unsigned long
+u_quad_t	include/types.h	/^typedef u_int64_t u_quad_t; \/* quads *\/$/;"	t	typeref:typename:u_int64_t
+u_quad_t	readelf/types.h	/^typedef u_int64_t u_quad_t; \/* quads *\/$/;"	t	typeref:typename:u_int64_t
+u_short	include/types.h	/^typedef unsigned short u_short;$/;"	t	typeref:typename:unsigned short
+u_short	readelf/types.h	/^typedef unsigned short u_short;$/;"	t	typeref:typename:unsigned short
+ugetc	user/ex.c	/^char ugetc() {$/;"	f	typeref:typename:char
+uint16_t	include/kerelf.h	/^typedef u_int16_t uint16_t;$/;"	t	typeref:typename:u_int16_t
+uint16_t	readelf/kerelf.h	/^typedef u_int16_t uint16_t;$/;"	t	typeref:typename:u_int16_t
+uint32_t	include/kerelf.h	/^typedef u_int32_t uint32_t;$/;"	t	typeref:typename:u_int32_t
+uint32_t	readelf/kerelf.h	/^typedef u_int32_t uint32_t;$/;"	t	typeref:typename:u_int32_t
+uint64_t	include/kerelf.h	/^typedef u_int64_t uint64_t;$/;"	t	typeref:typename:u_int64_t
+uint64_t	readelf/kerelf.h	/^typedef u_int64_t uint64_t;$/;"	t	typeref:typename:u_int64_t
+umain	fs/serv.c	/^void umain(void) {$/;"	f	typeref:typename:void
+umain	user/cat.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/echo.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/fktest.c	/^void umain() {$/;"	f	typeref:typename:void
+umain	user/fstest.c	/^void umain() {$/;"	f	typeref:typename:void
+umain	user/icode.c	/^void umain(void) {$/;"	f	typeref:typename:void
+umain	user/idle.c	/^umain() {$/;"	f
+umain	user/init.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/ls.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/num.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/pingpong.c	/^void umain(void) {$/;"	f	typeref:typename:void
+umain	user/sh.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/testarg.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/testfdsharing.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+umain	user/testpipe.c	/^void umain(void) {$/;"	f	typeref:typename:void
+umain	user/testpiperace.c	/^void umain(void) {$/;"	f	typeref:typename:void
+umain	user/testptelibrary.c	/^void umain(int argc, char **argv) {$/;"	f	typeref:typename:void
+unmap_block	fs/fs.c	/^void unmap_block(u_int blockno) {$/;"	f	typeref:typename:void
+usage	OS_ENV/compiler/usr/mips-linux/bin/mtrace	/^sub usage {$/;"	s
+usage	user/ls.c	/^void usage(void) {$/;"	f	typeref:typename:void
+usage	user/sh.c	/^void usage(void) {$/;"	f	typeref:typename:void
+user_PrintChar	user/print.c	/^int user_PrintChar(char *buf, char c, int length, int ladjust) {$/;"	f	typeref:typename:int
+user_PrintNum	user/print.c	/^int user_PrintNum(char *buf, unsigned long u, int base, int negFlag, int length, int ladjust, ch/;"	f	typeref:typename:int
+user_PrintString	user/print.c	/^int user_PrintString(char *buf, char *s, int length, int ladjust) {$/;"	f	typeref:typename:int
+user_assert	user/lib.h	/^#define user_assert(/;"	d
+user_bcopy	user/fork.c	/^void user_bcopy(const void *src, void *dst, size_t len) {$/;"	f	typeref:typename:void
+user_bzero	user/fork.c	/^void user_bzero(void *v, u_int n) {$/;"	f	typeref:typename:void
+user_dir	Makefile	/^user_dir	  := user$/;"	m
+user_dir	fs/Makefile	/^user_dir := ..\/user$/;"	m
+user_disk	Makefile	/^user_disk     := gxemul\/fs.img$/;"	m
+user_lp_Print	user/print.c	/^void user_lp_Print(void (*output)(void *, char *, int), void *arg, char *fmt, va_list ap) {$/;"	f	typeref:typename:void
+user_myoutput	user/ex.c	/^static void user_myoutput(void *arg, const char *s, int l) {$/;"	f	typeref:typename:void	file:
+user_myoutput	user/printf.c	/^static void user_myoutput(void *arg, char *s, int l) {$/;"	f	typeref:typename:void	file:
+user_out2string	user/fprintf.c	/^static void user_out2string(void *arg, char *s, int l) {$/;"	f	typeref:typename:void	file:
+user_panic	user/lib.h	/^#define user_panic(/;"	d
+user_theFatalMsg	user/print.c	/^static const char user_theFatalMsg[] = "fatal error in user_lp_Print!";$/;"	v	typeref:typename:const char[]	file:
+usr_is_elf_format	user/spawn.c	/^int usr_is_elf_format(u_char *binary) {$/;"	f	typeref:typename:int
+usr_load_elf	user/spawn.c	/^int usr_load_elf(int fd, Elf32_Phdr *ph, int child_envid) {$/;"	f	typeref:typename:int
+uwritef	user/ex.c	/^void uwritef(char *fmt, ...) {$/;"	f	typeref:typename:void
+v0	include/asm-mips3k/regdef.h	/^#define v0 /;"	d
+v0	include/asm/regdef.h	/^#define v0 /;"	d
+v1	include/asm-mips3k/regdef.h	/^#define v1 /;"	d
+v1	include/asm/regdef.h	/^#define v1 /;"	d
+va2pa	include/pmap.h	/^static inline u_long va2pa(Pde *pgdir, u_long va) {$/;"	f	typeref:typename:u_long
+va_arg	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define va_arg(/;"	d
+va_arg	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define va_arg(/;"	d
+va_copy	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define va_copy(/;"	d
+va_copy	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define va_copy(/;"	d
+va_end	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define va_end(/;"	d
+va_end	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define va_end(/;"	d
+va_is_dirty	fs/fs.c	/^u_int va_is_dirty(u_int va) { return (*vpt)[VPN(va)] & PTE_D; }$/;"	f	typeref:typename:u_int
+va_is_mapped	fs/fs.c	/^u_int va_is_mapped(u_int va) { return (((*vpd)[PDX(va)] & (PTE_V)) && ((*vpt)[VPN(va)] & (PTE_V)/;"	f	typeref:typename:u_int
+va_list	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^typedef __gnuc_va_list va_list;$/;"	t	typeref:typename:__gnuc_va_list
+va_list	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^typedef __gnuc_va_list va_list;$/;"	t	typeref:typename:__gnuc_va_list
+va_start	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stdarg.h	/^#define va_start(/;"	d
+va_start	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stdarg.h	/^#define va_start(/;"	d
+value	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/linux/flat.h	/^	unsigned long	value;$/;"	m	union:__anon618cb7a6010a	typeref:typename:unsigned long
+vmlinux	Makefile	/^vmlinux: $(modules)$/;"	t
+vmlinux_elf	Makefile	/^vmlinux_elf	  := gxemul\/vmlinux$/;"	m
+vpd	user/entry.S	/^vpd:$/;"	l
+vpt	user/entry.S	/^vpt:$/;"	l
+wait	user/wait.c	/^void wait(u_int envid) {$/;"	f	typeref:typename:void
+walk_path	fs/fs.c	/^int walk_path(char *path, struct File **pdir, struct File **pfile, char *lastelem) {$/;"	f	typeref:typename:int
+wint_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/stddef.h	/^typedef __WINT_TYPE__ wint_t;$/;"	t	typeref:typename:__WINT_TYPE__
+wint_t	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/stddef.h	/^typedef __WINT_TYPE__ wint_t;$/;"	t	typeref:typename:__WINT_TYPE__
+write	user/fd.c	/^int write(int fdnum, const void *buf, u_int n) {$/;"	f	typeref:typename:int
+write_block	fs/fs.c	/^void write_block(u_int blockno) {$/;"	f	typeref:typename:void
+write_directory	fs/fsformat.c	/^void write_directory(struct File *dirf, char *name) {$/;"	f	typeref:typename:void
+write_file	fs/fsformat.c	/^void write_file(struct File *dirf, const char *path) {$/;"	f	typeref:typename:void
+writef	user/printf.c	/^void writef(char *fmt, ...) {$/;"	f	typeref:typename:void
+xor	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define xor	/;"	d
+xor	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define xor	/;"	d
+xor_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/include/iso646.h	/^#define xor_eq	/;"	d
+xor_eq	OS_ENV/compiler/usr/lib/gcc/mips-linux/4.0.0/install-tools/include/iso646.h	/^#define xor_eq	/;"	d
+zero	include/asm-mips3k/regdef.h	/^#define zero /;"	d
+zero	include/asm/regdef.h	/^#define zero /;"	d
+挑战性任务——线程和信号量	OS_Extram/Ref/Assignments/lab4-challenge任务.md	/^### 挑战性任务——线程和信号量$/;"	S
