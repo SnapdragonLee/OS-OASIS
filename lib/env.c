@@ -18,11 +18,11 @@ struct Env_list env_sched_list[2];    // Runnable list
 extern Pde *boot_pgdir;
 extern char *KERNEL_SP;
 
+static u_int asid_bitmap[2] = {0};
+
 /* Overview:
  *    This function is using to fix 30-commands-then-panic.
  */
-
-static u_int asid_bitmap[2] = {0};
 
 static u_int asid_alloc() {
     int i, index, inner;
@@ -38,11 +38,10 @@ static u_int asid_alloc() {
 }
 
 static void asid_free(u_int i) {
-    int index, inner;
-    index = i >> 5;
-    inner = i & 31;
+    int index = i >> 5, inner = i & 31;
     asid_bitmap[index] &= ~(1 << inner);
 }
+
 
 /* Overview:
  *  This function is for making an unique ID for every env.
@@ -423,7 +422,7 @@ void env_free(struct Env *e) {
     u_int pdeno, pteno, pa;
 
     /* Hint: Note the environment's demise.*/
-    printf("[%08x] free env %08x\n", curenv ? curenv->env_id : 0, e->env_id);
+    // printf("[%08x] free env %08x\n", curenv ? curenv->env_id : 0, e->env_id);
 
     /* Hint: Flush all mapped pages in the user portion of the address space */
     for (pdeno = 0; pdeno < PDX(UTOP); pdeno++) {
@@ -452,6 +451,8 @@ void env_free(struct Env *e) {
     e->env_status = ENV_FREE;
     LIST_INSERT_HEAD(&env_free_list, e, env_link);
     LIST_REMOVE(e, env_sched_link);
+
+    asid_free(e->env_id >> 11); /* Add the promotion */
 }
 
 /* Overview:
