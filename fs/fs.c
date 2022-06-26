@@ -15,7 +15,7 @@ int block_is_free(u_int);
 //    than disk's nblocks, panic.
 u_int diskaddr(u_int blockno) {
     if (blockno >= DISKMAX / BY2BLK) {
-        user_panic("blockno wrong\n");
+        user_panic("blockno is greater than disk's nblocks!\n");
     }
     return DISKMAP + blockno * BY2BLK;
 }
@@ -57,6 +57,7 @@ int map_block(u_int blockno) {
     if (block_is_mapped(blockno)) {
         return 0;
     }
+
     // Step 2: Alloc a page of memory for this block via syscall.
     return syscall_mem_alloc(0, diskaddr(blockno), PTE_V | PTE_R);
 }
@@ -187,7 +188,7 @@ void free_block(u_int blockno) {
     if (blockno == 0 || (super != 0 && blockno >= super->s_nblocks)) {
         return;
     }
-    bitmap[blockno / 32] |= 1 << (blockno % 32);
+    bitmap[blockno >> 5] |= 1 << (blockno & 0x1f);
 }
 
 // Overview:
@@ -495,17 +496,19 @@ int dir_lookup(struct File *dir, char *name, struct File **file) {
     for (i = 0; i < nblock; i++) {
         // Step 2: Read the i'th block of the dir.
         // Hint: Use file_get_block.
-        if ((r = file_get_block(dir, i, &blk)) < 0) {
+        r = file_get_block(dir, i, &blk);
+        if (r < 0) {
             return r;
         }
+
         f = blk;
 
         // Step 3: Find target file by file name in all files on this block.
         // If we find the target file, set the result to *file and set f_dir field.
         for (j = 0; j < FILE2BLK; j++) {
             if (strcmp(f[j].f_name, name) == 0) {
-                *file = f + j;
-                (*file)->f_dir = dir;
+                *file = &f[j];
+                f[j].f_dir = dir;
                 return 0;
             }
         }
