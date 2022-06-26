@@ -411,7 +411,7 @@ int sys_ipc_can_send(int sysno, u_int envid, u_int value, u_int srcva, u_int per
     }
 
     r = envid2env(envid, &e, 0);
-    if (ret < 0) {
+    if (r < 0) {
         return r;
     }
 
