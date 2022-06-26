@@ -390,7 +390,8 @@ void env_create_priority(u_char *binary, int size, int priority) {
     int r;
 
     /*Step 1: Use env_alloc to alloc a new env. */
-    if (env_alloc(&e, 0)) {
+    r = env_alloc(&e, 0);
+    if (r) {
         return;
     }
 
